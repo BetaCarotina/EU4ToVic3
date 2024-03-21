@@ -34,11 +34,12 @@ link = { eu4 = manchu trait = siberian_culture_group trait = north_asian_heritag
 link = { eu4 = outremer trait = german_speaking trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = oltremare trait = italophone trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = ultramar trait = iberian_culture_group trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
-link = { eu4 = jerusaleman trait = south_slavic trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
+link = { eu4 = jerusaleman trait = jugoslav trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = hierosolyman trait = german_speaking trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = kulfoldi trait = hungarian_culture_group trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = dramor trait = celtic_people trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
 link = { eu4 = coigriche trait = celtic_people trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
+link = { eu4 = siddi trait = east_african trait = hindustani trait = african_heritage ethnicity = african graphics = south_asian }
 
 link = { eu4 = swiss trait = german_speaking trait = swiss trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = dutch trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
