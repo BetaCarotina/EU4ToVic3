@@ -1,3 +1,14 @@
+GER = { #Germany
+	color = { 147 130 110 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { north_german south_german weder_german }
+	capital = STATE_BRANDENBURG
+}
+
 SCA = { # Scandinavia
 	color = { 62  122  189 }
 
