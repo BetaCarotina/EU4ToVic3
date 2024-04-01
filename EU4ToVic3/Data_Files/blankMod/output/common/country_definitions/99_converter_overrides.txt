@@ -1,4 +1,4 @@
-GER = { #Germany
+GER = { # Germany
 	color = { 147 130 110 }
 	
 	country_type = recognized
@@ -7,6 +7,18 @@ GER = { #Germany
 	
 	cultures = { north_german south_german weder_german }
 	capital = STATE_BRANDENBURG
+}
+
+ISR = { # Israel
+	color = { 150  212  214 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { israeli ashkenazi sephardic }
+	religion = jewish
+	capital = STATE_PALESTINE
 }
 
 SCA = { # Scandinavia
