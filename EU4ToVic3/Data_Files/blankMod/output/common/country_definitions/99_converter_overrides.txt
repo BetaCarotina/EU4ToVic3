@@ -41,6 +41,17 @@ SIB = { # Siberia
 	capital = STATE_TOMSK
 }
 
+TRS = { # Transylvania
+	color = { 211  207  173 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { szekely romanian }
+	capital = STATE_SOUTHERN_TRANSYLVANIA
+}
+
 UBD = { # United Baltic Provinces
 	color = { 142 140 84 }
 	
