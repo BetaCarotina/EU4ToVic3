@@ -12,6 +12,7 @@
 
 # Cultures that change between culture groups
 link = { eu4group = slavic trait = jugoslav trait = east_slavic trait = west_slavic trait = european_heritage ethnicity = slavic graphics = european } 
+link = { eu4 = arvanite trait = albanian_language trait = greek_culture trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4 = albanian trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = albanian_g trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = south_slavic trait = jugoslav trait = european_heritage ethnicity = slavic graphics = european }
