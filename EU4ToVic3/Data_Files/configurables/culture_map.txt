@@ -183,9 +183,9 @@ link = { vic3 = ugrian eu4group = finno_ugric }
 
 # Baltic - estonian, latvian, lithuanian, old_prussian/pruthenian
 link = { vic3 = estonian eu4 = estonian }
-link = { vic3 = latvian eu4 = latvian eu4 = livonian eu4 = kurland_culture }
-link = { vic3 = lithuanian eu4 = lithuanian }
-link = { vic3 = pruthenian eu4 = pruthenian eu4 = old_prussian }
+link = { vic3 = latvian eu4 = latvian eu4 = livonian eu4 = kurland_culture eu4 = semigallian eu4 = selonian eu4 = curonian }
+link = { vic3 = lithuanian eu4 = lithuanian eu4 = samogitian }
+link = { vic3 = pruthenian eu4 = pruthenian eu4 = old_prussian eu4 = sudovian }
 
 
 # Jugoslav (South Slavic) - Bosniak, Bulgarian, Croatian, Serbian and Slovene
@@ -207,22 +207,24 @@ link = { vic3 = brazilian eu4 = portugese region = region_brazil }
 link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
 
 
-#Albanian - Albanian
+#Albanian - Albanian, Arvanite(x)
+
+link = { vic3 = arvanite eu4group = albanian_g region = STATE_ATTICA region = STATE_PELOPONNESE }
 link = { vic3 = albanian eu4group = albanian_g }
 
 
 # West Slavic - Czech, Polish, Slovak and Sorb
 link = { vic3 = czech eu4 = czech eu4 = czech_new eu4 = moravian eu4 = silesian }
-link = { vic3 = polish eu4 = mazovian eu4 = venedian eu4 = polish eu4 = polish_new eu4 = schlesian eu4 = schlesian_new}
+link = { vic3 = polish eu4 = mazovian eu4 = venedian eu4 = polish eu4 = polish_new eu4 = schlesian eu4 = schlesian_new }
 link = { vic3 = slovak eu4 = slovak eu4 = slovak_new eu4 = chrobatian }
 link = { vic3 = sorb eu4 = sorbian eu4 = sorbian_new eu4 = polabian eu4 = sorbs eu4 = wendish eu4 = kashubian }
 # Dynamic generation for Old Pommeranian
 
 
 # East Slavic - Byelorussian, Russian, Ruthenian
-link = { vic3 = byelorussian eu4 = byelorussian eu4 = byelorussian_new eu4 = ilmenian } #Ilmenians (Krivichs) are legendarily linked to the Belarussian
-link = { vic3 = ukrainian eu4 = antean eu4 = ruthenian eu4 = ruthenian_new eu4 = ukrainian eu4 = volhynian eu4 = severian eu4 = kishinyov eu4 = red_ruthenian }
-link = { vic3 = russian eu4 = russian eu4 = russian_new eu4 = novgorodian eu4 = novgorodian_new eu4 = ryazanian eu4 = ryazanian_new eu4 = russian_culture eu4 = old_slavic eu4 = pomor }
+link = { vic3 = byelorussian eu4 = byelorussian eu4 = byelorussian_new eu4 = ilmenian eu4 = krivich eu4 = radimich } #Ilmenians (Krivichs) are legendarily linked to the Belarussian
+link = { vic3 = ukrainian eu4 = antean eu4 = ruthenian eu4 = ruthenian_new eu4 = ukrainian eu4 = volhynian eu4 = severian eu4 = kishinyov eu4 = red_ruthenian eu4 = drevlian eu4 = dulebian }
+link = { vic3 = russian eu4 = russian eu4 = russian_new eu4 = novgorodian eu4 = novgorodian_new eu4 = ryazanian eu4 = ryazanian_new eu4 = russian_culture eu4 = old_slavic eu4 = pomor eu4 = vyatich }
 
 link = { vic3 = russian eu4group = east_slavic owner = RUS } #Keep last
 
@@ -246,12 +248,14 @@ link = { vic3 = hungarian eu4 = hungarian eu4 = magyar eu4 = szaszok }
 link = { vic3 = alan eu4 = alan }
 link = { vic3 = armenian eu4 = armenian eu4 = ge_armenian eu4 = owm_armenian }
 link = { vic3 = azerbaijani eu4 = azerbadjani eu4 = azerbaijani eu4 = shirvani }
-link = { vic3 = georgian eu4 = georgian eu4 = georgian_new }
+link = { vic3 = georgian eu4 = georgian eu4 = georgian_new eu4 = svanetian }
 link = { vic3 = circassian eu4 = circassian eu4 = abazin }
 link = { vic3 = north_caucasian eu4 = dagestani eu4 = avar_culture eu4 = caucasian_albanian eu4 = chechen eu4 = ossetian }
 
 
 # Hellenic - Greek
+## Added - Arvanite
+link = { vic3 = arvanite eu4 = arvanite }
 link = { vic3 = greek eu4group = byzantine }
 
 
