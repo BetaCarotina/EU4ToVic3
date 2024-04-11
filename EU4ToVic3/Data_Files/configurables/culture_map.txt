@@ -210,7 +210,9 @@ link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
 #Albanian - Albanian, Arvanite(x)
 
 link = { vic3 = arvanite eu4group = albanian_g region = STATE_ATTICA region = STATE_PELOPONNESE }
+link = { vic3 = arvanite eu4 = albanian region = STATE_ATTICA region = STATE_PELOPONNESE }
 link = { vic3 = albanian eu4group = albanian_g }
+link = { vic3 = albanian eu4 = albanian}
 
 
 # West Slavic - Czech, Polish, Slovak and Sorb
