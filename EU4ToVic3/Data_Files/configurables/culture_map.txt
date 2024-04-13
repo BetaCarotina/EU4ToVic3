@@ -78,7 +78,8 @@ link = { vic3 = weder_german eu4group = germanic } # Fallback
 link = { vic3 = danish eu4 = danish eu4 = faroese eu4 = scanian eu4 = jutish eu4 = angli }
 link = { vic3 = norwegian eu4 = norwegian eu4 = cooler_norwegian eu4 = anglo_norse eu4 = trondersk eu4 = vestlandsk }
 link = { vic3 = swedish eu4 = swedish eu4 = geatish eu4 = gutish eu4 = geat_culture eu4 = gutnish_culture eu4 = jamatland_culture eu4 = gotar eu4 = gutnish }
-link = { vic3 = finnish eu4 = finnish eu4 = ruotsish }
+link = { vic3 = finnish eu4 = finnish eu4 = ruotsish eu4 = tavastian }
+link = { vic3 = karelian eu4 = karelian eu4 = ingrian }
 link = { vic3 = icelandic eu4 = icelandic }
 
 
@@ -96,7 +97,7 @@ link = { vic3 = yankee eu4 = american neoculture_override = yes }
 link = { vic3 = anglo_saxon eu4 = northumbrian eu4 = anglo_saxon eu4 = mercian eu4 = wessexian eu4 = essexian eu4 = east_anglian eu4 = ecgfrithian eu4 = anglosaxon eu4 = northerner }
 link = { vic3 = british eu4 = english eu4 = anglois }
 link = { vic3 = scottish eu4 = scottish eu4 = hibernic eu4 = orkney eu4 = shetland eu4 = lowland_scottish }
-link = { vic3 = welsh eu4 = welsh eu4 = welsh_celtic eu4 = cornish eu4 = east_welsh }
+link = { vic3 = welsh eu4 = welsh eu4 = welsh_celtic eu4 = cornish eu4 = cumbric eu4 = east_welsh }
 
 
 # Celtic - Breton(x), Irish, Welsh(x)
@@ -112,6 +113,8 @@ link = { vic3 = noric eu4 = celtic_pannonian }
 
 link = { vic3 = celtiberian eu4group = celtiberian_g }
 link = { vic3 = noric eu4group = scordiscian_g }
+
+link = { vic3 = irish eu4group = celtic region = STATE_LEINSTER region = STATE_CONNAUGHT region = STATE_MUNSTER region = STATE_ULSTER }
 
 
 # Italophone - Corsican, Maltese, North Italian, South Italian, Swiss(x)
@@ -178,7 +181,7 @@ link = { vic3 = frankish eu4group = frankish_g }
 # Finnic - Finnish(x), Sami, Ugrian and Estonian(x)
 link = { vic3 = sami eu4 = sapmi eu4 = lappish }
 link = { vic3 = ugrian eu4 = komi eu4 = ugrorussian eu4 = mari eu4 = mari_culture eu4 = permic_culture eu4 = udmurt }
-link = { vic3 = ugrian eu4group = finno_ugric }
+link = { vic3 = ugrian eu4group = finno_ugric eu4group = ugric }
 
 
 # Baltic - estonian, latvian, lithuanian, old_prussian/pruthenian
@@ -209,10 +212,10 @@ link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
 
 #Albanian - Albanian, Arvanite(x)
 
-link = { vic3 = arvanite eu4group = albanian_g region = STATE_ATTICA region = STATE_PELOPONNESE }
+link = { vic3 = arvanite eu4group = albanian_g region = STATE_ATTICA region = STATE_PELOPONNESE  }
 link = { vic3 = arvanite eu4 = albanian region = STATE_ATTICA region = STATE_PELOPONNESE }
 link = { vic3 = albanian eu4group = albanian_g }
-link = { vic3 = albanian eu4 = albanian}
+link = { vic3 = albanian eu4 = albanian }
 
 
 # West Slavic - Czech, Polish, Slovak and Sorb
@@ -224,9 +227,10 @@ link = { vic3 = sorb eu4 = sorbian eu4 = sorbian_new eu4 = polabian eu4 = sorbs 
 
 
 # East Slavic - Byelorussian, Russian, Ruthenian
-link = { vic3 = byelorussian eu4 = byelorussian eu4 = byelorussian_new eu4 = ilmenian eu4 = krivich eu4 = radimich } #Ilmenians (Krivichs) are legendarily linked to the Belarussian
-link = { vic3 = ukrainian eu4 = antean eu4 = ruthenian eu4 = ruthenian_new eu4 = ukrainian eu4 = volhynian eu4 = severian eu4 = kishinyov eu4 = red_ruthenian eu4 = drevlian eu4 = dulebian }
-link = { vic3 = russian eu4 = russian eu4 = russian_new eu4 = novgorodian eu4 = novgorodian_new eu4 = ryazanian eu4 = ryazanian_new eu4 = russian_culture eu4 = old_slavic eu4 = pomor eu4 = vyatich }
+# Voltaire's Nightmare has Ilmenians being Novgorodians
+link = { vic3 = byelorussian eu4 = byelorussian eu4 = byelorussian_new eu4 = dulebian } #Ilmenians (Krivichs) are legendarily linked to the Belarussian
+link = { vic3 = ukrainian eu4 = antean eu4 = ruthenian eu4 = ruthenian_new eu4 = ukrainian eu4 = volhynian eu4 = severian eu4 = kishinyov eu4 = red_ruthenian eu4 = drevlian }
+link = { vic3 = russian eu4 = russian eu4 = russian_new eu4 = novgorodian eu4 = novgorodian_new eu4 = ryazanian eu4 = ryazanian_new eu4 = russian_culture eu4 = old_slavic eu4 = pomor eu4 = vyatich eu4 = krivich eu4 = radimich eu4 = ilmenian }
 
 link = { vic3 = russian eu4group = east_slavic owner = RUS } #Keep last
 
