@@ -41,3 +41,13 @@ link = { culture = polishBOH culture = schlesianBOH addtrait = german_speaking }
 link = { culture = sorbianBOH addtrait = german_speaking }
 
 link = { culture = sicilian_arabic culture = siculo_arabic addtrait = arab_speaking }
+
+#Ante Bellum cultures
+
+link = { culture = english_new addtrait = german_speaking }
+link = { culture = american_new addtrait = german_speaking }
+link = { culture = scottish_new addtrait = german_speaking }
+link = { culture = dutch_new addtrait = german_speaking }
+link = { culture = flemish_new addtrait = german_speaking }
+link = { culture = frisian_new addtrait = german_speaking }
+link = { culture = turkish_christian addtrait = greek_culture addtrait = european_heritage removetrait = middle_eastern_heritage }
