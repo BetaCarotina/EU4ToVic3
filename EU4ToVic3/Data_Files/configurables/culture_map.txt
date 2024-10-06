@@ -222,8 +222,8 @@ link = { vic3 = slovene eu4 = carantanian eu4 = slovene eu4 = slovene_new eu4 = 
 
 
 #Lusophone - Afro-Brazilian, Brazilian, Portuguese(x)
-link = { vic3 = afro_brazilian @african_cultures region = region_brazil owner = POR }
-link = { vic3 = brazilian eu4 = portugese region = region_brazil }
+link = { vic3 = afro_brazilian @african_cultures region = region_brazil owner = POR owner = GAL }
+link = { vic3 = brazilian eu4 = portugese eu4 = galician region = region_brazil }
 link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
 
 
@@ -345,7 +345,7 @@ link = { vic3 = yakut eu4 = yakut eu4 = yukagyr eu4 = tungus eu4 = daur eu4 = ev
 #Turkic - Turkish, Azerbaijani, Bashkir, Chuvash, Tatar and Tuvan
 link = { vic3 = bashkir eu4 = bashkir }
 link = { vic3 = chuvash eu4 = chuvash }
-link = { vic3 = turkish eu4 = turkish eu4 = turkish_new eu4 = yorouk }
+link = { vic3 = turkish eu4 = turkish eu4 = turkish_new eu4 = turkish_christian eu4 = turkish_iranian eu4 = yorouk }
 link = { vic3 = tatar eu4 = sabir eu4 = hunnic eu4 = tartar eu4 = bolghar eu4 = cuman eu4 = khazar eu4 = qasim  eu4 = hunnic eu4 = sinoturk eu4 = nogai }
 link = { vic3 = tatar eu4group = tartar } #Fallback
 
