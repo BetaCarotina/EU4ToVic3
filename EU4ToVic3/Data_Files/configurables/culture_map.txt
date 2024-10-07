@@ -34,7 +34,7 @@
 
 @african_cultures = "eu4 = egyptian eu4 = carthaginian eu4group = kongo_group  eu4group = cushitic eu4group = african eu4group = southern_african eu4group = great_lakes_group eu4group = maghrebi eu4group = mande eu4group = sahelian eu4group = sudanese eu4group = west_african eu4group = punic_group"
 
-@spanish_cultures = "eu4 = castillian eu4 = mexican eu4 = platinean eu4 = leonese eu4 = aragonese eu4 = catalan eu4 = galician eu4 = andalucian eu4 = basque eu4 = mozarabic"
+@spanish_cultures = "eu4 = castillian eu4 = mexican eu4 = platinean eu4 = leonese eu4 = asturian eu4 = aragonese eu4 = catalan eu4 = galician eu4 = andalucian eu4 = basque eu4 = mozarabic"
 ##Colonial
 @canada_colony = "region = region_canada region = STATE_SASKATCHEWAN region = STATE_ALBERTA region = STATE_BRITISH_COLUMBIA region = STATE_YUKON_TERRITORY region = STATE_ALASKA region = STATE_NEW_BRUNSWICK"
 @usa_north_colony = "region = region_new_england region = region_the_midwest region = STATE_NORTH_DAKOTA region = STATE_SOUTH_DAKOTA region = STATE_NEBRASKA"
@@ -76,8 +76,8 @@ link = { vic3 = sorb eu4 = sorbianBOH }
 
 link = { vic3 = anglo_canadian eu4 = english_new eu4 = scottish_new @canada_colony }
 link = { vic3 = australian eu4 = english_new eu4 = scottish_new @australia_colony }
-link = { vic3 = dixie eu4 = english_new eu4 = scottish_new @usa_south_colony  }
-link = { vic3 = dixie eu4 = english_new eu4 = scottish_new region = region_mexico region = region_central_america region = region_caribbean owner = USA } #Golden Circle
+link = { vic3 = dixie eu4 = english_new eu4 = scottish_new eu4 = american_new @usa_south_colony  }
+link = { vic3 = dixie eu4 = english_new eu4 = scottish_new eu4 = american_new region = region_mexico region = region_central_america region = region_caribbean owner = USA } #Golden Circle
 link = { vic3 = yankee eu4 = english_new eu4 = scottish_new @usa_north_colony @usa_western_colony }
 link = { vic3 = yankee eu4 = american_new neoculture_override = yes }
 link = { vic3 = british eu4 = english_new }
