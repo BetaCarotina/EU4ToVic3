@@ -98,6 +98,7 @@ link = { eu4 = HES name = "Hesse" vic3 = HES } # Hesse
 link = { eu4 = SHL name = "Holstein" vic3 = HOL } # Holstein
 link = { eu4 = HSA name = "Lübeck" vic3 = LUB } # Lübeck
 link = { name = "The Hansa" vic3 = LUB } # Hansa => Lübeck
+link = { name = "Hansa" vic3 = LUB } # Hansa => Lübeck
 link = { eu4 = LUX name = "Luxembourg" vic3 = LUX } # Luxembourg
 link = { eu4 = MKL name = "Mecklemburg" vic3 = MEC } # Mecklemburg
 link = { eu4 = NSA name = "Nassau" vic3 = NAS } # Nassau
@@ -131,6 +132,7 @@ link = { eu4 = KRA name = "Kraków" vic3 = KRA } # Krakow
 link = { eu4 = CRI name = "Crimea" vic3 = CRI } # Crimea
 link = { eu4 = EST name = "Estonia" vic3 = EST } # Estonia
 link = { eu4 = HUN name = "Hungary" vic3 = HUN } # Hungary
+link = { name = "Magyars" vic3 = HUN } # Magyars => Hungary
 link = { eu4 = LIT name = "Lithuania" vic3 = LIT } # Lithuania
 link = { eu4 = LTG name = "Latgalia" vic3 = LAT } # Latvia
 link = { name = "Latvia" vic3 = LAT } # Latvia
@@ -141,7 +143,8 @@ link = { eu4 = SLO vic3 = SLV } # Nitra => Slovakia
 link = { eu4 = SWI name = "Switzerland" vic3 = SWI } # Switzerland
 link = { eu4 = TRA name = "Transylvania" vic3 = TRS } # Transylvania
 link = { eu4 = UKR name = "Ruthenia" vic3 = UKR } # Ruthenia => Ukraine
-link = { name = "Hetmanate" vic3 = UKR } # Hetmanate  => Ukraine
+link = { name = "Hetmanate" vic3 = UKR } # Hetmanate => Ukraine
+link = { name = "Ukraine" vic3 = UKR } # Ukraine
 # Czechoslovakia defined with Bohemia
 link = { eu4 = ALB name = "Albania" vic3 = ALB } # Albania
 link = { eu4 = BOS name = "Bosnia" vic3 = BOS } # Bosnia
@@ -467,9 +470,9 @@ link = { name = "Schleswig" vic3 = SCH } # Schleswig
 link = { name = "Kishi Zhuz" vic3 = KZH } # Kishi Zhuz
 link = { name = "Uly Zhuz" vic3 = UZH } # Uly Zhuz
 link = { name = "Orta Zhuz" vic3 = OZH } # Orta Zhuz
-#link = { eu4 = ??? vic3 = CAU } # Greater Cacausia
+#link = { eu4 = ??? vic3 = CAU } # Greater Caucasia
 link = { eu4 = SAV name = "Savoy" vic3 = SAV } # Savoy
-link = { name = "Rhineland" vic3 = SAV } # Rhineland
+link = { name = "Rhineland" vic3 = RHE } # Rhineland
 link = { name = "Paris Commune" vic3 = PRC } # Paris Commune
 link = { eu4 = KRL name = "Karelia" vic3 = KRL } # Karelia
 link = { name = "Tatarstan" vic3 = TAR } # Tatarstan => Tatarstan
