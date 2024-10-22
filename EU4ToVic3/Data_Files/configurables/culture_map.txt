@@ -156,6 +156,7 @@ link = { vic3 = argentine @spanish_cultures owner = ARG owner = PLT }
 link = { vic3 = uruguayan @spanish_cultures owner = URU }
 link = { vic3 = paraguayan @spanish_cultures owner = PRG }
 link = { vic3 = colombian @spanish_cultures owner = GCO owner = CLM }
+link = { vic3 = colombian eu4 = Colombian neoculture_override = yes }
 link = { vic3 = north_andean @spanish_cultures region = region_gran_colombia }
 link = { vic3 = platinean @spanish_cultures region = region_la_plata }
 link = { vic3 = platinean eu4 = platinean neoculture_override = yes }
@@ -166,10 +167,10 @@ link = { vic3 = mexican eu4 = mexican }
 ##Added - Andalucian
 link = { vic3 = andalucian eu4 = andalucian eu4 = mozarabic }
 link = { vic3 = basque eu4 = basque }
-link = { vic3 = catalan eu4 = catalan eu4 = aragonese eu4 = valencian eu4 = balearic }
+link = { vic3 = catalan eu4 = catalan eu4 = aragonese eu4 = valencian eu4 = Valencian eu4 = balearic }
 link = { vic3 = galician eu4 = galician }
 link = { vic3 = portuguese eu4 = portugese }
-link = { vic3 = spanish eu4 = castillian eu4 = leonese eu4 = asturian }
+link = { vic3 = spanish eu4 = castillian eu4 = leonese eu4 = asturian eu4 = Asturian }
 
 
 # Francophone - Afro-Antillean, Breton, Cajun, Corsican(x), Franco-Canadian, French, Metis(x), Occitan, Swiss(x), Wallonian(x)
@@ -223,7 +224,7 @@ link = { vic3 = slovene eu4 = carantanian eu4 = slovene eu4 = slovene_new eu4 = 
 
 #Lusophone - Afro-Brazilian, Brazilian, Portuguese(x)
 link = { vic3 = afro_brazilian @african_cultures region = region_brazil owner = POR owner = GAL }
-link = { vic3 = brazilian eu4 = portugese eu4 = galician region = region_brazil }
+link = { vic3 = brazilian eu4 = portugese eu4 = galician eu4 = Lusitanian region = region_brazil }
 link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
 
 
