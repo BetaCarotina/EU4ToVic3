@@ -111,6 +111,7 @@ link = { eu4 = korchin trait = mongol_language trait = central_asian_heritage et
 link = { eu4 = mongol trait  = mongol_language trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
 link = { eu4 = oirat trait = mongol_language trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
 link = { eu4group = Mongolian trait = mongol_language trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
+link = { eu4 = turanian_culture trait = iranian_turanian trait = turkic trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
 link = { eu4group = altaic trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
 link = { eu4group = central_american trait = native_mesoamerican_culture_group trait = indigenous_american_heritage ethnicity = native_american graphics = decentralised_americas }
 link = { eu4group = aridoamerican trait = native_mesoamerican_culture_group trait = indigenous_american_heritage ethnicity = native_american graphics = decentralised_americas }
