@@ -165,6 +165,7 @@ link = { vic3 = mexican eu4 = mexican }
 
 # Iberian - Basque, Catalan, Galician, Portuguese, Spanish
 ##Added - Andalucian
+link = { vic3 = spanish eu4 = andalucian eu4 = mozarabic religion_group = christian }
 link = { vic3 = andalucian eu4 = andalucian eu4 = mozarabic }
 link = { vic3 = basque eu4 = basque }
 link = { vic3 = catalan eu4 = catalan eu4 = aragonese eu4 = valencian eu4 = Valencian eu4 = balearic }
@@ -222,7 +223,7 @@ link = { vic3 = serb eu4 = serbian eu4 = serbian_new eu4 = montenegrin }
 link = { vic3 = slovene eu4 = carantanian eu4 = slovene eu4 = slovene_new eu4 = slovenian }
 
 
-#Lusophone - Afro-Brazilian, Brazilian, Portuguese(x)
+#Lusophone - Afro-Brazilian, Brazilian, Galician(x), Portuguese(x)
 link = { vic3 = afro_brazilian @african_cultures region = region_brazil owner = POR owner = GAL }
 link = { vic3 = brazilian eu4 = portugese eu4 = galician eu4 = Lusitanian region = region_brazil }
 link = { vic3 = brazilian eu4 = brazilian neoculture_override = yes }
