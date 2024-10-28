@@ -18,6 +18,7 @@ link = { eu4 = arbereshe trait = albanian_language trait = european_heritage eth
 link = { eu4group = albanian_g trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = south_slavic trait = jugoslav trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = west_slavic trait = west_slavic trait = european_heritage ethnicity = slavic graphics = european }
+link = { eu4 = Litvin trait = east_slavic trait = baltic_culture_group trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = east_slavic trait = east_slavic trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4 = anglois trait = anglophone trait = francophone trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = vietnamese_new trait = sinosphere trait = khmer_language trait = southeast_asian_heritage ethnicity = asian graphics = east_asian } # Ironic, but working with vanilla
@@ -43,10 +44,11 @@ link = { eu4 = dutch trait = beneluxian_culture_group trait = european_heritage 
 link = { eu4 = flemish trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = frisian trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4group = dutch_group trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
+link = { eu4group = west_germanic trait = anglophone trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4group = germanic trait = german_speaking trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = sapmi trait = finnic trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = karelian trait = finnic trait = european_heritage ethnicity = caucasian graphics = european }
-link = { eu4 = finnish trait = finnic trait = scandinavian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
+link = { eu4 = finnish trait = finnic trait = scandinavian_culture_group trait = eufropean_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = norse_gael trait = celtic_people trait = scandinavian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = norse_gael_nordic trait = celtic_people trait = scandinavian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4group = scandinavian trait = scandinavian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
