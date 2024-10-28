@@ -149,3 +149,29 @@ development_ideas = {
 domination_ideas = {
 	mil = 1
 }
+
+# Ante Bellum
+
+globaldomination_ideas = {
+	literacy = 2
+	adm = 1
+	dip = 1
+	mil = 1
+}
+
+celestial_ideas = {
+	dip = 1
+}
+
+professional_ideas = {
+	mil = 1
+	ig = ig_armed_forces
+}
+
+state_governance_ideas = {
+	adm = 1
+}
+
+imperial_ideas = {
+	dip = 1
+}
