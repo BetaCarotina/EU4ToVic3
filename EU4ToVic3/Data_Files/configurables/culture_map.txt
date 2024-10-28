@@ -328,6 +328,7 @@ link = { vic3 = uighur eu4 = uyghur eu4 = old_uyghur }
 link = { vic3 = uzbek eu4 = chorasmian eu4 = uzbek eu4 = uzbehk eu4 = karluk }
 # Tocharian dynamically generated
 
+link = { vic3 = turkish eu4 = turkish } # Ante Bellum Altaic/Oghuz
 
 # Mongolian - Mongol, Kalmyk and Tuvan
 link = { vic3 = kalmyk eu4group = altaic region = region_anatolia region = region_caucasus region = region_dnieper region = region_belarus region = region_arctic_russia region = region_russia region = STATE_INGRIA }
@@ -335,9 +336,6 @@ link = { vic3 = tuvan eu4group = altaic region = STATE_TUVA }
 
 link = { vic3 = mongol eu4 = mongol eu4 = chahar eu4 = khalkha eu4 = oirats eu4 = khitan eu4 = yuan_culture eu4 = khalkas eu4 = khamnigan eu4 = khorchin eu4 = tumed eu4 = altaic_new eu4 = chaghatai }
 link = { vic3 = tuvan eu4 = tuvan eu4 = uriankhai }
-
-#North Asian
-#link = { vic3 = manul eu4 = ??? } - Here as a reminder to NOT map this vanilla placeholder culture
 
 #Siberian - Buryat, Siberian and Yakut
 link = { vic3 = buryat eu4 = buryat }
