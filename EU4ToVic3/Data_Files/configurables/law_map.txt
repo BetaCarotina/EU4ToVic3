@@ -39,7 +39,7 @@ lawgroup_governance_principles = {
 			revolutionary_republic_reform junior_revolutionary_republic_reform peasants_republic
 			kongsi_federation american_republic federal_republic republicanism_reform democratic_values_reform
 			parliamentary_reform parliamentary_republic_reform english_parliamentary_republic_government
-			hansahansetag
+			bav_south_german_confederation hansahansetag rhl_confederation_reform welsh_parliament 
 		}
 	}
 	law_presidential_republic = {
@@ -107,7 +107,7 @@ lawgroup_distribution_of_power = {
 			citizenry_reform elective_monarchy_reform administration_of_the_parliament_reform catalan_cortes_reform
 			courts_of_navarra governing_senate_reform plutocratic_reform restoration_of_the_senate_reform
 			ven_promissione_ducale_reform support_state_reform
-			wenceslas aduconstitution witenred
+			aduconstitution witenred wenceslas tataria_elevate welsh_parliament
 		}
 	}
 	law_landed_voting = {
@@ -120,7 +120,8 @@ lawgroup_distribution_of_power = {
 			aristocratic_values_reform fraternite_reform national_constituent_reform enlightened_principle_reform
 			landholders_reform clerical_commission_reform regionally_elected_commanders british_monarchy
 			tanistry_reform bohemian_elective_kingdom_reform house_of_lords_reform nakharar_title
-			frcrepresentatives bulboyar sweriksdag polestablishsejm saxon_england british_monarchy
+			bav_council_of_eight british_monarchy bulboyar saxon_england frcrepresentatives geodarbazi georegulations polestablishsejm
+			sweriksdag tataria_kurultai wls_rheol
 		}
 	}
 	law_elder_council = {
@@ -145,7 +146,7 @@ lawgroup_distribution_of_power = {
 			empower_buddhist_temples_reform secure_clergy_power_reform admiralty_regime_reform
 			japanese_divine_empire dutch_republic fifth_monarchists_reform namestnik_reform
 			arabic_plutocracy_reform merchant_representation_reform orangist_stadholders_reform
-			frcfeudalism byzsenate sicgiama ibecounciliberia engcyning
+			nnvsukkallu byzsenate engcyning frcfeudalism ibecounciliberia sicgiama rusboyarduma
 		}
 	}
 	law_autocracy = {
@@ -166,7 +167,8 @@ lawgroup_distribution_of_power = {
 			peters_government_reform superiority_of_the_state_reform divided_aristocracy_reform
 			austrian_absolute_monarchy crusader_nobility_reform german_austrian_reform german_bavarian_reform
 			apostolic_kingdom extend_the_unio_trium_nationum_reform imperial_hungarian_government
-			byzabsolutism sicabsolutism ibepaternal enghereditary yuatianming japandivinity
+			byzabsolutism enghereditary ibepaternal japandivinity russenate rustsar sicabsolutism tataria_pasta
+			yuatianming
 		}
 	}
 }
@@ -234,7 +236,7 @@ lawgroup_citizenship = {
 			harmonization_of_cultures_reform taxation_of_the_foreigners_reform penal_colonies_reform
 			standardized_millets_reform strengthened_parliament_reform millennialistic_theocracy_reform
 			german_franconian_reform german_swabian_reform
-			poljews
+			poljews feoslavic
 		}
 	}
 	law_national_supremacy = {
@@ -265,7 +267,7 @@ lawgroup_colonization = {
 	law_frontier_colonization = {
 		forms = { }
 		ideas = { expansion_ideas }
-		reforms = { }
+		reforms = { russloboda }
 	}
 	law_colonial_resettlement = {
 		forms = { }
@@ -297,7 +299,7 @@ lawgroup_church_and_state = {
 			revolutionary_principle_reform equality_principle_reform clerical_commission_reform
 			theocratic_democracy_reform constitional_theocracy_reform organising_our_religion_reform
 			separate_clergy_from_state_affairs_reform cult_of_reason_reform secularization_of_the_state_reform
-			hsntolerate ibeintegrate otr_tolerance adutolerance polreligion
+			adutolerance hsntolerate ibeintegrate otr_tolerance polreligion rhl_atheist_ideas
 		}
 	}
 	# !THEOCRACY
@@ -310,6 +312,7 @@ lawgroup_church_and_state = {
 			priestly_autonomy_reform lip_service_reform abolished_caste_system_reform
 			strengthen_the_dhimmi_reform curtail_clergy_power_reform maintain_clergy_balance_of_power_reform
 			english_conciliarism_reform turkoman_ottoman_institutions integrated_ottoman_officials
+			georuisi ottoman_millet
 		}
 	}
 	law_state_religion = {
@@ -329,8 +332,8 @@ lawgroup_church_and_state = {
 			fiqh_laws_reform sufism_decree_reform anglican_state_church_reform legacy_of_the_safavid_reform
 			andean_empire_reform divine_kingship_reform crusader_nobility_reform german_bavarian_reform
 			german_westphalian_reform apostolic_kingdom
-			frcstate norsanction armchurch ibebanish ibecolonialinqui otr_religious mvapatriarch
-			htm_faith japanshinto swewesternize swemission zundivine zunradiant
+			armchurch frcstate geomiaphysite htm_faith ibebanish ibecolonialinqui japanshinto otr_religious mvapatriarch 
+			norsanction rusconvert rusexpandmissionary swewesternize swemission zundivine zunradiant
 		}
 	}
 	law_state_atheism = {
@@ -363,7 +366,7 @@ lawgroup_land_reform = {
 			separation_of_boyars_from_court_reform revolutionary_republic_reform junior_revolutionary_republic_reform citizenry_reform
 			theocratic_democracy_reform religious_culture_reform regionally_elected_commanders laesio_enormis_reform
 			chinampa_farms_reform
-			bohsnem northralls
+			bohsnem northralls ruscrushprinces wls_privileges
 		}
 	}
 	law_serfdom = {
@@ -372,7 +375,7 @@ lawgroup_land_reform = {
 		reforms = { enforce_privileges_reform corvee_reform strengthen_the_dhimmi_reform ministerialis_promotion_reform 
 			grant_noble_castle_rights_reform devshirme_system_reform trade_company_government aristocratic_values_reform landholders_reform
 			loyal_nobility_reform TIM_plunder_economy
-			polszlachta
+			nnvilku polszlachta tataria_nobility
 		}
 	}
 }
@@ -413,7 +416,7 @@ lawgroup_economic_system = {
 			military_principle_reform revolutionary_principle_reform external_mission_reform
 			mission_to_civilize_reform commercial_mission_reform war_economy_reform thalassocracy_reform
 			royal_charters_reform merchant_aristocracy_reform bergordnung_reforms_reform laesio_enormis_reform
-			bohmining
+			bohmining crn_tinbaron feoosmans feourban
 		}
 	}
 	law_agrarianism = {
@@ -422,7 +425,7 @@ lawgroup_economic_system = {
 		reforms = { teutonic_bishopric_reform monastic_breweries_reform all_under_tengri_reform 
 			native_land_tradition_reform native_settle_down_reform lands_for_the_monasteries_reform
 			legacy_of_the_steppes_reform jap_gokaido_reform chinampa_farms_reform
-			brifarm
+			brifarm wls_privileges
 		}
 	}
 	law_traditionalism = {
@@ -449,7 +452,7 @@ lawgroup_bureaucracy = {
 			cultural_administration_reform universal_suffrage_reform subservient_administrators_reform
 			pursuit_of_knowledge_reform regionally_elected_commanders monastic_elections_reform
 			priestly_autonomy_reform qng_grand_council_reform courts_of_navarra restore_the_master_of_offices_reform
-			mvareform aduprovincial adulegalsystem naznomarchy nazmaat maitreya_admin
+			aduprovincial adulegalsystem crn_divide crn_foreign maitreya_admin mvareform naznomarchy nazmaat rustable
 		}
 	}
 	law_appointed_bureaucrats = {
@@ -464,7 +467,8 @@ lawgroup_bureaucracy = {
 			great_council_of_mechelen_reform strengthen_bakuhan_system_reform system_of_councils_reform
 			bureaucratic_rule_reform namestnik_reform legacy_of_eranshahr_reform court_of_art_and_culture_reform
 			german_franconian_reform german_rhenish_reform german_other_reform
-			aduceremonial bulreform roman_bureaucracy sicqadi zunadministration zunjustice
+			alnroman aduceremonial nnvprovincial bulreform roman_bureaucracy sicqadi tataria_meritocracy
+			zunadministration zunjustice
 		}
 	}
 	law_hereditary_bureaucrats = {
@@ -474,6 +478,7 @@ lawgroup_bureaucracy = {
 			of_noble_bearing_reform dyanstic_administration_reform signoria_reform noble_elite_reform
 			nepotism_reform native_codified_power_reform ministerialis_promotion_reform parliament_vs_monarchy_reform
 			hereditary_religious_leadership_reform tysyatsky_reform timurid_diwan_reform integrated_ottoman_officials
+			hsnatabegs rusmestnichestvo ruscourtprinces wls_rule
 		}
 	}
 }
@@ -512,9 +517,10 @@ lawgroup_army_model = {
 			swiss_mercenary_reform expanded_black_army_reform royal_marines_reform professional_navy_reform
 			new_order_regiments_reform reform_the_samurai_reform tercios_reform sparapet_office ayyubid_high_command
 			german_prussian_reform
-			frcoriflamme norvarangian norjvikings armnakharar armcrusader byztagmata sicfleet ibeadmiralty
-			otr_cavalry bulsiege nazcavalry swenobles bricavalry polhusaria enghousecarls engwarships engoak
-			mercenary_army_reform professional_army_reform officer_corps_reform lat_cavalry
+			armnakharar armcrusader bulsiege byztagmata bricavalry crn_general enghousecarls engwarships
+			engoak frcoriflamme ibeadmiralty otr_cavalry lat_cavalry nazcavalry
+			norvarangian norjvikings ottoman_nizam polhusaria rhl_imperial_guards sicfleet swenobles
+			mercenary_army_reform professional_army_reform officer_corps_reform
 		}
 	}
 	law_peasant_levies = {
@@ -528,7 +534,7 @@ lawgroup_army_model = {
 			volunteers_of_the_faith_reform manrent_reform sygnakhs_system_reform cossacks_registry_reform
 			lessons_of_the_hussite_wars_reform streltsy_reform legacy_of_the_seljuk_reform modernized_furusiyya_reform
 			gothic_monarchy_reform cuman_lancers_reform
-			aduawasim polszlachta sicrecruits zunfortress
+			aduawasim nnvilku geofortify polszlachta sicrecruits tataria_aristocracy wls_aristocracy zunfortress
 		}
 	}
 }
@@ -548,7 +554,7 @@ lawgroup_education_system = {
 	law_private_schools = {
 		forms = { }
 		ideas = { naval_ideas economic_ideas influence_ideas }
-		reforms = { aduforeignscholar nazcoptic japanscholars }
+		reforms = { aduforeignscholar hsnscholars nazcoptic japanscholars }
 	}
 	law_religious_schools = {
 		forms = { theocracy }
@@ -558,7 +564,7 @@ lawgroup_education_system = {
 			education_of_the_missionaries_reform guru_advisors_reform 
 			state_of_theologians_reform pursuit_of_knowledge_reform state_madrasas_reform
 			german_westphalian_reform continue_the_renaissance_reform
-			frcrenaissance hsnmadrasa mvapatriarch engchronicle rusmetropolitanschools
+			frcrenaissance hsnmadrasa mvapatriarch engchronicle rusmetropolitanschools rusreligiouscharters
 		}
 	}
 	law_no_schools = {
@@ -716,7 +722,7 @@ lawgroup_taxation = {
 			ambrosian_republic empowered_quartermasters_reform leading_clergy_reform merchant_theocracy_reform
 			divinity_through_craftsmanship_reform empower_the_burghers_reform reestablish_the_burgeoisie_reform
 			ottoman_siyasah_tax_reform
-			ibecouncils engheptarch
+			hsnwaqf engheptarch ibecouncils ottoman_eyalets
 		}
 	}
 	law_land_based_taxation = {
@@ -758,7 +764,7 @@ lawgroup_trade_policy = {
 			mission_to_civilize_reform pious_merchants_reform monastic_breweries_reform 
 			divinity_through_craftsmanship_reform empower_the_burghers_reform reestablish_the_burgeoisie_reform 
 			new_world_exploitation_reform vodka_of_the_crown_reform german_saxon_reform german_swabian_reform
-			siccurrency brifishing poljews
+			siccurrency brifishing poljews feoosmans
 		}
 	}
 	law_mercantilism = {
@@ -770,7 +776,7 @@ lawgroup_trade_policy = {
 			mercantilistic_approach_reform trade_company_government namestnik_reform thalassocracy_reform
 			royal_charters_reform consulate_of_the_sea karimi_stations_reform german_lower_saxon_reform
 			merchant_representation_reform
-			armfleet hansahansetag nazarab zunroutes
+			armfleet hansahansetag nazarab ottoman_corporation zunroutes
 		}
 	}
 	law_isolationism = {
