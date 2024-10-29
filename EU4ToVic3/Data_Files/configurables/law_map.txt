@@ -330,7 +330,7 @@ lawgroup_church_and_state = {
 			andean_empire_reform divine_kingship_reform crusader_nobility_reform german_bavarian_reform
 			german_westphalian_reform apostolic_kingdom
 			frcstate norsanction armchurch ibebanish ibecolonialinqui otr_religious mvapatriarch
-			swewesternize swemission japanshinto htm_faith
+			htm_faith japanshinto swewesternize swemission zundivine zunradiant
 		}
 	}
 	law_state_atheism = {
@@ -464,7 +464,7 @@ lawgroup_bureaucracy = {
 			great_council_of_mechelen_reform strengthen_bakuhan_system_reform system_of_councils_reform
 			bureaucratic_rule_reform namestnik_reform legacy_of_eranshahr_reform court_of_art_and_culture_reform
 			german_franconian_reform german_rhenish_reform german_other_reform
-			roman_bureaucracy sicqadi bulreform aduceremonial
+			aduceremonial bulreform roman_bureaucracy sicqadi zunadministration zunjustice
 		}
 	}
 	law_hereditary_bureaucrats = {
@@ -528,7 +528,7 @@ lawgroup_army_model = {
 			volunteers_of_the_faith_reform manrent_reform sygnakhs_system_reform cossacks_registry_reform
 			lessons_of_the_hussite_wars_reform streltsy_reform legacy_of_the_seljuk_reform modernized_furusiyya_reform
 			gothic_monarchy_reform cuman_lancers_reform
-			sicrecruits aduawasim polszlachta
+			aduawasim polszlachta sicrecruits zunfortress
 		}
 	}
 }
@@ -770,7 +770,7 @@ lawgroup_trade_policy = {
 			mercantilistic_approach_reform trade_company_government namestnik_reform thalassocracy_reform
 			royal_charters_reform consulate_of_the_sea karimi_stations_reform german_lower_saxon_reform
 			merchant_representation_reform
-			hansahansetag armfleet nazarab
+			armfleet hansahansetag nazarab zunroutes
 		}
 	}
 	law_isolationism = {
