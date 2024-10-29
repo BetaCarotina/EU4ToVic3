@@ -91,6 +91,7 @@ lawgroup_distribution_of_power = {
 			pirate_representation_reform government_for_people_reform theocratic_democracy_reform
 			constitional_theocracy_reform monastic_elections_reform united_cantons_reform strengthened_parliament_reform
 			civic_republicanism_government
+			noralthing
 		}
 	}
 	law_wealth_voting = {
@@ -174,7 +175,8 @@ lawgroup_slavery = {
 		forms = { theocracy }
 		ideas = { plutocracy_ideas humanist_ideas }
 		reforms = { two_treatises_reform peasants_republic egalite_reform 
-			moral_principle_reform enlightened_principle_reform balanced_mission_reform }
+			moral_principle_reform enlightened_principle_reform balanced_mission_reform
+			htm_refuge }
 	}
 	law_legacy_slavery = {
 		forms = { monarchy republic }
@@ -214,6 +216,7 @@ lawgroup_citizenship = {
 			enlightened_principle_reform revolutionary_principle_reform papacy_reform balanced_mission_reform
 			belief_and_unity_reform cultural_safe_haven_reform many_fingers_of_god_reform german_cultural_disunity_reform
 			imperial_hungarian_government
+			htm_faith
 		}
 	}
 	law_racial_segregation = {
@@ -258,7 +261,8 @@ lawgroup_colonization = {
 	law_colonial_resettlement = {
 		forms = { }
 		ideas = { naval_ideas }
-		reforms = { penal_colonies_reform free_trade_reform cultural_administration_reform external_mission_reform embedded_norse_government_reform }
+		reforms = { penal_colonies_reform free_trade_reform cultural_administration_reform external_mission_reform embedded_norse_government_reform
+		norcolonize }
 	}
 	law_colonial_exploitation = {
 		forms = { }
@@ -314,6 +318,7 @@ lawgroup_church_and_state = {
 			fiqh_laws_reform sufism_decree_reform anglican_state_church_reform legacy_of_the_safavid_reform
 			andean_empire_reform divine_kingship_reform crusader_nobility_reform german_bavarian_reform
 			german_westphalian_reform apostolic_kingdom
+			frcstate norsanction htm_faith
 		}
 	}
 	law_state_atheism = {
@@ -336,6 +341,7 @@ lawgroup_land_reform = {
 		reforms = { quash_noble_power_reform stability_principle_reform enlightened_principle_reform  equality_principle_reform
 			abolished_caste_system_reform peasants_republic colonial_government crown_colony_government private_enterprise_colony_government
 			self_governing_colony_government liberte_reform egalite_reform fraternite_reform equal_electorate_reform three_classes_reform
+			htm_refuge
 		}
 	}
 	law_tenant_farmers = {
@@ -345,6 +351,7 @@ lawgroup_land_reform = {
 			separation_of_boyars_from_court_reform revolutionary_republic_reform junior_revolutionary_republic_reform citizenry_reform
 			theocratic_democracy_reform religious_culture_reform regionally_elected_commanders laesio_enormis_reform
 			chinampa_farms_reform
+			northralls
 		}
 	}
 	law_serfdom = {
@@ -528,6 +535,7 @@ lawgroup_education_system = {
 			education_of_the_missionaries_reform guru_advisors_reform 
 			state_of_theologians_reform pursuit_of_knowledge_reform state_madrasas_reform
 			german_westphalian_reform continue_the_renaissance_reform
+			rusmetropolitanschools
 		}
 	}
 	law_no_schools = {
