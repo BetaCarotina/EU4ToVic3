@@ -155,6 +155,7 @@ link = { vic3 = mexican eu4 = mexican }
 
 # Iberian - Basque, Catalan, Galician, Portuguese, Spanish
 ##Added - Andalucian
+link = { vic3 = spanish eu4 = andalucian eu4 = mozarabic religion_group = christian }
 link = { vic3 = andalucian eu4 = andalucian eu4 = mozarabic }
 link = { vic3 = basque eu4 = basque }
 link = { vic3 = catalan eu4 = catalan eu4 = aragonese eu4 = valencian eu4 = balearic }
