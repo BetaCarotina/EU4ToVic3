@@ -51,3 +51,5 @@ link = { culture = dutch_new addtrait = german_speaking }
 link = { culture = flemish_new addtrait = german_speaking }
 link = { culture = frisian_new addtrait = german_speaking }
 link = { culture = turkish_christian addtrait = greek_culture addtrait = european_heritage removetrait = middle_eastern_heritage }
+link = { culture = turkish_new addtrait = arab_speaking }
+link = { culture = turkish_iranian addtrait = iranian_turanian_culture_group }
