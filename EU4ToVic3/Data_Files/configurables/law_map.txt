@@ -123,8 +123,8 @@ lawgroup_distribution_of_power = {
 			aristocratic_values_reform fraternite_reform national_constituent_reform enlightened_principle_reform
 			landholders_reform clerical_commission_reform regionally_elected_commanders british_monarchy
 			tanistry_reform bohemian_elective_kingdom_reform house_of_lords_reform nakharar_title parliamentary_reform
-			arscouncil bav_council_of_eight british_monarchy bulboyar saxon_england frcrepresentatives geodarbazi georegulations
-			polestablishsejm sweriksdag tataria_kurultai wls_rheol
+			arscouncil bav_council_of_eight british_monarchy bulboyar saxon_england est_council_of_chiefs frcrepresentatives
+			geodarbazi georegulations polestablishsejm sweriksdag tataria_kurultai wls_rheol
 		}
 	}
 	law_elder_council = {
@@ -239,7 +239,7 @@ lawgroup_citizenship = {
 			harmonization_of_cultures_reform taxation_of_the_foreigners_reform penal_colonies_reform
 			standardized_millets_reform strengthened_parliament_reform millennialistic_theocracy_reform
 			german_franconian_reform german_swabian_reform
-			arsitalian arsresurgence poljews feoslavic
+			arsitalian arsresurgence est_council_of_chiefs poljews feoslavic wee_pagan_coalition
 		}
 	}
 	law_national_supremacy = {
@@ -302,6 +302,7 @@ lawgroup_church_and_state = {
 			revolutionary_principle_reform equality_principle_reform clerical_commission_reform
 			theocratic_democracy_reform constitional_theocracy_reform organising_our_religion_reform
 			separate_clergy_from_state_affairs_reform cult_of_reason_reform secularization_of_the_state_reform
+			est_harmony
 		}
 	}
 	# !THEOCRACY
@@ -315,7 +316,7 @@ lawgroup_church_and_state = {
 			strengthen_the_dhimmi_reform curtail_clergy_power_reform maintain_clergy_balance_of_power_reform
 			english_conciliarism_reform turkoman_ottoman_institutions integrated_ottoman_officials
 			georuisi japanshinbutsu ottoman_millet rhl_atheist_ideas
-			adutolerance hsntolerate ibeintegrate mch_buddhist otr_tolerance polreligion wee_pagan_coalition
+			adutolerance hsntolerate ibeintegrate mch_buddhist otr_tolerance polreligion
 		}
 	}
 	law_state_religion = {
@@ -507,8 +508,9 @@ lawgroup_army_model = {
 			merchant_arsenal_reform rajput_military_leadership_reform the_maratha_army_reform subutais_strategies_reform
 			ordennancas_reform condottieri_contracts_reform staatse_leger_reform cawa_auxiliary_forces theme_system_reform
 			german_swiss_reform seven_provinces_reform vozove_hradby_reform
-			armazatavrear mission_expand_orders byztheme byzthemata ibeorders ibesantiago otr_orders
-			mvafort mvapohotovost nazmamluks wee_forest wee_pagan_fury military_draft_reform
+			armazatavrear blt_forest_warfare blt_pulka_system mission_expand_orders byztheme byzthemata ibeorders ibesantiago
+			otr_orders mvafort mvapohotovost nazmamluks prr_pruthenian_warchiefdom wee_forest wee_pagan_fury
+			military_draft_reform
 		}
 	}
 	law_professional_army = {
@@ -773,7 +775,7 @@ lawgroup_trade_policy = {
 			mission_to_civilize_reform pious_merchants_reform monastic_breweries_reform 
 			divinity_through_craftsmanship_reform empower_the_burghers_reform reestablish_the_burgeoisie_reform 
 			new_world_exploitation_reform vodka_of_the_crown_reform german_saxon_reform german_swabian_reform
-			siccurrency brifishing japanzaibatsu poljews japanredseal feoosmans
+			blt_amber_trade_charter siccurrency brifishing japanzaibatsu poljews japanredseal feoosmans
 		}
 	}
 	law_mercantilism = {
