@@ -229,6 +229,7 @@ lawgroup_citizenship = {
 			belief_and_unity_reform cultural_safe_haven_reform many_fingers_of_god_reform german_cultural_disunity_reform
 			imperial_hungarian_government
 			mch_buddhist sicitalo ibeintegrate adutolerance chinamongols iranzamin_tajik integration_of_wa
+			tibetscript1 tibetscript2
 		}
 	}
 	law_racial_segregation = {
@@ -239,7 +240,7 @@ lawgroup_citizenship = {
 			harmonization_of_cultures_reform taxation_of_the_foreigners_reform penal_colonies_reform
 			standardized_millets_reform strengthened_parliament_reform millennialistic_theocracy_reform
 			german_franconian_reform german_swabian_reform
-			arsitalian arsresurgence est_council_of_chiefs poljews feoslavic wee_pagan_coalition
+			arsitalian arsresurgence crn_foreign est_council_of_chiefs poljews feoslavic wee_pagan_coalition
 		}
 	}
 	law_national_supremacy = {
@@ -316,7 +317,7 @@ lawgroup_church_and_state = {
 			strengthen_the_dhimmi_reform curtail_clergy_power_reform maintain_clergy_balance_of_power_reform
 			english_conciliarism_reform turkoman_ottoman_institutions integrated_ottoman_officials
 			georuisi japanshinbutsu ottoman_millet rhl_atheist_ideas
-			adutolerance hsntolerate ibeintegrate mch_buddhist otr_tolerance polreligion
+			adutolerance hsntolerate ibeintegrate mch_buddhist nazcoptic otr_tolerance polreligion
 		}
 	}
 	law_state_religion = {
@@ -508,8 +509,9 @@ lawgroup_army_model = {
 			merchant_arsenal_reform rajput_military_leadership_reform the_maratha_army_reform subutais_strategies_reform
 			ordennancas_reform condottieri_contracts_reform staatse_leger_reform cawa_auxiliary_forces theme_system_reform
 			german_swiss_reform seven_provinces_reform vozove_hradby_reform
-			armazatavrear blt_forest_warfare blt_pulka_system mission_expand_orders byztheme byzthemata ibeorders ibesantiago
-			otr_orders mvafort mvapohotovost nazmamluks prr_pruthenian_warchiefdom wee_forest wee_pagan_fury
+			armazatavrear blt_forest_warfare blt_pulka_system crn_society mission_expand_orders byztheme byzthemata
+			ibeorders ibesantiago otr_orders mvafort mvapohotovost nazmamluks prr_pruthenian_warchiefdom
+			wee_forest wee_pagan_fury
 			military_draft_reform
 		}
 	}
