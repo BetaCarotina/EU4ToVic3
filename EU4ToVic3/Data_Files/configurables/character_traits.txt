@@ -109,6 +109,7 @@ personalities = {
 	reaver_personality = wrathful
 	last_knight_personality = romantic
 	immortal_personality = converter_immortal
+	thunderer_personality = wrathful #Ante Bellum
 }
 
 global = {
