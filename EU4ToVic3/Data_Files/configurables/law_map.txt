@@ -95,7 +95,7 @@ lawgroup_distribution_of_power = {
 			pirate_representation_reform government_for_people_reform theocratic_democracy_reform
 			constitional_theocracy_reform monastic_elections_reform united_cantons_reform strengthened_parliament_reform
 			civic_republicanism_government parliamentary_reform presidential_monarchy_reform the_social_contract_reform
-			bohsnem noralthing briparliament
+			bohsnem noralthing briparliament ab_florentine_peasants_reform ab_tuscan_peasants_reform
 		}
 	}
 	law_wealth_voting = {
@@ -111,6 +111,7 @@ lawgroup_distribution_of_power = {
 			ven_promissione_ducale_reform support_state_reform regional_representation_reform parliamentary_reform
 			presidential_monarchy_reform two_treatises_reform
 			aduconstitution witenred wenceslas tataria_elevate welsh_parliament
+			ab_florentine_merchants_reform ab_tuscan_merchants_reform
 		}
 	}
 	law_landed_voting = {
@@ -170,7 +171,8 @@ lawgroup_distribution_of_power = {
 			peters_government_reform superiority_of_the_state_reform divided_aristocracy_reform
 			austrian_absolute_monarchy crusader_nobility_reform german_austrian_reform german_bavarian_reform
 			apostolic_kingdom extend_the_unio_trium_nationum_reform imperial_hungarian_government
-			byzabsolutism enghereditary ibepaternal japandivinity russenate rustsar reformed_shogunate sicabsolutism
+			byzabsolutism enghereditary ab_florentine_military_reform ab_tuscan_military_reform
+			ibepaternal japandivinity russenate rustsar reformed_shogunate sicabsolutism
 			tataria_pasta yuatianming
 		}
 	}
@@ -459,7 +461,7 @@ lawgroup_bureaucracy = {
 			cultural_administration_reform universal_suffrage_reform subservient_administrators_reform
 			pursuit_of_knowledge_reform regionally_elected_commanders monastic_elections_reform
 			priestly_autonomy_reform qng_grand_council_reform courts_of_navarra restore_the_master_of_offices_reform
-			aduprovincial adulegalsystem crn_divide crn_foreign mch_admin maitreya_admin mvareform
+			aduprovincial adulegalsystem crn_divide crn_foreign mch_admin maitreya_admin
 			naznomarchy nazmaat rustable
 		}
 	}
@@ -475,7 +477,7 @@ lawgroup_bureaucracy = {
 			great_council_of_mechelen_reform strengthen_bakuhan_system_reform system_of_councils_reform
 			bureaucratic_rule_reform namestnik_reform legacy_of_eranshahr_reform court_of_art_and_culture_reform
 			german_franconian_reform german_rhenish_reform german_other_reform
-			alnroman aduceremonial arsitalian nnvprovincial bulreform roman_bureaucracy japandaij sicqadi
+			alnroman aduceremonial arsitalian nnvprovincial bulreform roman_bureaucracy japandaij mvareform sicqadi
 			tataria_meritocracy wee_confederation zunadministration zunjustice
 		}
 	}
@@ -528,8 +530,9 @@ lawgroup_army_model = {
 			new_order_regiments_reform reform_the_samurai_reform tercios_reform sparapet_office ayyubid_high_command
 			german_prussian_reform
 			akgunid_ghazi arspiedmont arsresurgence armnakharar armcrusader bulsiege byztagmata bricavalry crn_general
-			enghousecarls engwarships engoak frcoriflamme ibeadmiralty japanships japanshizoku otr_cavalry lat_cavalry
-			nazcavalry norvarangian norjvikings ottoman_nizam polhusaria rhl_imperial_guards sicfleet swenobles wee_naval
+			enghousecarls engwarships engoak ab_condottiero_reform frcoriflamme ibeadmiralty japanships japanshizoku
+			otr_cavalry lat_cavalry nazcavalry norvarangian norjvikings ottoman_nizam polhusaria rhl_imperial_guards
+			sicfleet swenobles wee_naval
 			mercenary_army_reform professional_army_reform officer_corps_reform
 		}
 	}
@@ -777,7 +780,7 @@ lawgroup_trade_policy = {
 			mission_to_civilize_reform pious_merchants_reform monastic_breweries_reform 
 			divinity_through_craftsmanship_reform empower_the_burghers_reform reestablish_the_burgeoisie_reform 
 			new_world_exploitation_reform vodka_of_the_crown_reform german_saxon_reform german_swabian_reform
-			blt_amber_trade_charter siccurrency brifishing japanzaibatsu poljews japanredseal feoosmans
+			blt_amber_trade_charter ab_customs_union siccurrency brifishing japanzaibatsu poljews japanredseal feoosmans
 		}
 	}
 	law_mercantilism = {
