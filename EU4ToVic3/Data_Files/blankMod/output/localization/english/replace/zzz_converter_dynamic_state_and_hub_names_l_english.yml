@@ -1,0 +1,76 @@
+﻿l_english:
+ # Ulster - English by default
+ STATE_ULSTER_irish: "Ulaidh"
+ HUB_NAME_STATE_ULSTER_city_irish: "Béal Feirste"
+ HUB_NAME_STATE_ULSTER_port_irish: "Doire"
+ HUB_NAME_STATE_ULSTER_mine_irish: "Inis Ceithleann"
+ HUB_NAME_STATE_ULSTER_farm_irish: "An Iúraigh"
+ HUB_NAME_STATE_ULSTER_wood_irish: "An Ómaigh"
+
+ # Leinster - English by default
+ STATE_LEINSTER_irish: "Laighin"
+ HUB_NAME_STATE_LEINSTER_city_irish: "Dubhlinn"
+ HUB_NAME_STATE_LEINSTER_port_irish: "Loch Garman"
+ HUB_NAME_STATE_LEINSTER_mine_irish: "Port Láirge"
+ HUB_NAME_STATE_LEINSTER_farm_irish: "Ceatharlach"
+ HUB_NAME_STATE_LEINSTER_wood_irish: "An Cabhán"
+
+ # Connaught - English by default
+ STATE_CONNAUGHT_irish: "Connachta"
+ HUB_NAME_STATE_CONNAUGHT_city: "Gaillimh"
+ HUB_NAME_STATE_CONNAUGHT_port: "Sligeach"
+ HUB_NAME_STATE_CONNAUGHT_mine: "Caisleán an Bharraigh"
+ HUB_NAME_STATE_CONNAUGHT_farm: "Baile Átha Luain"
+ HUB_NAME_STATE_CONNAUGHT_wood: "Baile Locha Riach"
+
+ # Munster - English by default
+ STATE_MUNSTER_irish: "An Mhumhain"
+ HUB_NAME_STATE_MUNSTER_city_irish: "Corcaigh"
+ HUB_NAME_STATE_MUNSTER_port_irish: "Sionainn"
+ HUB_NAME_STATE_MUNSTER_mine_irish: "Cill Airne"
+ HUB_NAME_STATE_MUNSTER_farm_irish: "Mala"
+ HUB_NAME_STATE_MUNSTER_wood_irish: "Aonach Urmhumhan"
+
+ # Lowlands - English by default
+ STATE_LOWLANDS_gaelic: "A' Ghalldachd"
+ HUB_NAME_STATE_LOWLANDS_city_gaelic: "Dùn Èideann"
+ HUB_NAME_STATE_LOWLANDS_port_gaelic: "Obar Dheathain"
+ HUB_NAME_STATE_LOWLANDS_mine_gaelic: "Dùn Phris"
+ HUB_NAME_STATE_LOWLANDS_farm_gaelic: "Glaschu"
+ HUB_NAME_STATE_LOWLANDS_wood_gaelic: "Dùn Dè"
+
+ # Highlands - English by default
+ STATE_HIGHLANDS_gaelic: "A' Ghàidhealtachd"
+ HUB_NAME_STATE_HIGHLANDS_city_gaelic: "Inbhir Nis"
+ HUB_NAME_STATE_HIGHLANDS_port_gaelic: "Kirkwal"
+ HUB_NAME_STATE_HIGHLANDS_mine_gaelic: "Druim na Drochaid"
+ HUB_NAME_STATE_HIGHLANDS_farm_gaelic: "An Gearasdan"
+ HUB_NAME_STATE_HIGHLANDS_wood_gaelic: "An Aghaidh Mhòr"
+
+ # Wales - English by default
+ STATE_WALES_breton: "Kembre"
+
+ STATE_WALES_welsh: "Cymru"
+ HUB_NAME_STATE_WALES_city_welsh: "Caerdydd"
+ HUB_NAME_STATE_WALES_port_welsh: "Abertawe"
+ HUB_NAME_STATE_WALES_mine_welsh: "Merthyr Tudful"
+ HUB_NAME_STATE_WALES_farm_welsh: "Caerfyrddin"
+ HUB_NAME_STATE_WALES_wood_welsh: ""
+
+ # West Country - English by default
+ STATE_WEST_COUNTRY_cornish: "Kernow ha Dewnens" #"Cornwall and Devon/Dumnonia," made up
+ HUB_NAME_STATE_WEST_COUNTRY_city_cornish: "Brystow"
+ HUB_NAME_STATE_WEST_COUNTRY_port_cornish: "Aberplymm"
+ HUB_NAME_STATE_WEST_COUNTRY_mine_cornish: "Karlow"
+ HUB_NAME_STATE_WEST_COUNTRY_farm_cornish: ""
+ HUB_NAME_STATE_WEST_COUNTRY_wood_welsh: "Barstabl"
+
+ # Brittany - French by default
+ STATE_BRITTANY_welsh: "Llydaw"
+
+ STATE_BRITTANY_breton: "Breizh"
+ HUB_NAME_STATE_BRITTANY_city: "Naoned"
+ HUB_NAME_STATE_BRITTANY_port: ""
+ HUB_NAME_STATE_BRITTANY_mine: "Gwened"
+ HUB_NAME_STATE_BRITTANY_farm: "Sant-Brieg"
+ HUB_NAME_STATE_BRITTANY_wood: "Roazhon"
