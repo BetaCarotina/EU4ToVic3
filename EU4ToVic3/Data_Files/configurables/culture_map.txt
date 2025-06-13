@@ -58,7 +58,7 @@ link = { vic3 = sephardic eu4 = sephardi eu4 = sephardic eu4 = hebrew eu4 = mizr
 # Low Countries - Dutch, Flemish, Wallonian and Boer
 link = { vic3 = boer @benelux_cultures region = african_strategic_regions }
 
-link = { vic3 = boer eu4 = afrikaner }
+link = { vic3 = boer eu4 = afrikaner eu4 = Afrikaans }
 link = { vic3 = dutch eu4 = dutch eu4 = dutch_new eu4 = frisian eu4 = frisian_new eu4 = batavian eu4 = tasmanian }
 link = { vic3 = flemish eu4 = flemish eu4 = flemish_new eu4 = brabantian }
 link = { vic3 = wallonian eu4 = wallonian eu4 = wallonian_UKS }
