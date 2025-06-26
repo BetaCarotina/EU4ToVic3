@@ -388,6 +388,7 @@ link = { eu4 = MKA vic3 = KHN } # Mong Kwang => Kachin
 link = { eu4 = ANU vic3 = AIN } # Ainu
 link = { name = "Ezo" vic3 = EZO } # Ezo
 link = { name = "Emishi" vic3 = EZO } # Ezo
+link = { name = "Ezochi" vic3 = EZO } # Ezo
 link = { eu4 = CMI vic3 = QIA } # Miao => Qian
 link = { eu4 = FRM vic3 = FRS } # Tungning => Formosa
 link = { eu4 = CDL vic3 = YUN } # Dali => Yunnan
