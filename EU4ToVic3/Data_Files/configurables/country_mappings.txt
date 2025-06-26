@@ -35,6 +35,8 @@
 
 ## 00_countries.txt
 link = { eu4 = GER name = "Germany" vic3 = GER } # Germany
+link = { reform = rhl_confederation_reform vic3 = NGF } # North Germany
+link = { reform = bav_south_german_confederation vic3 = SGF } # South Germany
 link = { eu4 = GBR vic3 = GBR } # Great Britain
 link = { name = "Britannia" vic3 = GBR } # Britannia
 link = { name = "The United Crowns" vic3 = GBR } # Dutch Britian
@@ -144,9 +146,9 @@ link = { name = "Slovakia" vic3 = SLV } # Slovakia
 link = { eu4 = SLO vic3 = SLV } # Nitra => Slovakia
 link = { eu4 = SWI name = "Switzerland" vic3 = SWI } # Switzerland
 link = { eu4 = TRA name = "Transylvania" vic3 = TRS } # Transylvania
-link = { eu4 = UKR name = "Ruthenia" vic3 = UKR } # Ruthenia => Ukraine
 link = { name = "Hetmanate" vic3 = UKR } # Hetmanate => Ukraine
 link = { name = "Ukraine" vic3 = UKR } # Ukraine
+link = { eu4 = UKR name = "Ruthenia" vic3 = UKR } # Ruthenia => Ukraine
 # Czechoslovakia defined with Bohemia
 link = { eu4 = ALB name = "Albania" vic3 = ALB } # Albania
 link = { eu4 = BOS name = "Bosnia" vic3 = BOS } # Bosnia
