@@ -125,7 +125,7 @@ lawgroup_distribution_of_power = {
 			landholders_reform clerical_commission_reform regionally_elected_commanders british_monarchy
 			tanistry_reform bohemian_elective_kingdom_reform house_of_lords_reform nakharar_title parliamentary_reform
 			arscouncil bav_council_of_eight british_monarchy bulboyar saxon_england est_council_of_chiefs frcrepresentatives
-			geodarbazi georegulations polestablishsejm sweriksdag tataria_kurultai wls_rheol
+			geodarbazi georegulations htm_council polestablishsejm sweriksdag tataria_kurultai wls_rheol
 		}
 	}
 	law_elder_council = {
@@ -461,7 +461,7 @@ lawgroup_bureaucracy = {
 			cultural_administration_reform universal_suffrage_reform subservient_administrators_reform
 			pursuit_of_knowledge_reform regionally_elected_commanders monastic_elections_reform
 			priestly_autonomy_reform qng_grand_council_reform courts_of_navarra restore_the_master_of_offices_reform
-			aduprovincial adulegalsystem crn_divide crn_foreign mch_admin maitreya_admin
+			aduprovincial adulegalsystem crn_divide crn_foreign htm_autonomous htm_kurin mch_admin maitreya_admin
 			naznomarchy nazmaat rustable
 		}
 	}
@@ -483,7 +483,7 @@ lawgroup_bureaucracy = {
 	}
 	law_hereditary_bureaucrats = {
 		forms = { monarchy tribal native }
-		ideas = { aristocracy_ideas influence_ideas }
+		ideas = { aristocracy_ideas influence_ideas imperial_ideas }
 		reforms = { enforce_privileges_reform imperial_nobility_reform expand_imperial_court_reform 
 			of_noble_bearing_reform dyanstic_administration_reform signoria_reform noble_elite_reform
 			nepotism_reform native_codified_power_reform ministerialis_promotion_reform parliament_vs_monarchy_reform
@@ -538,7 +538,7 @@ lawgroup_army_model = {
 	}
 	law_peasant_levies = {
 		forms = { monarchy tribal native }
-		ideas = { aristocracy_ideas administrative_ideas celestial_ideas }
+		ideas = { aristocracy_ideas administrative_ideas }
 		reforms = { ambrosian_republic imperial_diplomacy_reform crusading_kingdom_reform 
 			ottoman_conscription_reform absolute_shogunate_reform tysyatsky_reform defensive_stance_reform
 			mercenary_leadership_reform devshirme_system_reform janissary_military_reform wei_suo_system_reform
