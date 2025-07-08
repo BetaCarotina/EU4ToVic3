@@ -97,9 +97,9 @@ zzz_advanced_native_expansion = {
 	}
 
 	ai_chance = {
-		base = 30
-		modifier = {
-			is_diplomatic_play_undecided_participant = yes
+		value = 30
+		if = {
+			limit = { is_diplomatic_play_undecided_participant = yes }
 			add = -1000
 		}
 	}

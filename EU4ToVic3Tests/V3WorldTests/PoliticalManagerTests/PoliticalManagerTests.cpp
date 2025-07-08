@@ -19,8 +19,8 @@
 
 namespace
 {
-const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game/", {});
-const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation/", {});
+const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game", {});
+const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation", {});
 
 std::tuple<V3::PoliticalManager, V3::PopManager, mappers::CultureMapper, mappers::ReligionMapper, V3::ClayManager, EU4::CultureLoader, EU4::ReligionLoader>
 prepMappers()
@@ -91,8 +91,8 @@ prepMappers()
 	culMapper.expandCulturalMappings(clayManager, cultureLoader, religionLoader);
 
 	V3::PopManager popManager;
-	popManager.initializeVanillaPops(modFS);
-	popManager.initializeDWPops(modFS);
+	popManager.initializeVanillaPops(modFS, 1.0);
+	popManager.initializeDWPops(modFS, 1.0);
 	popManager.convertDemographics(clayManager, culMapper, relMapper, cultureLoader, religionLoader);
 
 	politicalManager.initializeVanillaCountries(modFS, modFS);

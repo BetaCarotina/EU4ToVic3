@@ -17,8 +17,8 @@
 
 namespace
 {
-const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game/", {});
-const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation/", {});
+const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game", {});
+const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation", {});
 
 V3::ClayManager generateChunks()
 {
@@ -97,7 +97,7 @@ std::tuple<V3::ClayManager, V3::PoliticalManager> assignSubStateOwnership()
 	clayManager.assignSubStateOwnership(politicalManager.getCountries(), *countryMapper);
 
 	V3::PopManager popManager;
-	popManager.initializeVanillaPops(modFS);
+	popManager.initializeVanillaPops(modFS, 1.0);
 
 	clayManager.injectVanillaSubStates(modFS, politicalManager, popManager, false);
 

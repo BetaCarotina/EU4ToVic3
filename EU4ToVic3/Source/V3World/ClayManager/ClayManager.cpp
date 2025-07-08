@@ -392,6 +392,13 @@ void V3::ClayManager::assignSubStateOwnership(const std::map<std::string, std::s
 		if (!substate->getSourceOwnerTag())
 			continue;
 
+		// Why is this even here... people with consoles.
+		if (substate->getHomeState()->isSea() || substate->getHomeState()->isLake())
+		{
+			substate->setOwner(nullptr); // You really don't have an owner. You're a sea.
+			continue;
+		}
+
 		// all the rest must have an owner and that owner must be able to map properly.
 		auto eu4tag = substate->getSourceOwnerTag();
 		if (!eu4tag || eu4tag->empty())
@@ -872,7 +879,7 @@ void V3::ClayManager::redistributeResourcesAndLandshares(const int splitStatePri
 	}
 }
 
-void V3::ClayManager::loadAdjacencies(const std::string& filePath)
+void V3::ClayManager::loadAdjacencies(const std::filesystem::path& filePath)
 {
 	coastalMapper.loadAdjacencies(filePath);
 }

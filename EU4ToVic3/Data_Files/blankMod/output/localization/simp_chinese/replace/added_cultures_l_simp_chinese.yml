@@ -17,7 +17,7 @@
  israeli:0 "$ISR_ADJ$"
  je:0 "杰"
  kamarupan:0 "迦摩缕波"
- lombard:0 "$LOM_ADJ$"
+ old_lombard:0 "$LOM_ADJ$"
  macedonian:0 "马其顿语"
  maranon:0 "马拉尼翁"
  noric:0 "诺里克"
@@ -26,6 +26,7 @@
  sarmatian:0 "萨尔马提亚"
  szekely:0 "塞克利"
  weder_german:0 "$GGR_ADJ$"
+ sumerian:0 "苏美尔人"
 # Formerly converted_cultures
  charruan:0 "查鲁阿"
  dacian:0 "达西亚"

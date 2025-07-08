@@ -15,7 +15,7 @@
  israeli:0 "$ISR_ADJ$"
  kamarupan:0 "Kamarupan"
  je:0 "Jê"
- lombard:0 "$LOM_ADJ$"
+ old_lombard:0 "$LOM_ADJ$"
  macedonian:0 "Macedonian"
  maranon:0 "Marañón"
  matacoan:0 "Matacoan"
@@ -24,6 +24,7 @@
  pruthenian:0 "Pruthenian"
  sarmatian:0 "Sarmatian"
  weder_german:0 "$GGR_ADJ$"
+ sumerian:0 "Sumerian"
 # Formerly converted_cultures
  araucanian:0 "Araucanian"
  chacoan:0 "Chacoan"

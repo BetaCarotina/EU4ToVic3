@@ -4,20 +4,22 @@
 #include "Log.h"
 
 V3::World::World(const Configuration& configuration, const EU4::World& sourceWorld):
-	 V3Path(configuration.getVic3Path()), configBlock(configuration.configBlock), datingData(sourceWorld.getDatingData())
+	 V3Path(configuration.getVic3Path()),
+	 configBlock(configuration.configBlock),
+	 datingData(sourceWorld.getDatingData())
 {
 	Mods overrideMods;
 	// We use decentralized world mod to fill out wasteland and out-of-scope clay with decentralized tribes.
 	if (!configuration.configBlock.vn)
-		overrideMods.emplace_back(Mod{"Decentralized World", "configurables/decentralized_world/"});
+		overrideMods.emplace_back(Mod{"Decentralized World", "configurables/decentralized_world"});
 	const auto vanillaFS = commonItems::ModFilesystem(V3Path, {});
 	const auto dwFS = commonItems::ModFilesystem(V3Path, overrideMods);
-	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output/"});
+	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output"});
 	const auto allFS = commonItems::ModFilesystem(V3Path, overrideMods);
-	overrideMods.emplace_back(Mod{"TO", "configurables/third_odyssey/"});
+	overrideMods.emplace_back(Mod{"TO", "configurables/third_odyssey"});
 	const auto toFS = commonItems::ModFilesystem(V3Path, overrideMods);
 	overrideMods.clear();
-	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output/"});
+	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output"});
 	const auto blankModFS = commonItems::ModFilesystem(V3Path, overrideMods);
 
 	Log(LogLevel::Progress) << "45 %";
@@ -108,8 +110,8 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 
 	Log(LogLevel::Progress) << "49 %";
 	// soaking up vanilla pops
-	popManager.initializeVanillaPops(vanillaFS);
-	popManager.initializeDWPops(dwFS);
+	popManager.initializeVanillaPops(vanillaFS, configBlock.populationMultiplier);
+	popManager.initializeDWPops(dwFS, configBlock.populationMultiplier);
 	popManager.injectReligionsIntoVanillaPops(cultureMapper.getV3CultureDefinitions());
 	popManager.injectReligionsIntoDWPops(cultureMapper.getV3CultureDefinitions());
 
@@ -141,7 +143,7 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 	politicalManager.attemptColonialTagReplacement(cultureMapper.getColonialRegionMapper(), clayManager);
 
 	Log(LogLevel::Progress) << "54 %";
-	popManager.generatePops(clayManager, configBlock.popShaping, configBlock.shapingFactor);
+	popManager.generatePops(clayManager, configBlock.popShaping, configBlock.shapingFactor, configBlock.populationMultiplier);
 	popManager.applyHomeLands(clayManager);
 
 	Log(LogLevel::Progress) << "55 %";
@@ -180,7 +182,7 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 	Log(LogLevel::Progress) << "59 %";
 	clayManager.squashAllSubStates(politicalManager);
 	Log(LogLevel::Progress) << "60 %";
-	clayManager.redistributeResourcesAndLandshares(definesLoader.getSplitStatePrimeLandWeight());
+	clayManager.redistributeResourcesAndLandshares(static_cast<int>(definesLoader.getSplitStatePrimeLandWeight()));
 
 	Log(LogLevel::Progress) << "61 %";
 	cultureMapper.injectReligionsIntoCultureDefs(clayManager);
@@ -194,8 +196,8 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 		 sourceWorld.getReligionLoader());
 
 	Log(LogLevel::Progress) << "63 %";
-	flagCrafter.loadCustomColors(configuration.getEU4Path() + "/common/custom_country_colors/00_custom_country_colors.txt");
-	flagCrafter.loadAvailableFlags("blankMod/output/common/coat_of_arms/coat_of_arms/", V3Path + "/common/flag_definitions/");
+	flagCrafter.loadCustomColors(configuration.getEU4Path() / "common/custom_country_colors/00_custom_country_colors.txt");
+	flagCrafter.loadAvailableFlags("blankMod/output/common/coat_of_arms/coat_of_arms/", V3Path / "common/flag_definitions/");
 	Log(LogLevel::Progress) << "64 %";
 	flagCrafter.distributeAvailableFlags(politicalManager.getCountries(), *countryMapper, sourceWorld.getEU4ModFS());
 

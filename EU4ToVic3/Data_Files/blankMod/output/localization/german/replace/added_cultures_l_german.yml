@@ -17,7 +17,7 @@
  israeli:0 "$ISR_ADJ$"
  je:0 "Jê"
  kamarupan:0 "Kamarupisch"
- lombard:0 "$LOM_ADJ$"
+ old_lombard:0 "$LOM_ADJ$"
  macedonian:0 "Mazedonisch"
  maranon:0 "Marañónisch"
  noric:0 "Norisch"
@@ -26,6 +26,7 @@
  sarmatian:0 "Sarmatisch"
  szekely:0 "Szekely"
  weder_german:0 "$GGR_ADJ$"
+ sumerian:0 "Sumerisch"
 # Formerly converted_cultures
  charruan:0 "Charrúa"
  dacian:0 "Dakisch"

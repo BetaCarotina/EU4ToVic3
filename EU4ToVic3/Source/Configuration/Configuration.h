@@ -65,6 +65,7 @@ class Configuration: commonItems::parser
 		bool convertAll = false;
 		bool downTiers = true;
 		double shapingFactor = 1.0;
+		double populationMultiplier = 1.0;
 		// runtime options.
 		bool vn = false;					 // Voltaire's Nightmare
 		bool thirdOdyssey = false;		 // Third Odyssey: Back to the Motherland
@@ -93,11 +94,11 @@ class Configuration: commonItems::parser
 	void verifyEU4Version(const commonItems::ConverterVersion& converterVersion) const;
 
 	// options from configuration.txt
-	std::string EU4SaveGamePath;
-	std::string EU4Path;
-	std::string EU4DocumentsPath;
-	std::string Vic3Path;
-	std::string outputName;
+	std::filesystem::path EU4SaveGamePath;
+	std::filesystem::path EU4Path;
+	std::filesystem::path EU4DocumentsPath;
+	std::filesystem::path Vic3Path;
+	std::filesystem::path outputName;
 };
 
 #endif // CONFIGURATION_H

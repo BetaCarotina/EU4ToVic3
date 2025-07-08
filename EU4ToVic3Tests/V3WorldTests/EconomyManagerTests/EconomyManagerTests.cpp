@@ -17,8 +17,8 @@
 
 namespace
 {
-const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game/", {});
-const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation/", {Mod("Some mod", "TestFiles/mod/themod/")});
+const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game", {});
+const auto eu4FS = commonItems::ModFilesystem("TestFiles/eu4installation", {Mod("Some mod", "TestFiles/mod/themod")});
 
 std::tuple<V3::ClayManager, V3::PoliticalManager> prepManagers()
 {
@@ -94,13 +94,13 @@ V3::PoliticalManager prepWorld()
 	culMapper.expandCulturalMappings(clayManager, cultureLoader, religionLoader);
 
 	V3::PopManager popManager;
-	popManager.initializeVanillaPops(modFS);
-	popManager.initializeDWPops(modFS);
+	popManager.initializeVanillaPops(modFS, 1.0);
+	popManager.initializeDWPops(modFS, 1.0);
 	popManager.convertDemographics(clayManager, culMapper, relMapper, cultureLoader, religionLoader);
 	clayManager.shoveRemainingProvincesIntoSubStates();
 	politicalManager.generateDecentralizedCountries(clayManager, popManager);
 
-	popManager.generatePops(clayManager, Configuration::POPSHAPES::Vanilla, 1);
+	popManager.generatePops(clayManager, Configuration::POPSHAPES::Vanilla, 1, 1.0);
 
 	return politicalManager;
 }
@@ -129,7 +129,7 @@ TEST(V3World_EconomyManagerTests, GlobalCPScalesByPopulation)
 
 	V3::EconomyManager econManager;
 	econManager.loadCentralizedStates(politicalManager.getCountries());
-	econManager.loadMappersAndConfigs(modFS, "TestFiles/");
+	econManager.loadMappersAndConfigs(modFS, "TestFiles");
 
 	EXPECT_EQ(5500, politicalManager.getWorldPopCount());
 	EXPECT_EQ(4600, V3::PoliticalManager::getCountriesPopCount(econManager.getCentralizedCountries()));

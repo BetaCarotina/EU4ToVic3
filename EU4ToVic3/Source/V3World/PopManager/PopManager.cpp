@@ -15,32 +15,32 @@
 #include <numeric>
 #include <ranges>
 
-void V3::PopManager::initializeVanillaPops(const commonItems::ModFilesystem& modFS)
+void V3::PopManager::initializeVanillaPops(const commonItems::ModFilesystem& modFS, double populationMultiplier)
 {
 	Log(LogLevel::Info) << "-> Loading Vanilla Pops.";
 	PopLoader popLoader;
-	popLoader.loadPops(modFS);
+	popLoader.loadPops(modFS, populationMultiplier);
 	vanillaStatePops = popLoader.getStatePops();
 
 	const auto total = std::accumulate(vanillaStatePops.begin(), vanillaStatePops.end(), 0, [](int sum, const std::pair<std::string, StatePops>& statePop) {
 		return sum + statePop.second.getPopCount();
 	});
 
-	Log(LogLevel::Info) << "<> Vanilla had " << total << " pops.";
+	Log(LogLevel::Info) << "<> Vanilla had " << total << " pops with population multiplier: " << populationMultiplier;
 }
 
-void V3::PopManager::initializeDWPops(const commonItems::ModFilesystem& modFS)
+void V3::PopManager::initializeDWPops(const commonItems::ModFilesystem& modFS, double populationMultiplier)
 {
 	Log(LogLevel::Info) << "-> Loading Decentralized World Pops.";
 	PopLoader popLoader;
-	popLoader.loadPops(modFS);
+	popLoader.loadPops(modFS, populationMultiplier);
 	dwStatePops = popLoader.getStatePops();
 
 	const auto total = std::accumulate(dwStatePops.begin(), dwStatePops.end(), 0, [](int sum, const std::pair<std::string, StatePops>& statePop) {
 		return sum + statePop.second.getPopCount();
 	});
 
-	Log(LogLevel::Info) << "<> Decentralized World had " << total << " pops.";
+	Log(LogLevel::Info) << "<> Decentralized World had " << total << " pops with population multiplier: " << populationMultiplier;
 }
 
 std::optional<V3::SubStatePops> V3::PopManager::getVanillaSubStatePops(const std::string& stateName, const std::string& ownerTag) const
@@ -194,12 +194,12 @@ std::string V3::PopManager::getDominantDWReligion(const std::string& stateName) 
 	return *best;
 }
 
-void V3::PopManager::generatePops(const ClayManager& clayManager, const Configuration::POPSHAPES popShapes, double shapingFactor)
+void V3::PopManager::generatePops(const ClayManager& clayManager, const Configuration::POPSHAPES popShapes, double shapingFactor, double populationMultipler)
 {
-	const auto worldTotal = std::accumulate(vanillaStatePops.begin(), vanillaStatePops.end(), 0, [](int sum, const auto& statePops) {
+	auto worldTotal = std::accumulate(vanillaStatePops.begin(), vanillaStatePops.end(), 0, [](int sum, const auto& statePops) {
 		return sum + statePops.second.getPopCount();
 	});
-	Log(LogLevel::Info) << "-> Generating Pops. Vanilla World was: " << worldTotal << " pops.";
+	Log(LogLevel::Info) << "-> Generating Pops. Vanilla World was: " << worldTotal << " pops, with population multipler: " << populationMultipler;
 
 	filterVanillaMinorityStatePops();
 
@@ -511,7 +511,7 @@ int V3::PopManager::generatePopCountForShovedSubState(const std::shared_ptr<SubS
 	return static_cast<int>(round(subStateRatio * static_cast<double>(unassignedPopCount)));
 }
 
-void V3::PopManager::loadMinorityPopRules(const std::string& filePath)
+void V3::PopManager::loadMinorityPopRules(const std::filesystem::path& filePath)
 {
 	minorityPopMapper.loadMappingRules(filePath);
 }
@@ -557,7 +557,7 @@ std::map<std::string, V3::StatePops> V3::PopManager::injectReligionsIntoPops(con
 	return newVanillaPops;
 }
 
-void V3::PopManager::loadSlaveCultureRules(const std::string& filePath)
+void V3::PopManager::loadSlaveCultureRules(const std::filesystem::path& filePath)
 {
 	slaveCultureMapper.loadMappingRules(filePath);
 }
