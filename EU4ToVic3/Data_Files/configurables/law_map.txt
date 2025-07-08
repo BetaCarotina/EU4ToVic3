@@ -420,7 +420,7 @@ lawgroup_economic_system = {
 	}
 	law_interventionism = {
 		forms = { republic }
-		ideas = { diplomatic_ideas economic_ideas influence_ideas infrastructure_ideas }
+		ideas = { diplomatic_ideas economic_ideas influence_ideas infrastructure_ideas state_governance_ideas }
 		reforms = { livonian_diplomatic_monarchy venice_merchants_reform stability_principle_reform 
 			military_principle_reform revolutionary_principle_reform external_mission_reform
 			mission_to_civilize_reform commercial_mission_reform war_economy_reform thalassocracy_reform
@@ -467,7 +467,7 @@ lawgroup_bureaucracy = {
 	}
 	law_appointed_bureaucrats = {
 		forms = { republic theocracy }
-		ideas = { diplomatic_ideas trade_ideas infrastructure_ideas celestial_ideas }
+		ideas = { diplomatic_ideas trade_ideas infrastructure_ideas celestial_ideas state_governance_ideas }
 		reforms = { celestial_empire confucian_bureaucracy livonian_administrative_monarchy 
 			poligar_reform deccani_society_reform centralize_reform representation_of_the_crown_reform
 			clergy_in_administration_reform dakhni_culture_reform zabt_reform emperor_of_the_revolution_reform
