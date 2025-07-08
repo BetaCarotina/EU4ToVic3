@@ -11,6 +11,18 @@
 # There must be a SINGLE ethnicity
 
 # Cultures that change between culture groups
+
+#Ante Bellum
+link = { eu4group = united_germanic trait = german_speaking trait = anglophone trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
+link = { eu4 = turkish_christian trait = greek_culture trait = turkic trait = european_heritage ethnicity = slavic graphics = european }
+link = { eu4 = turkish_new trait = arab_speaking trait = turkic trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
+link = { eu4 = turkish_iranian trait = iranian_turanian_culture_group trait = turkic trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
+link = { eu4 = sclavinian trait = greek_culture trait = jugoslav trait = european_heritage ethnicity = slavic graphics = european }
+link = { eu4 = Illyrian trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
+link = { eu4 = Yuan trait = sinosphere trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
+link = { eu4 = Litvin trait = east_slavic trait = baltic_culture_group trait = european_heritage ethnicity = slavic graphics = european }
+link = { eu4 = litvin_westslavic trait = west_slavic trait = baltic_culture_group trait = european_heritage ethnicity = slavic graphics = european }
+
 link = { eu4group = slavic trait = jugoslav trait = east_slavic trait = west_slavic trait = european_heritage ethnicity = slavic graphics = european } 
 link = { eu4 = albanian trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4 = shqiperi trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
@@ -19,7 +31,6 @@ link = { eu4group = albanian_g trait = albanian_language trait = european_herita
 link = { eu4group = western_balkan trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = south_slavic trait = jugoslav trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = west_slavic trait = west_slavic trait = european_heritage ethnicity = slavic graphics = european }
-link = { eu4 = Litvin trait = east_slavic trait = baltic_culture_group trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4group = east_slavic trait = east_slavic trait = european_heritage ethnicity = slavic graphics = european }
 link = { eu4 = anglois trait = anglophone trait = francophone trait = european_heritage ethnicity = caucasian graphics = european }
 link = { eu4 = vietnamese_new trait = sinosphere trait = khmer_language trait = southeast_asian_heritage ethnicity = asian graphics = east_asian } # Ironic, but working with vanilla
@@ -32,15 +43,6 @@ link = { eu4 = altaic_new trait = mongol_language trait = sinosphere trait = cen
 link = { eu4 = zhuang_new trait = tai trait = sinosphere trait = east_asian_heritage ethnicity = asian graphics = east_asian }
 link = { eu4 = manchu_new trait = sinosphere trait = north_asian_heritage ethnicity = asian graphics = east_asian }
 link = { eu4 = manchu trait = siberian_culture_group trait = north_asian_heritage ethnicity = asian graphics = east_asian }
-
-#Ante Bellum
-link = { eu4group = united_germanic trait = german_speaking trait = anglophone trait = beneluxian_culture_group trait = european_heritage ethnicity = caucasian graphics = european }
-link = { eu4 = turkish_christian trait = greek_culture trait = turkic trait = european_heritage ethnicity = slavic graphics = european }
-link = { eu4 = turkish_new trait = arab_speaking trait = turkic trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
-link = { eu4 = turkish_iranian trait = iranian_turanian_culture_group trait = turkic trait = middle_eastern_heritage ethnicity = arab graphics = arabic }
-link = { eu4 = sclavinian trait = greek_culture trait = jugoslav trait = european_heritage ethnicity = slavic graphics = european }
-link = { eu4 = Illyrian trait = albanian_language trait = european_heritage ethnicity = slavic graphics = european }
-link = { eu4 = Yuan trait = sinosphere trait = central_asian_heritage ethnicity = central_asian graphics = east_asian }
 
 #Converter Languages
 link = { eu4 = coptic trait = african_heritage trait = coptophone ethnicity = arab graphics = arabic }
