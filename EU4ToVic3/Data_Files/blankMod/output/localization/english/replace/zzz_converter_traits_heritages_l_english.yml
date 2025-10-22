@@ -1,4 +1,8 @@
 ﻿l_english:
+#Groups
+ heritage_group_animal:0 "Animal"
+
+#Heritages
  heritage_continental_celtic:0 "Continental Celtic"
  heritage_egyptian:0 "Egyptian"
  heritage_gutian:0 "Gutian"
@@ -8,8 +12,16 @@
  heritage_pelasgian:0 "Pelasgian" #Pre-Greeks
  heritage_scythian:0 "Scythian"
  heritage_thracian:0 "Thracian"
+ heritage_bahnaric:0 "Bahnaric"
+ heritage_embera:0 "Embera"
+ heritage_guaycuri:0 "Guaycuri"
+ heritage_guaycuru:0 "Guaycuru"
+ heritage_mascoian:0 "Mascoian"
+ heritage_wichi:0 "Wichí"
+ heritage_zamucoan:0 "Zamucoan"
+ heritage_sumerian:0 "Sumerian"
 
- heritage_group_animal:0 "Animal"
+#Animals
  heritage_equine:0 "Equidae"
  heritage_feline:0 "Felidae"
  heritage_ursine:0 "Ursidae"
@@ -19,3 +31,4 @@
  heritage_elephantine:0 "Elephantidae"
  heritage_draconic:0 "Draconidae"
  heritage_ailurine:0 "Ailuridae"
+ 
