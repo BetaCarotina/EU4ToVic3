@@ -4,7 +4,7 @@
 
 namespace
 {
-const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game/", {});
+const auto modFS = commonItems::ModFilesystem("TestFiles/vic3installation/game", {});
 }
 
 TEST(Mappers_ReligionDefinitionLoaderTests, religionsCanBeRetrieved)
@@ -17,7 +17,7 @@ TEST(Mappers_ReligionDefinitionLoaderTests, religionsCanBeRetrieved)
 
 	EXPECT_EQ("religion_1", religion->name);
 	EXPECT_EQ("gfx/interface/icons/religion_icons/religion_1.dds", religion->texture);
-	EXPECT_THAT(religion->traits, testing::UnorderedElementsAre("religiontrait"));
+	EXPECT_EQ("religiontrait", religion->heritage);
 	EXPECT_EQ(commonItems::Color(std::array{1, 2, 3}), *religion->color);
 	EXPECT_TRUE(religion->taboos.empty());
 }

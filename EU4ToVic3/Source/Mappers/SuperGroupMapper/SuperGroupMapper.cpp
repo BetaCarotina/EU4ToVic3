@@ -4,6 +4,7 @@
 #include "ParserHelpers.h"
 #include "SuperRegionParser.h"
 #include <cmath>
+#include <filesystem>
 
 void mappers::SuperGroupMapper::loadSuperGroups()
 {

@@ -133,8 +133,6 @@
 				size = 6000
 			}
 		}
-	}
-	s:STATE_GAMBIA = {
 		region_state:SRR = {
 			create_pop = {
 				culture = mande
@@ -669,7 +667,7 @@
 			}
 		}
 	}
-	s:STATE_GHANA = {
+	s:STATE_GOLD_COAST = {
 		region_state:ASH = {
 			create_pop = {
 				culture = akan
@@ -785,7 +783,7 @@
 				size = 6000
 			}
 			create_pop = {
-				culture = unyamwezi
+				culture = nyamwezi
 				size = 54200
 			}
 			create_pop = {
@@ -809,7 +807,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = unyamwezi
+				culture = nyamwezi
 				size = 5000
 			}
 			create_pop = {
@@ -875,7 +873,7 @@
 				size = 28000
 			}
 			create_pop = {
-				culture = unyamwezi
+				culture = nyamwezi
 				size = 92000
 			}
 			create_pop = {
@@ -893,7 +891,7 @@
 	s:STATE_TANGANYIKA = {
 		region_state:NYM = {
 			create_pop = {
-				culture = unyamwezi
+				culture = nyamwezi
 				size = 331200
 			}
 			create_pop = {

@@ -4,24 +4,27 @@
 #include "Log.h"
 
 V3::World::World(const Configuration& configuration, const EU4::World& sourceWorld):
-	 V3Path(configuration.getVic3Path()), configBlock(configuration.configBlock), datingData(sourceWorld.getDatingData())
+	 V3Path(configuration.getVic3Path()),
+	 configBlock(configuration.configBlock),
+	 datingData(sourceWorld.getDatingData())
 {
 	Mods overrideMods;
 	// We use decentralized world mod to fill out wasteland and out-of-scope clay with decentralized tribes.
 	if (!configuration.configBlock.vn)
-		overrideMods.emplace_back(Mod{"Decentralized World", "configurables/decentralized_world/"});
+		overrideMods.emplace_back(Mod{"Decentralized World", "configurables/decentralized_world"});
 	const auto vanillaFS = commonItems::ModFilesystem(V3Path, {});
 	const auto dwFS = commonItems::ModFilesystem(V3Path, overrideMods);
-	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output/"});
+	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output"});
 	const auto allFS = commonItems::ModFilesystem(V3Path, overrideMods);
-	overrideMods.emplace_back(Mod{"TO", "configurables/third_odyssey/"});
+	overrideMods.emplace_back(Mod{"TO", "configurables/third_odyssey"});
 	const auto toFS = commonItems::ModFilesystem(V3Path, overrideMods);
 	overrideMods.clear();
-	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output/"});
+	overrideMods.emplace_back(Mod{"Blankmod", "blankMod/output"});
 	const auto blankModFS = commonItems::ModFilesystem(V3Path, overrideMods);
 
 	Log(LogLevel::Progress) << "45 %";
 	Log(LogLevel::Info) << "* Soaking up the shine *";
+	primeLaFabricaDeColor(configuration);
 	clayManager.loadAdjacencies("configurables/province_adjacencies.txt");
 	if (configBlock.thirdOdyssey)
 	{
@@ -147,7 +150,9 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 	Log(LogLevel::Progress) << "55 %";
 	cultureMapper.generateCultureDefinitions("configurables/name_lists.txt",
 		 "configurables/name_list_map.txt",
-		 "configurables/culture_trait_map.txt",
+		 "configurables/culture_trait_heritage_map.txt",
+		 "configurables/culture_trait_language_map.txt",
+		 "configurables/culture_trait_tradition_map.txt",
 		 clayManager,
 		 sourceWorld.getCultureLoader(),
 		 sourceWorld.getReligionLoader(),
@@ -180,7 +185,7 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 	Log(LogLevel::Progress) << "59 %";
 	clayManager.squashAllSubStates(politicalManager);
 	Log(LogLevel::Progress) << "60 %";
-	clayManager.redistributeResourcesAndLandshares(definesLoader.getSplitStatePrimeLandWeight());
+	clayManager.redistributeResourcesAndLandshares(static_cast<int>(definesLoader.getSplitStatePrimeLandWeight()));
 
 	Log(LogLevel::Progress) << "61 %";
 	cultureMapper.injectReligionsIntoCultureDefs(clayManager);
@@ -194,8 +199,8 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 		 sourceWorld.getReligionLoader());
 
 	Log(LogLevel::Progress) << "63 %";
-	flagCrafter.loadCustomColors(configuration.getEU4Path() + "/common/custom_country_colors/00_custom_country_colors.txt");
-	flagCrafter.loadAvailableFlags("blankMod/output/common/coat_of_arms/coat_of_arms/", V3Path + "/common/flag_definitions/");
+	flagCrafter.loadCustomColors(configuration.getEU4Path() / "common/custom_country_colors/00_custom_country_colors.txt");
+	flagCrafter.loadAvailableFlags("blankMod/output/common/coat_of_arms/coat_of_arms/", V3Path / "common/flag_definitions/");
 	Log(LogLevel::Progress) << "64 %";
 	flagCrafter.distributeAvailableFlags(politicalManager.getCountries(), *countryMapper, sourceWorld.getEU4ModFS());
 
@@ -239,4 +244,16 @@ V3::World::World(const Configuration& configuration, const EU4::World& sourceWor
 	economyManager.setPMs();
 
 	Log(LogLevel::Info) << "*** Goodbye, Vicky 3, and godspeed. ***";
+}
+
+void V3::World::primeLaFabricaDeColor(const Configuration& configuration)
+{
+	Log(LogLevel::Info) << "-> Loading colors.";
+	for (const auto& file: commonItems::GetAllFilesInFolder(configuration.getVic3Path() / "common/named_colors"))
+	{
+		if (file.extension() != ".txt")
+			continue;
+		namedColors.loadColors(configuration.getVic3Path() / "common/named_colors" / file);
+	}
+	Log(LogLevel::Info) << "<> Loaded " << laFabricaDeColor.getRegisteredColors().size() << " colors.";
 }

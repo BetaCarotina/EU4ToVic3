@@ -8,6 +8,7 @@
 #include "Parser.h"
 #include "TraitDefinitionLoader/TraitDef.h"
 #include "WesternizationMapper/WesternizationMapper.h"
+#include <filesystem>
 
 namespace EU4
 {
@@ -36,13 +37,13 @@ class CultureMapper: commonItems::parser
 	CultureMapper() = default;
 
 	void loadMappingRules(std::istream& theStream);
-	void loadMappingRules(const std::string& fileName);
+	void loadMappingRules(const std::filesystem::path& fileName);
 	void loadColonialRules(std::istream& theStream);
-	void loadColonialRules(const std::string& fileName);
+	void loadColonialRules(const std::filesystem::path& fileName);
 	void loadWesternizationRules(std::istream& theStream);
-	void loadWesternizationRules(const std::string& fileName);
+	void loadWesternizationRules(const std::filesystem::path& fileName);
 	void loadNewEU4CultureRules(std::istream& theStream);
-	void loadNewEU4CultureRules(const std::string& fileName);
+	void loadNewEU4CultureRules(const std::filesystem::path& fileName);
 	void expandCulturalMappings(const V3::ClayManager& clayManager, const EU4::CultureLoader& cultureLoader, const EU4::ReligionLoader& religionLoader);
 
 	[[nodiscard]] const auto& getMacros() const { return encounteredMacros; }
@@ -77,9 +78,11 @@ class CultureMapper: commonItems::parser
 		 const std::string& v3state,
 		 const std::string& v3ownerTag);
 
-	void generateCultureDefinitions(const std::string& nameListsPath,
-		 const std::string& nameListMapPath,
-		 const std::string& cultureTraitsPath,
+	void generateCultureDefinitions(const std::filesystem::path& nameListsPath,
+		 const std::filesystem::path& nameListMapPath,
+		 const std::filesystem::path& cultureHeritagesPath,
+		 const std::filesystem::path& cultureLanguagesPath,
+		 const std::filesystem::path& cultureTraditionsPath,
 		 const V3::ClayManager& clayManager,
 		 const EU4::CultureLoader& cultureLoader,
 		 const EU4::ReligionLoader& religionLoader,
@@ -94,8 +97,9 @@ class CultureMapper: commonItems::parser
 	[[nodiscard]] int getLiteracyScoreForCulture(const std::string& cultureName) const;
 	[[nodiscard]] int getIndustryScoreForCulture(const std::string& cultureName) const;
 
-	[[nodiscard]] std::optional<bool> doCulturesShareHeritageTrait(const std::string& cultureA, const std::string& cultureB) const;
-	[[nodiscard]] std::optional<bool> doCulturesShareNonHeritageTrait(const std::string& cultureA, const std::string& cultureB) const;
+	[[nodiscard]] std::optional<bool> doCulturesShareHeritage(const std::string& cultureA, const std::string& cultureB) const;
+	[[nodiscard]] std::optional<bool> doCulturesShareLanguage(const std::string& cultureA, const std::string& cultureB) const;
+	[[nodiscard]] std::optional<bool> doCulturesShareTradition(const std::string& cultureA, const std::string& cultureB) const;
 
 	void alterNewEU4CultureDefinitions(const std::map<int, std::shared_ptr<EU4::Province>>& provinces);
 	[[nodiscard]] bool isCultureNeoCulturallyOverridden(const std::string& culture) const;

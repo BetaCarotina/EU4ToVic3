@@ -1,8 +1,8 @@
-﻿agitator_pierre_joseph_proudhon = {
+﻿REPLACE:agitator_pierre_joseph_proudhon = {
 	first_name = Pierre-Joseph
 	last_name = Proudhon
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:atheist
 	female = no
 	interest_group = ig_intelligentsia
@@ -27,29 +27,31 @@
 			uses_fra_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_trade_unions
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1840.6.30 # first publication of "What is to be Done?""
 		latest_usage_date = 1865.1.19
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pierre_joseph_proudhon
 		}
+		fix_variable_error = { variable = converter_pierre_joseph_proudhon }
 	}
 }
 
-agitator_errico_malatesta = {
+REPLACE:agitator_errico_malatesta = {
 	first_name = Errico
 	last_name = Malatesta
 	historical = yes
-	culture = global_var:sou_ita_culture
+	culture = cu:south_italian
 	religion = rel:atheist
 	female = no
 	interest_group = ig_trade_unions
@@ -74,39 +76,41 @@ agitator_errico_malatesta = {
 			uses_sou_ita_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_trade_unions
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1872.9.15 # Malatesta met Bakunin at the Saint-Inier Congress
 		latest_usage_date = 1900.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:south_italian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_errico_malatesta
 		}
+		fix_variable_error = { variable = converter_errico_malatesta }
 	}
 }
 
-agitator_henry_ford = {
+REPLACE:agitator_henry_ford = {
 	first_name = Henry
 	last_name = Ford
 	historical = yes
-	#culture = global_var:midwest_yankee_culture
 	culture = cu:yankee
 	religion = rel:protestant
 	female = no
 	interest_group = ig_industrialists
 	ideology = ideology_ethno_nationalist
 	birth_date = 1863.7.30
+	dna = dna_henry_ford
 	traits = {
 		bigoted
 		ambitious
-		direct
+		experienced_entrepreneur
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -121,27 +125,46 @@ agitator_henry_ford = {
 			uses_midwest_yankee_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_industrialists
-		}   
+		}
 		earliest_usage_date = 1908.8.12 # first production Model T
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
+    executive_usage = {
+        country_trigger = {
+			should_have_male_characters = yes
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = converter_unavailable_unique_characters
+					target = flag:converter_henry_ford
+				}
+			}
+            has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+            is_company_type = company_type:company_ford_motor
+        }
+        earliest_usage_date = 1908.8.12 # first production Model T
+		latest_usage_date = 1935.12.31
+        chance = 100
+    }
 	on_created = {
-		converter_mw_yankee_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_mw_yankee_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_henry_ford
 		}
+		fix_variable_error = { variable = converter_henry_ford }
 	}
 }
 
-agitator_louise_michel = {
+REPLACE:agitator_louise_michel = {
 	first_name = Louise
 	last_name = Michel
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:catholic
 	female = yes
 	interest_group = ig_intelligentsia
@@ -166,30 +189,31 @@ agitator_louise_michel = {
 			uses_fra_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_trade_unions
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1869.1.1
 		latest_usage_date = 1890.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_louise_michel
 		}
+		fix_variable_error = { variable = converter_louise_michel }
 	}
 }
 
-agitator_emiliano_zapata = {
+REPLACE:agitator_emiliano_zapata = {
 	first_name = Emiliano
 	last_name = Zapata
 	historical = yes
-	#culture = global_var:mexico_culture
-	culture = primary_culture
+	culture = cu:mexican
 	religion = rel:catholic
 	female = no
 	interest_group = ig_rural_folk
@@ -214,30 +238,31 @@ agitator_emiliano_zapata = {
 			uses_mexico_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_rural_folk
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1909.1.1
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
 	on_created = {
-		converter_mexican_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_mexican_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_emiliano_zapata
 		}
+		fix_variable_error = { variable = converter_emiliano_zapata }
 	}
 }
 
-agitator_ernst_rohm = {
+REPLACE:agitator_ernst_rohm = {
 	first_name = Ernst
 	last_name = RO_hm
 	historical = yes
-	culture = global_var:sou_ger_culture
+	culture = cu:south_german
 	religion = rel:protestant
 	female = no
 	interest_group = ig_armed_forces
@@ -252,6 +277,9 @@ agitator_ernst_rohm = {
 	agitator_usage = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				has_variable = ernst_rohm_spawn
+			}
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -259,65 +287,39 @@ agitator_ernst_rohm = {
 					target = flag:converter_ernst_rohm
 				}
 			}
-			trigger_if = {
-				limit = {
-					OR = {
-						AND = {
-							exists = c:BAV
-							is_target_in_global_variable_list = { name = global_sou_ger_countries target = c:BAV }
-						}
-						AND = {
-							exists = c:SGF
-							is_target_in_global_variable_list = { name = global_sou_ger_countries target = c:SGF }
-						}
-						AND = {
-							exists = c:GER
-							is_target_in_global_variable_list = { name = global_sou_ger_countries target = c:GER }
-						}
-					}
-				}
-				OR = {
-					c:BAV ?= this
-					c:SGF ?= this
-					c:GER ?= this
-					c:BOL ?= this # Yes, Bolivia.
-				}
-				OR = {
-					is_target_in_global_variable_list = { name = global_sou_ger_countries target = this }
-					c:BOL ?= this # Yes, Bolivia.
-				}
-			}
-			trigger_else = {
-				OR = {
-					is_target_in_global_variable_list = { name = global_sou_ger_countries target = this }
-					c:BOL ?= this # Yes, Bolivia.
-				}
+			OR = {
+				uses_bav_ger_characters = yes
+				uses_bol_characters = yes
 			}
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1917.1.1
 		latest_usage_date = 1935.12.31
 		chance = 25
 	}
 	on_created = {
+		owner = {
+			set_variable = ernst_rohm_spawn
+		}
+		converter_standard_template_effect = { TARGET = cu:south_german }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_ernst_rohm
 		}
+		fix_variable_error = { variable = converter_ernst_rohm }
 	}
 }
 
-agitator_frederick_douglass = {
+REPLACE:agitator_frederick_douglass = {
 	first_name = Frederick
 	last_name = Douglass
 	historical = yes
-	#culture = global_var:afro_amer_culture
 	culture = cu:afro_american
 	religion = rel:protestant
 	female = no
@@ -344,27 +346,28 @@ agitator_frederick_douglass = {
 			uses_afro_amer_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_intelligentsia
-		}   
+		}
 		earliest_usage_date = 1840.1.1
 		latest_usage_date = 1877.1.1
 		chance = 50
 	}
 	on_created = {
-		converter_afro-american_template_effect = yes
+		converter_african_diaspora_template_effect = { TARGET = global_american_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_frederick_douglass
 		}
+		fix_variable_error = { variable = converter_frederick_douglass }
 	}
 }
 
-agitator_ahmed_urabi = {
+REPLACE:agitator_ahmed_urabi = {
 	first_name = Ahmed
 	last_name = Urabi
 	historical = yes
-	culture = global_var:urabi_culture
+	culture = cu:misri
 	religion = rel:sunni
 	female = no
 	interest_group = ig_armed_forces
@@ -386,38 +389,30 @@ agitator_ahmed_urabi = {
 					target = flag:converter_ahmed_urabi
 				}
 			}
-			trigger_if = {
-				limit = {
-					exists = c:EGY
-					is_target_in_global_variable_list = { name = global_urabi_countries target = c:EGY }
-				}
-				this = c:EGY
-			}
-			trigger_else = {
-				is_target_in_global_variable_list = { name = global_urabi_countries target = this }
-			}
+			uses_egy_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_armed_forces
-		}   
+		}
 		earliest_usage_date = 1876.3.9 # End of the Egyptian-Ethiopian War
 		latest_usage_date = 1901.5.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:misri }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_ahmed_urabi
 		}
+		fix_variable_error = { variable = converter_ahmed_urabi }
 	}
 }
 
-agitator_eugene_debs = {
+REPLACE:agitator_eugene_debs = {
 	first_name = Eugene
 	last_name = Debs
 	historical = yes
-	#culture = global_var:midwest_yankee_culture
 	culture = cu:yankee
 	religion = rel:protestant
 	female = no
@@ -443,27 +438,28 @@ agitator_eugene_debs = {
 			uses_midwest_yankee_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_trade_unions
-		}   
+		}
 		earliest_usage_date = 1893.6.20 # foundation of the American Railway Union
 		latest_usage_date = 1921.12.25
 		chance = 50
 	}
 	on_created = {
-		converter_mw_yankee_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_mw_yankee_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_eugene_debs
 		}
+		fix_variable_error = { variable = converter_eugene_debs }
 	}
 }
 
-agitator_saigo_takamori = {
+REPLACE:agitator_saigo_takamori = {
 	first_name = Saigo
 	last_name = Takamori
 	historical = yes
-	culture = global_var:jap_culture
+	culture = cu:japanese
 	religion = rel:shinto
 	female = no
 	interest_group = ig_landowners
@@ -473,6 +469,7 @@ agitator_saigo_takamori = {
 		demagogue
 		charismatic
 		honorable
+		basic_offensive_planner
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -484,29 +481,31 @@ agitator_saigo_takamori = {
 					target = flag:converter_saigo_takamori
 				}
 			}
-			uses_jap_characters = yes
+			uses_japanese_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_landowners
-		}   
+		}
 		earliest_usage_date = 1868.1.27
 		latest_usage_date = 1877.9.24
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:japanese }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_saigo_takamori
 		}
+		fix_variable_error = { variable = converter_saigo_takamori }
 	}
 }
 
-agitator_wichaichan = { # a.k.a. PRINCE GEORGE WASHINGTON
+REPLACE:agitator_wichaichan = { # a.k.a. PRINCE GEORGE WASHINGTON
 	first_name = Wichaichan
 	last_name = Chakri
 	historical = yes
-	culture = global_var:chakri_culture
+	culture = cu:thai
 	religion = rel:theravada
 	female = no
 	interest_group = ig_landowners
@@ -527,38 +526,31 @@ agitator_wichaichan = { # a.k.a. PRINCE GEORGE WASHINGTON
 					target = flag:converter_wichaichan
 				}
 			}
-			trigger_if = {
-				limit = {
-					exists = c:SIA
-					is_target_in_global_variable_list = { name = global_chakri_countries target = c:SIA }
-				}
-				this = c:SIA
-			}
-			trigger_else = {
-				is_target_in_global_variable_list = { name = global_chakri_countries target = this }
-			}
+			uses_sia_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_landowners
-		}   
+		}
 		earliest_usage_date = 1868.8.2
 		latest_usage_date = 1885.8.28
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:thai }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_wichaichan
 		}
+		fix_variable_error = { variable = converter_wichaichan }
 	}
 }
 
-agitator_enver_pasha = {
+REPLACE:agitator_enver_pasha = {
 	first_name = Enver
 	last_name = Pasha
 	historical = yes
-	culture = global_var:tur_culture
+	culture = cu:turkish
 	religion = rel:sunni
 	female = no
 	interest_group = ig_armed_forces
@@ -583,9 +575,9 @@ agitator_enver_pasha = {
 			uses_tur_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_armed_forces
-		}   
+		}
 		earliest_usage_date = 1906.1.1
 		latest_usage_date = 1922.8.4
 		chance = 25
@@ -602,7 +594,7 @@ agitator_enver_pasha = {
 			uses_tur_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_armed_forces
 		}
 		earliest_usage_date = 1908.1.1
@@ -610,18 +602,20 @@ agitator_enver_pasha = {
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:turkish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_enver_pasha
 		}
+		fix_variable_error = { variable = converter_enver_pasha }
 	}
 }
 
-agitator_alfred_hugenberg = {
+REPLACE:agitator_alfred_hugenberg = {
 	first_name = Alfred
 	last_name = Hugenberg
 	historical = yes
-	culture = global_var:nor_ger_culture
+	culture = cu:north_german
 	religion = rel:protestant
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -636,6 +630,9 @@ agitator_alfred_hugenberg = {
 	agitator_usage = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				has_variable = alfred_hugenberg_spawn
+			}
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -643,55 +640,33 @@ agitator_alfred_hugenberg = {
 					target = flag:converter_alfred_hugenberg
 				}
 			}
-			trigger_if = {
-				limit = {
-					OR = {
-						AND = {
-							exists = c:HAN
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:HAN }
-						}
-						AND = {
-							exists = c:NGF
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:NGF }
-						}
-						AND = {
-							exists = c:GER
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:GER }
-						}
-					}
-				}
-				OR = {
-					this = c:HAN
-					this = c:NGF
-					this = c:GER
-				}
-				is_target_in_global_variable_list = { name = global_nor_ger_countries target = this }
-			}
-			trigger_else = {
-				is_target_in_global_variable_list = { name = global_nor_ger_countries target = this }
-			}
+			uses_han_ger_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_petty_bourgeoisie
-		}   
+		}
 		earliest_usage_date = 1916.1.1
 		latest_usage_date = 1936.1.1
 		chance = 25
 	}
 	on_created = {
+		owner = {
+			set_variable = alfred_hugenberg_spawn
+		}
+		converter_standard_template_effect = { TARGET = cu:north_german }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_alfred_hugenberg
 		}
+		fix_variable_error = { variable = converter_alfred_hugenberg }
 	}
 }
 
-agitator_susan_b_anthony = {
+REPLACE:agitator_susan_b_anthony = {
 	first_name = Susan
 	last_name = Anthony
 	historical = yes
-	#culture = global_var:new_england_yankee_culture
 	culture = cu:yankee
 	religion = rel:protestant
 	female = yes
@@ -714,47 +689,34 @@ agitator_susan_b_anthony = {
 					target = flag:converter_susan_b_anthony
 				}
 			}
-			OR = {
-				uses_new_england_yankee_characters = yes
-				trigger_if = {
-					limit = {
-						exists = c:NEN
-						#is_target_in_global_variable_list = { name = global_new_england_yankee_countries target = c:NEN }
-						c:NEN = { any_primary_culture = { is_target_in_global_variable_list = { name = global_ne_yankee_cultures target = this } } }
-					}
-					this = c:NEN
-				}
-				trigger_else = {
-					#is_target_in_global_variable_list = { name = global_new_england_yankee_countries target = this }
-					any_primary_culture = { is_target_in_global_variable_list = { name = global_ne_yankee_cultures target = this } }
-				}
-			}
+			uses_new_england_yankee_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1851.1.1
 		latest_usage_date = 1900.1.1
 		chance = 50
 	}
 	on_created = {
-		converter_ne_yankee_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_ne_yankee_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_susan_b_anthony
 		}
+		fix_variable_error = { variable = converter_susan_b_anthony }
 	}
 }
 
-agitator_giovanni_gentile = {
+REPLACE:agitator_giovanni_gentile = {
 	first_name = Giovanni
 	last_name = Gentile
 	historical = yes
-	culture = global_var:sou_ita_culture
+	culture = cu:south_italian
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -769,6 +731,9 @@ agitator_giovanni_gentile = {
 	agitator_usage = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				has_variable = giovanni_gentile_spawn
+			}
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -779,83 +744,34 @@ agitator_giovanni_gentile = {
 			uses_sou_ita_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1922.1.1
 		latest_usage_date = 1935.12.31
 		chance = 25
 	}
 	on_created = {
+		owner = {
+			set_variable = giovanni_gentile_spawn
+		}
+		converter_standard_template_effect = { TARGET = cu:south_italian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_giovanni_gentile
 		}
+		fix_variable_error = { variable = converter_giovanni_gentile }
 	}
 }
 
-agitator_lajos_kossuth = {
-	first_name = Lajos
-	last_name = Kossuth
-	historical = yes
-	culture = global_var:hun_culture
-	religion = rel:protestant
-	female = no
-	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_radical
-	birth_date = 1802.9.19
-	traits = {
-		charismatic
-		demagogue
-		imperious
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			should_have_male_characters = yes
-			NOT = {
-				is_target_in_global_variable_list = {
-					name = converter_unavailable_unique_characters
-					target = flag:converter_lajos_kossuth
-				}
-			}
-			trigger_if = {
-				limit = {
-					NOT = {
-						any_country = { uses_hun_characters = yes }
-					}
-				}
-				uses_aus_ger_characters = yes
-				any_scope_state = {
-					state_region = { is_homeland = global_var:hun_culture }
-				}
-			}
-			trigger_else = { uses_hun_characters = yes }
-		}
-		interest_group_trigger = {
-			is_marginal = no
-			is_interest_group_type = ig_petty_bourgeoisie
-		}   
-		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1867.5.29 # Compromise of 1867
-		chance = 50
-	}
-	on_created = {
-		add_to_global_variable_list = {
-			name = converter_unavailable_unique_characters
-			target = flag:converter_lajos_kossuth
-		}
-	}
-}
-
-agitator_ludwik_mieroslawski = {
+REPLACE:agitator_ludwik_mieroslawski = {
 	first_name = Ludwik
 	last_name = Mieroslawski
 	historical = yes
-	culture = global_var:pol_culture
+	culture = cu:polish
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -876,42 +792,31 @@ agitator_ludwik_mieroslawski = {
 					target = flag:converter_ludwik_mieroslawski
 				}
 			}
-			trigger_if = {
-				limit = {
-					exists = c:POL
-					is_target_in_global_variable_list = { name = global_pol_countries target = c:POL }
-				}
-				this = c:POL
-			}
-			trigger_else = {
-				OR = {
-					is_target_in_global_variable_list = { name = global_pol_countries target = this }
-					uses_rus_characters = yes
-					uses_pru_ger_characters = yes
-				}
-			}
+			uses_pol_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_petty_bourgeoisie
-		}   
+		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1871.1.28
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:polish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_ludwik_mieroslawski
 		}
+		fix_variable_error = { variable = converter_ludwik_mieroslawski }
 	}
 }
 
-agitator_francesco_crispi = {
+REPLACE:agitator_francesco_crispi = {
 	first_name = Francesco
 	last_name = Crispi
 	historical = yes
-	culture = global_var:sou_ita_culture
+	culture = cu:south_italian
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -936,30 +841,32 @@ agitator_francesco_crispi = {
 			uses_sou_ita_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_rural_folk
 			}
-		}   
+		}
 		earliest_usage_date = 1847.1.1
 		latest_usage_date = 1893.1.1
 		chance = 25
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:south_italian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francesco_crispi
 		}
+		fix_variable_error = { variable = converter_francesco_crispi }
 	}
 }
 
-agitator_bjornstjerne_bjornson = {
+REPLACE:agitator_bjornstjerne_bjornson = {
 	first_name = Bjornstjerne
 	last_name = Bjornson
 	historical = yes
-	culture = global_var:nor_culture
+	culture = cu:norwegian
 	religion = rel:protestant
 	female = no
 	interest_group = ig_intelligentsia
@@ -983,29 +890,31 @@ agitator_bjornstjerne_bjornson = {
 			uses_nor_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1857.1.1
 		latest_usage_date = 1894.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:norwegian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_bjornstjerne_bjornson
 		}
+		fix_variable_error = { variable = converter_bjornstjerne_bjornson }
 	}
 }
 
-agitator_orla_lehmann = { # Peter Martin Orla Lehmann
+REPLACE:agitator_orla_lehmann = { # Peter Martin Orla Lehmann
 	first_name = Orla
 	last_name = Lehmann
 	historical = yes
-	culture = global_var:dan_culture
+	culture = cu:danish
 	religion = rel:protestant
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1029,30 +938,32 @@ agitator_orla_lehmann = { # Peter Martin Orla Lehmann
 			uses_den_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_rural_folk
 			}
-		}   
+		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1863.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:danish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_orla_lehmann
 		}
+		fix_variable_error = { variable = converter_orla_lehmann }
 	}
 }
 
-agitator_prince_sabahaddin = { # Prince Sabahaddin de Neuchâtel 
+REPLACE:agitator_prince_sabahaddin = { # Prince Sabahaddin de Neuchâtel 
 	first_name = Sabahaddin
 	last_name = Osmanoglu
 	historical = yes
-	culture = global_var:tur_culture
+	culture = cu:turkish
 	religion = rel:sunni
 	female = no
 	interest_group = ig_landowners
@@ -1078,30 +989,31 @@ agitator_prince_sabahaddin = { # Prince Sabahaddin de Neuchâtel
 			has_law = law_type:law_monarchy
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_landowners
 			}
-		}   
+		}
 		earliest_usage_date = 1899.1.1
 		latest_usage_date = 1935.12.31
 		chance = 25
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:turkish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_prince_sabahaddin
 		}
+		fix_variable_error = { variable = converter_prince_sabahaddin }
 	}
 }
 
-agitator_francisco_madero = { # Francisco Ignacio Madero Gonzalez
+REPLACE:agitator_francisco_madero = { # Francisco Ignacio Madero Gonzalez
 	first_name = Francisco
 	last_name = Madero
 	historical = yes
-	#culture = global_var:mexico_culture
-	culture = primary_culture
+	culture = cu:mexican
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1126,30 +1038,31 @@ agitator_francisco_madero = { # Francisco Ignacio Madero Gonzalez
 			uses_mexico_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
-		}   
+		}
 		earliest_usage_date = 1903.1.1
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
 	on_created = {
-		converter_mexican_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_mexican_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francisco_madero
 		}
+		fix_variable_error = { variable = converter_francisco_madero }
 	}
 }
 
-agitator_gabriele_d_annunzio = { # Gabriele D'Annunzio
+REPLACE:agitator_gabriele_d_annunzio = { # Gabriele D'Annunzio
 	first_name = Gabriele
 	last_name = D_Annunzio
 	historical = yes
-	culture = global_var:sou_ita_culture
+	culture = cu:south_italian
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1164,6 +1077,9 @@ agitator_gabriele_d_annunzio = { # Gabriele D'Annunzio
 	agitator_usage = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				has_variable = gabriele_d_annunzio_spawn
+			}
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1174,30 +1090,35 @@ agitator_gabriele_d_annunzio = { # Gabriele D'Annunzio
 			uses_sou_ita_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1899.1.1
 		latest_usage_date = 1924.1.1
 		chance = 50
 	}
 	on_created = {
+		owner = {
+			set_variable = gabriele_d_annunzio_spawn
+		}
+		converter_standard_template_effect = { TARGET = cu:south_italian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_gabriele_d_annunzio
 		}
+		fix_variable_error = { variable = converter_gabriele_d_annunzio }
 	}
 }
 
-agitator_jean_jaures = { # Jean Jaurès
+REPLACE:agitator_jean_jaures = { # Jean Jaurès
 	first_name = Jean
 	last_name = JaurE_s
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:catholic
 	female = no
 	interest_group = ig_intelligentsia
@@ -1224,29 +1145,31 @@ agitator_jean_jaures = { # Jean Jaurès
 			}
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1892.1.1
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jean_jaures
 		}
+		fix_variable_error = { variable = converter_jean_jaures }
 	}
 }
 
-agitator_viggo_horup = { # Viggo Hørup
+REPLACE:agitator_viggo_horup = { # Viggo Hørup
 	first_name = Viggo
 	last_name = Horup
 	historical = yes
-	culture = global_var:dan_culture
+	culture = cu:danish
 	religion = rel:protestant
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1270,29 +1193,31 @@ agitator_viggo_horup = { # Viggo Hørup
 			uses_den_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1876.1.1
 		latest_usage_date = 1900.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:danish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_viggo_horup
 		}
+		fix_variable_error = { variable = converter_viggo_horup }
 	}
 }
 
-agitator_georg_brandes = { # Georg Brandes
+REPLACE:agitator_georg_brandes = { # Georg Brandes
 	first_name = Georg
 	last_name = Brandes
 	historical = yes
-	culture = global_var:dan_culture
+	culture = cu:danish
 	religion = rel:jewish
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1316,29 +1241,31 @@ agitator_georg_brandes = { # Georg Brandes
 			uses_den_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1871.11.3
 		latest_usage_date = 1900.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:danish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_georg_brandes
 		}
+		fix_variable_error = { variable = converter_georg_brandes }
 	}
 }
 
-agitator_alexis_de_tocqueville = { # Alexis de Tocqueville
+REPLACE:agitator_alexis_de_tocqueville = { # Alexis de Tocqueville
 	first_name = Alexis
 	last_name = de_Tocqueville
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:catholic
 	female = no
 	interest_group = ig_landowners
@@ -1363,30 +1290,31 @@ agitator_alexis_de_tocqueville = { # Alexis de Tocqueville
 			uses_fra_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1852.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_alexis_de_tocqueville
 		}
+		fix_variable_error = { variable = converter_alexis_de_tocqueville }
 	}
 }
 
-agitator_jose_do_patrocinio = { # José do Patrocínio
+REPLACE:agitator_jose_do_patrocinio = { # José do Patrocínio
 	first_name = JosE_
 	last_name = do_PatrocI_nio
 	historical = yes
-	#culture = global_var:afro_braz_culture
-	culture = cu:afro_brazilian
+	culture = cu:afro_american
 	religion = rel:catholic
 	female = no
 	interest_group = ig_intelligentsia
@@ -1412,30 +1340,31 @@ agitator_jose_do_patrocinio = { # José do Patrocínio
 			uses_afro_braz_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_rural_folk
-			} 
-		}   
+			}
+		}
 		earliest_usage_date = 1874.1.1
 		latest_usage_date = 1893.1.1
 		chance = 50
 	}
 	on_created = {
-		converter_afro-brazilian_template_effect = yes
+		converter_african_diaspora_template_effect = { TARGET = global_brazilian_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jose_do_patrocinio
 		}
+		fix_variable_error = { variable = converter_jose_do_patrocinio }
 	}
 }
 
-agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky.
+REPLACE:agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky.
 	first_name = Karl
 	last_name = Liebknecht
 	historical = yes
-	culture = global_var:nor_ger_culture
+	culture = cu:north_german
 	religion = rel:protestant
 	female = no
 	interest_group = ig_intelligentsia
@@ -1457,58 +1386,34 @@ agitator_karl_liebknecht = { # Karl Liebknecht, or as I like to call him, Chucky
 					target = flag:converter_karl_liebknecht
 				}
 			}
-			trigger_if = {
-				limit = {
-					OR = {
-						AND = {
-							exists = c:SAX
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:SAX }
-						}
-						AND = {
-							exists = c:NGF
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:NGF }
-						}
-						AND = {
-							exists = c:GER
-							is_target_in_global_variable_list = { name = global_nor_ger_countries target = c:GER }
-						}
-					}
-				}
-				OR = {
-					this = c:SAX
-					this = c:NGF
-					this = c:GER
-				}
-				is_target_in_global_variable_list = { name = global_nor_ger_countries target = this }
-			}
-			trigger_else = {
-				is_target_in_global_variable_list = { name = global_nor_ger_countries target = this }
-			}
+			uses_sax_ger_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1899.4.5
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:north_german }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_karl_liebknecht
 		}
+		fix_variable_error = { variable = converter_karl_liebknecht }
 	}
 }
 
-agitator_francesc_pi_i_margall = { # Francesc Pi i Margall
+REPLACE:agitator_francesc_pi_i_margall = { # Francesc Pi i Margall
 	first_name = Francesc
 	last_name = Pi_i_Margall
 	historical = yes
-	culture = global_var:pi_i_margall_culture
+	culture = cu:catalan
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1530,43 +1435,34 @@ agitator_francesc_pi_i_margall = { # Francesc Pi i Margall
 					target = flag:converter_francesc_pi_i_margall
 				}
 			}
-			trigger_if = {
-				limit = {
-					NOT = {
-						any_country = { uses_pi_i_margall_characters = yes }
-					}
-				}
-				is_target_in_global_variable_list = { name = global_spa_countries target = this }
-				any_scope_state = {
-					state_region = { is_homeland = global_var:pi_i_margall_culture }
-				}
-			}
-			trigger_else = { uses_pi_i_margall_characters = yes }
+			uses_catalan_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1854.1.1
 		latest_usage_date = 1893.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:catalan }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francesc_pi_i_margall
 		}
+		fix_variable_error = { variable = converter_francesc_pi_i_margall }
 	}
 }
 
-agitator_manuel_ruiz_zorrilla = { # Manuel Ruiz Zorrilla
+REPLACE:agitator_manuel_ruiz_zorrilla = { # Manuel Ruiz Zorrilla
 	first_name = Manuel
 	last_name = Ruiz_Zorrilla
 	historical = yes
-	culture = global_var:spa_culture
+	culture = cu:spanish
 	religion = rel:catholic
 	female = no
 	interest_group = ig_petty_bourgeoisie
@@ -1588,32 +1484,34 @@ agitator_manuel_ruiz_zorrilla = { # Manuel Ruiz Zorrilla
 					target = flag:converter_manuel_ruiz_zorrilla
 				}
 			}
-			uses_spa_characters = yes
+			uses_spanish_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
-		}   
+		}
 		earliest_usage_date = 1866.1.1
 		latest_usage_date = 1884.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:spanish }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_ruiz_zorrilla
 		}
+		fix_variable_error = { variable = converter_manuel_ruiz_zorrilla }
 	}
 }
 
-agitator_francois_rene_de_la_tour_du_pin_chambly = { # François-René de La Tour du Pin Chambly, marquis de La Charce, sacré bleu mon name is trés long
+REPLACE:agitator_francois_rene_de_la_tour_du_pin_chambly = { # François-René de La Tour du Pin Chambly, marquis de La Charce, sacré bleu mon name is trés long
 	first_name = Fran_Cois-Ren_E
 	last_name = de_La_Tour_du_Pin_Chambly
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:catholic
 	female = no
 	interest_group = ig_landowners
@@ -1637,29 +1535,31 @@ agitator_francois_rene_de_la_tour_du_pin_chambly = { # François-René de La Tou
 			uses_fra_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_armed_forces
 			}
-		}   
+		}
 		earliest_usage_date = 1870.1.1
 		latest_usage_date = 1900.1.1
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francois_rene_de_la_tour_du_pin_chambly
 		}
+		fix_variable_error = { variable = converter_francois_rene_de_la_tour_du_pin_chambly }
 	}
 }
 
-agitator_antonio_sardinha = { # António Sardinha, integralist
+REPLACE:agitator_antonio_sardinha = { # António Sardinha, integralist
 	first_name = Antonio_2
 	last_name = Sardinha
 	historical = yes
-	culture = global_var:por_culture
+	culture = cu:portuguese
 	religion = rel:catholic
 	female = no
 	interest_group = ig_intelligentsia
@@ -1673,6 +1573,9 @@ agitator_antonio_sardinha = { # António Sardinha, integralist
 	agitator_usage = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
+			NOT = {
+				has_variable = antonio_sardinha_spawn
+			}
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1683,121 +1586,33 @@ agitator_antonio_sardinha = { # António Sardinha, integralist
 			uses_por_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
-		}   
+		}
 		earliest_usage_date = 1910.1.1
 		latest_usage_date = 1935.12.31 # Historically he died young in 1925 at the age of 37
 		chance = 50
 	}
 	on_created = {
+		owner = {
+			set_variable = antonio_sardinha_spawn
+		}
+		converter_standard_template_effect = { TARGET = cu:portuguese }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_antonio_sardinha
 		}
+		fix_variable_error = { variable = converter_antonio_sardinha }
 	}
 }
 
-agitator_ion_dragoumis = { # Ion Dragoumis
-	first_name = Ion
-	last_name = Dragoumis
-	historical = yes
-	culture = global_var:gre_culture
-	religion = rel:orthodox
-	female = no
-	interest_group = ig_landowners
-	ideology = ideology_fascist
-	birth_date = 1878.9.14
-	traits = {
-		experienced_diplomat
-		literary
-		ambitious
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			should_have_male_characters = yes
-			NOT = {
-				is_target_in_global_variable_list = {
-					name = converter_unavailable_unique_characters
-					target = flag:converter_ion_dragoumis
-				}
-			}
-			uses_gre_characters = yes
-		}
-		interest_group_trigger = {
-			is_marginal = no
-			OR = {
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_petty_bourgeoisie
-			}
-		}   
-		earliest_usage_date = 1907.1.1
-		latest_usage_date = 1935.12.31 # Historically, he was shot in 1920
-		chance = 50
-	}
-	on_created = {
-		add_to_global_variable_list = {
-			name = converter_unavailable_unique_characters
-			target = flag:converter_ion_dragoumis
-		}
-	}
-}
-
-agitator_sandor_petofi = { # Sándor Petőfi
-	first_name = Sandor_2
-	last_name = Petofi
-	historical = yes
-	culture = global_var:hun_culture
-	religion = rel:protestant
-	female = no
-	interest_group = ig_intelligentsia
-	ideology = ideology_radical
-	birth_date = 1823.1.1
-	traits = {
-		literary
-		charismatic
-		romantic
-	}
-	agitator_usage = {
-		country_trigger = {
-			has_dlc_feature = voice_of_the_people_content
-			should_have_male_characters = yes
-			NOT = {
-				is_target_in_global_variable_list = {
-					name = converter_unavailable_unique_characters
-					target = flag:converter_sandor_petofi
-				}
-			}
-			uses_hun_characters = yes
-		}
-		interest_group_trigger = {
-			is_marginal = no
-			OR = {
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_petty_bourgeoisie
-			}
-		}   
-		earliest_usage_date = 1847.1.1
-		latest_usage_date = 1860.1.1 # he actually disappeared in 1860
-		chance = 50
-	}
-	on_created = {
-		add_to_global_variable_list = {
-			name = converter_unavailable_unique_characters
-			target = flag:converter_sandor_petofi
-		}
-	}
-}
-
-agitator_harriet_tubman = {
+REPLACE:agitator_harriet_tubman = {
 	first_name = Harriet
 	last_name = Tubman
 	historical = yes
-	#culture = global_var:afro_amer_culture
 	culture = cu:afro_american
 	religion = rel:protestant
 	female = yes
@@ -1824,30 +1639,30 @@ agitator_harriet_tubman = {
 			uses_afro_amer_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_devout
 			}
-		}   
+		}
 		earliest_usage_date = 1849.9.17
 		latest_usage_date = 1896.1.1
 		chance = 50
 	}
 	on_created = {
-		converter_afro-american_template_effect = yes
+		converter_african_diaspora_template_effect = { TARGET = global_american_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_harriet_tubman
 		}
+		fix_variable_error = { variable = converter_harriet_tubman }
 	}
 }
 
-agitator_web_du_bois = { # W.E.B. Du Bois
+REPLACE:agitator_web_du_bois = { # W.E.B. Du Bois
 	first_name = William
 	last_name = Du_Bois
 	historical = yes
-	#culture = global_var:afro_amer_culture
 	culture = cu:afro_american
 	religion = rel:protestant
 	female = no
@@ -1877,7 +1692,7 @@ agitator_web_du_bois = { # W.E.B. Du Bois
 			}
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_intelligentsia
 		}
 		earliest_usage_date = 1894.6.1
@@ -1885,19 +1700,20 @@ agitator_web_du_bois = { # W.E.B. Du Bois
 		chance = 50
 	}
 	on_created = {
-		converter_afro-american_template_effect = yes
+		converter_african_diaspora_template_effect = { TARGET = global_american_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_web_du_bois
 		}
+		fix_variable_error = { variable = converter_web_du_bois }
 	}
 }
 
-agitator_alexandru_bogdan_pitesti = { # Alexandru Bogdan-Pitești
+REPLACE:agitator_alexandru_bogdan_pitesti = { # Alexandru Bogdan-Pitești
 	first_name = Alexandru
 	last_name = Bogdan-Pitesti
 	historical = yes
-	culture = global_var:pitesti_culture
+	culture = cu:romanian
 	religion = rel:catholic # He's not Orthodox. He converted to Catholicism. I don't make the rules.
 	female = no
 	interest_group = ig_intelligentsia
@@ -1919,31 +1735,10 @@ agitator_alexandru_bogdan_pitesti = { # Alexandru Bogdan-Pitești
 					target = flag:converter_alexandru_bogdan_pitesti
 				}
 			}
-			trigger_if = {
-				limit = {
-					OR = {
-						AND = {
-							exists = c:ROM
-							is_target_in_global_variable_list = { name = global_pitesti_countries target = c:ROM }
-						}
-						AND = {
-							exists = c:WAL
-							is_target_in_global_variable_list = { name = global_pitesti_countries target = c:WAL }
-						}
-					}
-				}
-				OR = {
-					this = c:ROM
-					this = c:WAL
-				}
-				is_target_in_global_variable_list = { name = global_pitesti_countries target = this }
-			}
-			trigger_else = {
-				is_target_in_global_variable_list = { name = global_pitesti_countries target = this }
-			}
+			uses_romanian_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_intelligentsia
 		}
 		earliest_usage_date = 1894.1.1
@@ -1951,18 +1746,20 @@ agitator_alexandru_bogdan_pitesti = { # Alexandru Bogdan-Pitești
 		chance = 50
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:romanian }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_alexandru_bogdan_pitesti
 		}
+		fix_variable_error = { variable = converter_alexandru_bogdan_pitesti }
 	}
 }
 
-agitator_jules_brunet = { # Jules Brunet
+REPLACE:agitator_jules_brunet = { # Jules Brunet
 	first_name = Jules
 	last_name = Brunet
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:catholic
 	female = no
 	interest_group = ig_armed_forces
@@ -1984,114 +1781,124 @@ agitator_jules_brunet = { # Jules Brunet
 					target = flag:converter_jules_brunet
 				}
 			}
-			c:JAP ?= this
+			uses_japanese_characters = yes
 		}
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_landowners
 			}
-		}   
+		}
 		earliest_usage_date = 1867.1.1 # French military mission to Japan
 		latest_usage_date = 1892.1.1
 		chance = 25
 	}
 	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jules_brunet
 		}
+		fix_variable_error = { variable = converter_jules_brunet }
 	}
 }
 
-fra_delescluze_character_template = {
-    first_name = Louis_Charles
-    last_name = Delescluze
-    historical = yes
-    birth_date = 1809.5.25
-    is_agitator = yes
-    female = no
-    culture = global_var:fra_culture
-    interest_group = ig_intelligentsia
-    ideology = ideology_communist
-    dna = dna_louis_delescluze
-    traits = {
-        literary
-        inspirational_orator
-        brave
-    }
-}
-
-fra_blanqui_character_template = {
-    first_name = Louis
-    last_name = Blanqui
-    historical = yes
-    birth_date = 1805.2.8
-    culture = global_var:fra_culture
-    religion = rel:atheist
-    is_agitator = yes
-    female = no
-    interest_group = ig_intelligentsia
-    ideology = ideology_communist
-    dna = dna_blanqui
-    traits = {
-        direct
-        basic_political_operator
-        ambitious
-    }
-}
-
-usa_john_brown_character_template = {
-    first_name = John
-    last_name = Brown
-    historical = yes
-    birth_date = 1800.5.9
-    #culture = global_var:new_england_yankee_culture
-	culture = cu:yankee
-    is_agitator = yes
-    female = no
-    interest_group = ig_devout
-    ideology = ideology_abolitionist
-    dna = dna_john_brown
-    traits = {
-        reserved
-        firebrand
-        reckless
-    } 
+REPLACE:fra_delescluze_character_template = {
+	first_name = Louis_Charles
+	last_name = Delescluze
+	historical = yes
+	birth_date = 1809.5.25
+	is_agitator = yes
+	female = no
+	culture = cu:french
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_louis_delescluze
+	traits = {
+		literary
+		inspirational_orator
+		brave
+	}
 	on_created = {
-		converter_ne_yankee_template_effect = yes
+		converter_standard_template_effect = { TARGET = cu:french }
 	}
 }
 
-fra_maurras_character_template = {
-   first_name = Charles
-    last_name = Maurras
-    historical = yes
-    birth_date = 1868.4.20
-    culture = global_var:fra_culture
-    is_agitator = yes
-    female = no
-    interest_group = ig_petty_bourgeoisie
-    ideology = ideology_traditionalist
-    dna = dna_charles_maurras
-    traits = {
-        reserved
-        firebrand
-        reckless
-    }  
+REPLACE:fra_blanqui_character_template = {
+	first_name = Louis
+	last_name = Blanqui
+	historical = yes
+	birth_date = 1805.2.8
+	culture = cu:french
+	religion = rel:atheist
+	is_agitator = yes
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_communist
+	dna = dna_blanqui
+	traits = {
+		direct
+		basic_political_operator
+		ambitious
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
+	}
 }
 
-usa_emperor_norton_character_template = {
-    first_name = Joshua
+REPLACE:usa_john_brown_character_template = {
+	first_name = John
+	last_name = Brown
+	historical = yes
+	birth_date = 1800.5.9
+	culture = cu:yankee
+	is_agitator = yes
+	female = no
+	interest_group = ig_devout
+	ideology = ideology_abolitionist
+	dna = dna_john_brown
+	traits = {
+		reserved
+		firebrand
+		reckless
+	} 
+	on_created = {
+		converter_colonial_template_effect = { TARGET = global_ne_yankee_cultures }
+	}
+}
+
+REPLACE:fra_maurras_character_template = {
+   first_name = Charles
+	last_name = Maurras
+	historical = yes
+	birth_date = 1868.4.20
+	culture = cu:french
+	is_agitator = yes
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_traditionalist
+	dna = dna_charles_maurras
+	traits = {
+		reserved
+		firebrand
+		reckless
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
+	}
+}
+
+REPLACE:usa_joshua_norton_character_template = {
+	first_name = Joshua
 	last_name = Norton
 	historical = yes
-	culture = global_var:gbr_culture
+	culture = cu:british
 	#religion = scope:norton_religion
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_royalist
+	ideology = ideology_humanitarian_royalist
 	birth_date = 1818.2.4
 	dna = dna_emperor_norton
 	traits = {
@@ -2099,129 +1906,317 @@ usa_emperor_norton_character_template = {
 		honorable
 		ambitious
 	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:british }
+	}
 }
-pol_rosa_luxemburg_character_template = {
-    first_name = Rosa
+REPLACE:pol_rosa_luxemburg_character_template = {
+	first_name = Rosa
 	last_name = Luxemburg
 	historical = yes
-	culture = global_var:pol_culture
+	culture = cu:polish
 	religion = rel:atheist
 	female = yes
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_trade_unions
 	ideology = ideology_communist
 	birth_date = 1871.3.5
 	dna = dna_rosa_luxemburg
 	traits = {
 		firebrand
-        brave
-        romantic
+		brave
+		romantic
+	}
+	on_created = {
+		set_variable = anti_nationalist_var
+		converter_standard_template_effect = { TARGET = cu:polish }
 	}
 }
-fra_georges_sorel_character_template = {
-    first_name = Georges
+REPLACE:fra_georges_sorel_character_template = {
+	first_name = Georges
 	last_name = Sorel
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	religion = rel:atheist
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_intelligentsia
-	ideology = ideology_atheist
+	ideology = ideology_nihilist
 	birth_date = 1847.11.2
 	dna = dna_georges_sorel
 	traits = {
 		erudite
-        innovative
-        engineer
+		innovative
+		engineer
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 	}
 }
-fra_georges_boulanger_character_template = {
-    first_name = Georges
+REPLACE:fra_georges_boulanger_character_template = {
+	first_name = Georges
 	last_name = Boulanger
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_ethno_nationalist
 	birth_date = 1837.4.29
 	dna = dna_boulanger
 	traits = {
 		demagogue
-        innovative
-        romantic
+		innovative
+		romantic
+        special_character_general_revanche
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 	}
 }
-pru_ferdinand_lassalle_character_template = {
-    first_name = Ferdinand
+REPLACE:pru_ferdinand_lassalle_character_template = {
+	first_name = Ferdinand
 	last_name = Lassalle
 	historical = yes
-	culture = global_var:nor_ger_culture
+	culture = cu:north_german
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_social_democrat
 	dna = dna_lassalle
 	birth_date = 1825.4.11
 	traits = {
 		inspirational_orator
-        arrogant
-        ambitious
+		arrogant
+		ambitious
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:north_german }
 	}
 }
-brz_luis_gama_character_template = {
-    first_name = Luis_2
+REPLACE:brz_luis_gama_character_template = {
+	first_name = Luis_2
 	last_name = Gama
 	historical = yes
-	#culture = global_var:afro_braz_culture
 	culture = cu:afro_brazilian
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_intelligentsia
 	ideology = ideology_abolitionist
 	birth_date = 1830.6.21
 	dna = dna_luis_gama
 	traits = {
 		erudite
-        meticulous
+		meticulous
 	}
 	on_created = {
-		converter_afro-brazilian_template_effect = yes
+		converter_african_diaspora_template_effect = { TARGET = global_brazilian_cultures }
 	}
 }
-fra_victor_hugo_character_template = {
-    first_name = Victor
+REPLACE:fra_victor_hugo_character_template = {
+	first_name = Victor
 	last_name = Hugo
 	historical = yes
-	culture = global_var:fra_culture
+	culture = cu:french
 	female = no
-    is_agitator = yes
+	is_agitator = yes
 	interest_group = ig_intelligentsia
 	ideology = ideology_republican_leader
 	birth_date = 1802.2.26
 	dna = dna_victor_hugo
 	traits = {
 		direct
-        brave
-        literary
+		brave
+		literary
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:french }
 	}
 }
-chi_sun_yat_sen_character_template = {
-    first_name = Sun
-	last_name = Yat_Sen
+
+REPLACE:agitator_karl_marx = { # Normal Marx
+	first_name = Karl_Heinrich
+	last_name = Marx
 	historical = yes
-	culture = global_var:han_culture
-	religion = global_var:yat_sen_religion
+	is_agitator = yes
+	interest_group = ig_trade_unions
 	female = no
-    is_agitator = yes
-	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_republican_leader
-	birth_date = 1866.11.12
-	dna = dna_sun_yat_sen
+	dna = dna_karl_marx
+	ideology = ideology_communist
+	culture = global_var:ashkenazi_culture
+	religion = rel:atheist
 	traits = {
-		erudite
-        persistent
-        ambitious
+		direct
+		persistent
+		literary
+	}
+}
+
+REPLACE:agitator_charlie_marx = { # Karl Marx, Texas
+	first_name = Charlie
+	last_name = Marx
+	historical = yes
+	is_agitator = yes
+	interest_group = ig_trade_unions
+	female = no
+	dna = dna_karl_marx
+	ideology = ideology_communist
+	culture = global_var:ashkenazi_culture
+	religion = rel:atheist
+	traits = {
+		direct
+		persistent
+		literary
+	}
+}
+
+REPLACE:agitator_kras_masov = { # Kras Mazov
+	first_name = Kras
+	last_name = Masov
+	is_agitator = yes
+	interest_group = ig_trade_unions
+	female = no
+	ideology = ideology_communist
+	traits = {
+		direct
+		persistent
+		literary
+	}
+}
+
+REPLACE:ada_lovelace_template = {
+	first_name = Ada
+	last_name = Lovelace
+	historical = yes
+	is_agitator = yes
+	culture = cu:british
+	religion = rel:protestant
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate
+	female = yes
+	birth_date = 1815.11.27
+	dna = dna_ada_lovelace
+	traits = {
+		romantic
+		innovative
+		literary
+		cancer
+	}
+	agitator_usage = {
+		country_trigger = {
+			uses_gbr_characters = yes
+			should_have_male_characters = yes
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = converter_unavailable_unique_characters
+					target = flag:converter_ada_lovelace
+				}
+			}
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+			is_interest_group_type = ig_intelligentsia
+        }
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1852.11.27
+		chance = 100
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:british }
+		add_to_global_variable_list = {
+			name = converter_unavailable_unique_characters
+			target = flag:converter_ada_lovelace
+		}
+		fix_variable_error = { variable = converter_ada_lovelace }
+	}
+}
+
+REPLACE:ibsen_character_template = {
+	first_name = Henrik
+	last_name = Ibsen
+	historical = yes
+	culture = cu:norwegian
+	religion = rel:protestant #Ibsen was actually Lutheran
+	interest_group = ig_intelligentsia
+	ideology = ideology_anarchist
+	female = no
+	birth_date = 1828.3.20
+	dna = dna_ibsen
+	traits = {
+		romantic
+		innovative
+		literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			should_have_male_characters = yes
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = converter_unavailable_unique_characters
+					target = flag:converter_ibsen
+				}
+			}
+			uses_nor_characters = yes
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1862.1.1
+		latest_usage_date = 1906.1.1
+		chance = 10
+	}
+	on_created = {
+		converter_standard_template_effect = { TARGET = cu:norwegian }
+		add_to_global_variable_list = {
+			name = converter_unavailable_unique_characters
+			target = flag:converter_ibsen
+		}
+		fix_variable_error = { variable = converter_ibsen }
+	}
+}
+
+REPLACE:albert_einstein_template = {
+	first_name = Albert
+	last_name = Einstein
+	historical = yes
+	culture = global_var:ashkenazi_culture
+	religion = rel:jewish
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	female = no
+	is_agitator = yes
+	birth_date = 1879.3.14
+	dna = dna_albert_einstein
+	traits = {
+		innovative
+		ambitious
+		literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			uses_pru_ger_characters = yes
+			should_have_male_characters = yes
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = converter_unavailable_unique_characters
+					target = flag:converter_albert_einstein
+				}
+			}
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1905.1.1
+		latest_usage_date = 1955.4.18
+		chance = 100
+	}
+	on_created = {
+		add_to_global_variable_list = {
+			name = converter_unavailable_unique_characters
+			target = flag:converter_albert_einstein
+		}
+		fix_variable_error = { variable = converter_albert_einstein }
 	}
 }

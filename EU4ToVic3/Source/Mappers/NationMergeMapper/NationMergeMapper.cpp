@@ -1,6 +1,7 @@
 #include "NationMergeMapper.h"
 #include "CommonRegexes.h"
 #include "ParserHelpers.h"
+#include <filesystem>
 
 void mappers::NationMergeMapper::loadNationMerge()
 {

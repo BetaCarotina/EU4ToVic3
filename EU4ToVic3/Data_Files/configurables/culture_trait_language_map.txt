@@ -1,0 +1,303 @@
+# This file is used when generating language definitions for any culture NOT already defined. 
+# This means when importing flemish (already defined) we won't create a new def, but when importing
+#    dynamic-flemish-russian-culture-num3, we will be using both flemish and east_slavic entries.
+# Relevant to this is also name_list_map.txt which graps appropriate namelist for the culture being defines.
+#
+# Example usage:
+# link = { language = X_language eu4 = culture1 eu4group = culturegroup1 } -> list individual cultures BEFORE group fallbacks!
+# There can be as many cultures and groups as needed
+# There must be a SINGLE language
+
+#Mapping Order: The converter first searches for EU4 cultures, THEN if, and only if, it cannot find a matching EU4 culture, does it map by EU4 Culture Group.
+#This means that you do NOT need to order the EU4 cultures so that they appear before EU4 Culture Groups, since the cultures will always map before the mapper starts looking for culture groups.
+
+##Languages
+#Vanilla EU4 Cultures
+link = { language = language_aboriginal eu4group = aboriginal_australian }
+link = { language = language_adyghe eu4 = circassian }
+link = { language = language_afar eu4 = afar }
+link = { language = language_ainu eu4 = ainu }
+link = { language = language_akan eu4 = aka }
+link = { language = language_algonquian eu4 = algonquin eu4group = central_algonquian eu4group = eastern_algonquian eu4group = plains_algonquian }
+link = { language = language_albanian eu4 = albanian }
+link = { language = language_amazonian eu4group = je eu4group = maranon }
+link = { language = language_amharic eu4 = amhara eu4group = cushitic }
+link = { language = language_anglophone eu4 = english eu4 = american eu4 = scottish eu4group = british }
+link = { language = language_apachean eu4group = apachean }
+link = { language = language_arabic eu4group = turko_semitic eu4group = maghrebi }
+link = { language = language_aramaic eu4 = aramaic }
+link = { language = language_armenian eu4 = armenian }
+#link = { language = language_arpitan eu4 = ??? }
+link = { language = language_athabaskan eu4 = athabascan eu4group = na_dene }
+link = { language = language_avaric eu4 = dagestani }
+link = { language = language_aymaran eu4 = aimara }
+link = { language = language_baltic eu4 = pruthenian eu4group = baltic }
+link = { language = language_baluchi eu4 = baluchi }
+link = { language = language_basque eu4group = basque }
+#link = { language = language_batak eu4group = ??? }
+link = { language = language_beja eu4 = beja }
+link = { language = language_berber eu4 = berber eu4 = tuareg }
+#link = { language = language_beti eu4 = ??? }
+link = { language = language_brythonic eu4 = breton eu4 = welsh }
+link = { language = language_bulgarian eu4 = bulgarian eu4 = bulgarian_new }
+link = { language = language_burmic eu4 = burmese eu4group = burman }
+link = { language = language_buryat eu4 = buryat }
+link = { language = language_caddoan eu4group = caddoan }
+link = { language = language_cariban eu4group = carribean }
+link = { language = language_cham eu4 = cham }
+link = { language = language_cherokee eu4 = cherokee }
+link = { language = language_chonan eu4group = araucanian }
+link = { language = language_cree eu4 = cree eu4 = plains_cree }
+link = { language = language_creek eu4group = muskogean }
+#link = { language = language_creole eu4group = ??? }
+link = { language = language_dardic eu4 = kashmiri }
+#link = { language = language_dayak eu4group = ??? }
+link = { language = language_dinka eu4group = sudanese }
+link = { language = language_dutch eu4 = dutch eu4 = flemish eu4 = frisian }
+link = { language = language_east_slavic eu4group = east_slavic eu4group = slavic }
+link = { language = language_eastern_hindi eu4 = assamese }
+link = { language = language_eastern_romance eu4group = carpathian }
+link = { language = language_edo eu4 = bariba } # Language of Benin, but the culture of Benin is Yoruba, another language
+link = { language = language_equatorial_bantu eu4 = sawabantu }
+link = { language = language_eskimoan eu4 = inuit eu4group = eskaleut }
+link = { language = language_ewenic eu4group = evenks }
+link = { language = language_finnic eu4 = estonian eu4 = livonian eu4 = finnish eu4 = ingrian eu4 = karelian }
+link = { language = language_fluvial_bantu eu4group = kongo_group eu4group = southern_african }
+#link = { language = language_formosan eu4group = ??? }
+link = { language = language_francophone eu4group = french }
+link = { language = language_fulani eu4 = fulani }
+link = { language = language_fur eu4 = tunjur }
+link = { language = language_gaelic eu4group = gaelic }
+link = { language = language_galla eu4 = oromo }
+link = { language = language_gbe eu4 = fon }
+link = { language = language_georgian eu4 = georgian eu4 = georgian_new eu4group = caucasian}
+link = { language = language_germanophone eu4group = germanic }
+link = { language = language_greek eu4 = spartan eu4 = athenian eu4group = byzantine }
+link = { language = language_guajiro eu4 = guajiro }
+link = { language = language_guarani eu4 = guarani }
+link = { language = language_hakka eu4 = hakka }
+link = { language = language_hausa eu4 = hausa }
+link = { language = language_hindustani eu4group = hindusthani eu4group = western_aryan }
+link = { language = language_hispanophone eu4group = iberian }
+link = { language = language_hmong eu4 = miao }
+link = { language = language_hokan eu4 = haida } #Most of the area that's Hokan in VIC3 is Penutian in EU4, but the groups are not actually related
+link = { language = language_hopi eu4 = pueblo eu4group = sonoran }
+link = { language = language_hungarian eu4 = hungarian }
+#link = { language = language_ibibio eu4group = ??? }
+#link = { language = language_igbo eu4group = ??? }
+link = { language = language_iroquoian eu4 = iroquois eu4group = iroquoian }
+link = { language = language_italian eu4group = latin }
+link = { language = language_japanese eu4group = japanese_g }
+link = { language = language_jurchenic eu4 = manchu eu4 = manchu_new }
+link = { language = language_kachinic eu4 = kachin }
+link = { language = language_kamchatkan eu4 = kamchatkan_g }
+link = { language = language_kanuri eu4 = kanuri }
+link = { language = language_karenic eu4 = karen }
+link = { language = language_karluk eu4 = uzbehk eu4 = uyghur }
+#link = { language = language_kavango eu4group = ??? }
+link = { language = language_khmeric eu4 = khmer eu4group = southeastasian_group }
+#link = { language = language_khmuic eu4group = ??? }
+link = { language = language_khoisan eu4 = khoisan eu4group = khoisan }
+link = { language = language_kikuyu eu4 = bantu } # EU4 Bantu = Thagiicu
+link = { language = language_kipchak eu4 = khazak eu4 = kirgiz eu4group = tartar }
+#link = { language = language_kissi eu4group = ??? }
+link = { language = language_kongo eu4 = kongolese }
+#link = { language = language_kordofanian eu4group = ??? }
+link = { language = language_korean eu4 = korean eu4 = korean_new eu4group = korean_g }
+#link = { language = language_kru eu4group = ??? }
+link = { language = language_kurdish eu4 = kurdish }
+link = { language = language_lacustrine_bantu eu4group = african } #EU4 African = Eastern Bantu Groups
+#link = { language = language_ladino eu4group = ??? }
+link = { language = language_laotian eu4 = lao }
+link = { language = language_luba eu4 = luba }
+link = { language = language_lunda eu4 = lunda }
+link = { language = language_luo eu4 = acholi }
+link = { language = language_lusophone eu4 = portugese eu4 = brazilian }
+link = { language = language_maa eu4 = masaba eu4group = great_lakes_group }
+link = { language = language_magadhan eu4group = eastern_aryan }
+link = { language = language_makua eu4 = makua }
+link = { language = language_malagasy eu4 = madagascan eu4 = madagasque }
+link = { language = language_malay eu4group = malay }
+link = { language = language_mandarin eu4group = east_asian }
+link = { language = language_mande eu4 = mali }
+link = { language = language_manding eu4group = mande eu4group = sahelian eu4group = west_african }
+#link = { language = language_mari eu4group = ??? }
+link = { language = language_mayan eu4group = maya }
+link = { language = language_meitei eu4 = chin }
+link = { language = language_melanesian eu4 = melanesian eu4 = papuan }
+#link = { language = language_metis eu4group = ??? }
+#link = { language = language_micronesian eu4group = ??? }
+link = { language = language_min eu4 = chimin }
+link = { language = language_miskito eu4 = miskito }
+link = { language = language_mixtecan eu4 = mixtec }
+#link = { language = language_mizo eu4group = ??? }
+link = { language = language_moluccan eu4 = moluccan }
+link = { language = language_mongo eu4 = kuba }
+link = { language = language_mongolian eu4 = altaic_new eu4 = mongolian eu4group = altaic }
+link = { language = language_monic eu4 = mon }
+#link = { language = language_mordvinic eu4group = ??? }
+link = { language = language_mossi eu4 = mossi }
+link = { language = language_muiscan eu4 = muisca eu4group = chibchan }
+#link = { language = language_métis eu4group = ??? }
+#link = { language = language_naga eu4group = ??? }
+link = { language = language_nahuan eu4group = central_american }
+link = { language = language_nguni eu4 = nguni }
+link = { language = language_nilotic eu4group = nilotic }
+link = { language = language_northwestern_indic eu4 = panjabi eu4 = sindhi }
+#link = { language = language_nuer eu4group = ??? }
+link = { language = language_numic eu4 = shoshone }
+#link = { language = language_nyamwezi eu4group = ??? }
+link = { language = language_nyasa eu4 = nyasa }
+link = { language = language_occitano_romance eu4 = occitain eu4 = catalan }
+link = { language = language_oghuric eu4group = oghur }
+link = { language = language_oghuz eu4 = turkish eu4 = azerbaijani eu4 = turkmeni }
+link = { language = language_pahari eu4 = nepali eu4 = pahari }
+#link = { language = language_patois eu4 = ??? }
+link = { language = language_pashto eu4 = afghani }
+#link = { language = language_permic eu4 = ??? }
+link = { language = language_zaghawa eu4 = zaghawa }
+link = { language = language_nupe eu4 = nupe }
+
+
+link = { language = language_persian eu4 = parsi eu4 = persian eu4group = iranian eu4group = iranian_tribal }
+link = { language = language_philippinic eu4 = filipino }
+link = { language = language_piman eu4 = piman eu4 = yaqui eu4group = aridoamerican }
+link = { language = language_polynesian eu4 = polynesian eu4group = pacific }
+link = { language = language_quechuan eu4group = andean_group }
+#link = { language = language_sahaptian eu4 = ??? }
+link = { language = language_salish eu4 = salish }
+link = { language = language_sami eu4 = sapmi }
+#link = { language = language_sara eu4 = ??? }
+link = { language = language_scandinavian eu4 = scanian eu4group = scandinavian }
+#link = { language = language_senufo eu4 = ??? }
+link = { language = language_shan eu4 = shan }
+link = { language = language_shona eu4 = shona }
+link = { language = language_siamese eu4group = thai_group }
+link = { language = language_siberian eu4 = yakut }
+link = { language = language_sidama eu4 = sidamo }
+link = { language = language_siouan eu4group = siouan }
+link = { language = language_slovene eu4 = slovene }
+link = { language = language_somali eu4 = somali }
+link = { language = language_songhai eu4 = songhai }
+#link = { language = language_sotho eu4 = ??? }
+link = { language = language_south_central eu4 = gondi eu4 = telegu eu4group = central_indic }
+link = { language = language_south_slavic eu4 = croatian_new eu4 = serbian_new eu4 = slovene_new eu4 = bosnian_new eu4 = bulgarian_new eu4group = south_slavic }
+link = { language = language_southern_indic eu4 = marathi eu4 = sinhala }
+link = { language = language_swahili eu4 = swahili }
+link = { language = language_tabari eu4 = mazandarani }
+link = { language = language_takama eu4 = takama }
+link = { language = language_tamil_tulu eu4 = tamil eu4group = dravidian }
+link = { language = language_tarascan eu4 = purepecha }
+#link = { language = language_tebu eu4 = ??? }
+link = { language = language_tibetan eu4 = tibetan eu4 = tibetan_new eu4group = tibetan_group }
+link = { language = language_tigrinya eu4 = tigray }
+link = { language = language_tiv eu4 = jukun }
+link = { language = language_tonga eu4 = takama }
+link = { language = language_tupi eu4 = tupinamba eu4group = je_tupi }
+link = { language = language_takama eu4 = takama }
+link = { language = language_ugric eu4group = finno_ugric }
+#link = { language = language_umbundu eu4 = ??? }
+#link = { language = language_vainakh eu4 = ??? }
+link = { language = language_vietic eu4 = vietnamese eu4 = vietnamese_new }
+link = { language = language_west_slavic eu4 = czech_new eu4 = polish_new eu4 = schlesian_new eu4 = sorbian_new eu4 = slovak_new eu4group = west_slavic }
+link = { language = language_western_indic eu4 = gujarati eu4 = malvi eu4 = rajput }
+link = { language = language_wolof eu4 = senegambian }
+link = { language = language_yao eu4 = bilala eu4 = toubou }
+link = { language = language_yi eu4 = bai eu4 = yi }
+#link = { language = language_yiddish eu4 = ??? }
+link = { language = language_yoruba eu4 = yorumba } #Yorumba localizes to Yoruba
+link = { language = language_yue eu4 = cantonese }
+#link = { language = language_zande eu4 = ??? }
+link = { language = language_zapotecan eu4 = zapotek eu4group = otomanguean }
+link = { language = language_zhuang eu4 = zhuang eu4 = zhuang_new }
+
+#Converter Cultures
+link = { language = language_adyghe eu4group = abkhazian_group }
+link = { language = language_albanian eu4 = shqiperi eu4 = arbereshe eu4group = albanian_g eu4group = western_balkan }
+link = { language = language_aramaic eu4 = babylonian eu4group = chaldean eu4group = mesopotamian eu4group = mesopotamian_group }
+link = { language = language_armenian eu4group = armenian_group }
+link = { language = language_avaric eu4group = dagestani_group }
+link = { language = language_basque eu4group = basque_group }
+link = { language = language_brythonic eu4 = arvorigeg eu4 = dramor }
+link = { language = language_dutch eu4group = dutch_group }
+link = { language = language_eastern_romance eu4 = aromanian eu4 = olbian eu4group = eastern_balkan eu4group = vlach }
+link = { language = language_greek eu4 = romaic eu4 = elysian eu4 = elyric eu4 = elysameric eu4 = cretan_e eu4 = eleutheroi eu4 = borealian eu4 = hyperborealian eu4 = hesperidian eu4 = kykladian eu4 = lakonian eu4 = shqipproi eu4 = varangian_e eu4 = arkadian eu4group = spartakian_group }
+link = { language = language_germanophone eu4group = barbaro_germanic }
+link = { language = language_hindustani eu4group = dom_group }
+link = { language = language_hungarian eu4group = magyar }
+link = { language = language_italian eu4 = friulan eu4group = northern_romance }
+link = { language = language_lusophone eu4group = portugese_moroccan_macaronesia }
+link = { language = language_mongolian eu4group = mongolic }
+link = { language = language_oghuz eu4group = oghuz }
+link = { language = language_persian eu4group = iranian_tribal }
+link = { language = language_philippinic eu4group = filipino_group }
+link = { language = language_scandinavian eu4group = norse_g }
+link = { language = language_ugric eu4group = ugric }
+
+#Converter Languages
+link = { language = language_coptophone eu4 = coptic eu4 = per_sheklesh eu4 = niwt_ipt }
+link = { language = language_thracian eu4 = thracian eu4group = scordiscian_g }
+link = { language = language_dacian eu4group = dacian_group }
+link = { language = language_etruscan eu4group = tyrrhenian eu4 = etrurian eu4group = eastern_etrurian eu4group = western_etrurian eu4group = northern_etrurian }
+link = { language = language_nuragic eu4 = nuragic }
+link = { language = language_iberic eu4 = oldspain eu4 = iberic } #oldspain mixes iberic and turdetanian, set to iberic for now
+link = { language = language_turdetanian eu4 = turdetanian }
+link = { language = language_gaulish eu4group = gallic_group }
+link = { language = language_galatian eu4 = galatian_celtic eu4 = plashurii }
+link = { language = language_celtiberian eu4group = celtiberian_g eu4group = celtic eu4group = celts }
+link = { language = language_noric eu4 = ghasettian eu4 = betwani } #Noric is manually defined
+link = { language = language_belgae eu4 = atrebatian } #Belgian is manually defined
+link = { language = language_lusitanian eu4 = lusitanian }
+link = { language = language_gutian eu4 = gutian }
+link = { language = language_hattic eu4group = hatti_group }
+link = { language = language_hebrew eu4 = hebrew eu4group = israelite eu4group = israeli_group }
+link = { language = language_phrygian eu4 = phrygian }
+link = { language = language_luwian eu4 = luwian eu4 = lycian eu4 = isaurian }
+link = { language = language_paphlagonian eu4 = paphlagonian }
+link = { language = language_cilician eu4 = cilician }
+link = { language = language_lydian eu4 = lydian }
+link = { language = language_trojan eu4 = trojan }
+link = { language = language_kizzuwatnan eu4 = kizzuwatnan }
+link = { language = language_hittite eu4group = hittite_group eu4group = old_anatolian_group }
+link = { language = language_hurrian eu4group = hurrian_group }
+link = { language = language_illevionophone eu4 = vandal eu4group = gothic_group }
+link = { language = language_ingaevophone eu4 = anglosaxon eu4 = anglo_saxon eu4 = northumbrian eu4 = mercian eu4 = wessexian eu4 = essexian eu4 = east_anglian eu4 = ecgfrithian eu4 = northerner }
+link = { language = language_irminophone eu4 = suebi eu4group = old_lombard_g }
+link = { language = language_istvaeonophone eu4group = frankish_g }
+link = { language = language_indo_germanic eu4 = indo_germanic }
+link = { language = language_old_ligurian eu4 = old_ligurian }
+link = { language = language_romano_british eu4 = romano_british eu4 = britannian eu4 = cambrian }
+link = { language = language_romano_germanic eu4 = laessin eu4 = theodisc eu4 = hyperborean }
+link = { language = language_romano_slavic eu4 = tracki eu4 = alzzecio eu4 = wenedyk eu4 = rhogian }
+link = { language = language_afro_romance eu4group = afro_romance_group eu4 = salinatorian eu4 = african_romance eu4 = aegyptian eu4 = eifrican eu4 = antonian eu4 = nilan }
+link = { language = language_palmyrene eu4 = palmyrene }
+link = { language = language_oriental_romance eu4group = oriental_romance eu4 = arabus eu4 = romano_persian eu4 = bazramani }
+link = { language = language_indo_roman eu4 = romanoindian }
+link = { language = language_latinophone eu4 = roman eu4group = roman_group }
+link = { language = language_cycladic eu4 = cycladic }
+link = { language = language_pelasgian eu4 = pelasgian }
+link = { language = language_minoan eu4group = pre_greek_group }
+link = { language = language_ugaritic eu4 = ugaritic }
+link = { language = language_alasiyan eu4 = alasiyan }
+link = { language = language_phoeniciophone eu4 = phoenician eu4 = punic eu4group = punic_group eu4group = old_mashriqi }
+link = { language = language_rhaetic eu4group = rhaetic eu4group = pre_indo_european_group }
+link = { language = language_neo_mitanni eu4 = neo_mitanni }
+link = { language = language_atlanto_slavic eu4group = atlanto_slavic }
+link = { language = language_scythian eu4 = scythian eu4 = saka eu4group = scythian_group }
+link = { language = language_sogdian eu4 = sogdian } 
+link = { language = language_tocharian eu4 = tocharian } 
+link = { language = language_elamite eu4 = elamite }
+link = { language = language_wichi eu4group = mataco }
+link = { language = language_penutian eu4group = penutian }
+
+link = { language = language_equine eu4group = equine_group }
+link = { language = language_feline eu4group = cat_group }
+link = { language = language_ursine eu4 = polar_bear eu4 = jan_mayanese eu4group = bear_group }
+link = { language = language_erinaceous eu4group = hedgehog_group }
+link = { language = language_anatidine eu4group = duck_group }
+link = { language = language_canine eu4group = dog_group }
+link = { language = language_elephantine eu4group = elephant_group }
+link = { language = language_draconic eu4group = dragon_group }
+link = { language = language_ailurine eu4group = red_panda_group }
+
+link = { language = language_latinophone eu4group = lost_cultures_group } #Fallback for any unmapped EU4 Lost Cultures

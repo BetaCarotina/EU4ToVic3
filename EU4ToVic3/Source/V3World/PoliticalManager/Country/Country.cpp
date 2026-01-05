@@ -276,7 +276,16 @@ void V3::Country::registerKeys()
 		vanillaData->capitalStateName = commonItems::getString(theStream);
 	});
 	registerKeyword("color", [this](std::istream& theStream) {
-		vanillaData->color = commonItems::Color::Factory().getColor(theStream);
+		vanillaData->color = laFabricaDeColor.getColor(theStream);
+	});
+	registerKeyword("primary_unit_color", [this](std::istream& theStream) {
+		vanillaData->primaryUnitColor = laFabricaDeColor.getColor(theStream);
+	});
+	registerKeyword("secondary_unit_color", [this](std::istream& theStream) {
+		vanillaData->secondaryUnitColor = laFabricaDeColor.getColor(theStream);
+	});
+	registerKeyword("tertiary_unit_color", [this](std::istream& theStream) {
+		vanillaData->tertiaryUnitColor = laFabricaDeColor.getColor(theStream);
 	});
 	registerKeyword("is_named_from_capital", [this](const std::string& unused, std::istream& theStream) {
 		commonItems::ignoreItem(unused, theStream);
@@ -319,11 +328,23 @@ void V3::Country::convertFromEU4Country(const ClayManager& clayManager,
 	{
 		processedData.color = vanillaData->color;
 	}
-	else if (sourceCountry->getNationalColors().getMapColor())
+	if (vanillaData && vanillaData->primaryUnitColor)
+	{
+		processedData.primaryUnitColor = vanillaData->primaryUnitColor;
+	}
+	if (vanillaData && vanillaData->secondaryUnitColor)
+	{
+		processedData.secondaryUnitColor = vanillaData->secondaryUnitColor;
+	}
+	if (vanillaData && vanillaData->tertiaryUnitColor)
+	{
+		processedData.tertiaryUnitColor = vanillaData->tertiaryUnitColor;
+	}
+	if (!processedData.color && sourceCountry->getNationalColors().getMapColor())
 	{
 		processedData.color = sourceCountry->getNationalColors().getMapColor();
 	}
-	// If nothing... well... Game will assign something.
+	// Else if nothing... well... Game will assign something.
 
 	// Maybe we're a colonial nation? In that case our colors will be within 1-2 of the overlord. We neeed to fluctuate.
 	if (!sourceCountry->getOverLord().empty() && sourceCountry->isColony())
@@ -950,8 +971,7 @@ void V3::Country::calculateBaseLiteracy(const mappers::ReligionMapper& religionM
 	if (religionMapper.getV3ReligionDefinitions().contains(processedData.religion))
 	{
 		const auto& religion = religionMapper.getV3ReligionDefinitions().at(processedData.religion);
-		const auto& traits = religion.traits;
-		if (religion.name == "protestant" || traits.contains("eastern"))
+		if (religion.name == "protestant" || religion.heritage == "heritage_group_eastern")
 			literacy += 0.1;
 	}
 
@@ -1151,8 +1171,8 @@ bool V3::Country::isCultureDiscriminated(const std::string& culture, const mappe
 	{
 		for (const auto& primaryCulture: processedData.cultures)
 		{
-			if (cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture) &&
-				 cultureMapper.doCulturesShareNonHeritageTrait(primaryCulture, culture) && *cultureMapper.doCulturesShareNonHeritageTrait(primaryCulture, culture))
+			if (cultureMapper.doCulturesShareHeritage(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritage(primaryCulture, culture) &&
+				 cultureMapper.doCulturesShareLanguage(primaryCulture, culture) && *cultureMapper.doCulturesShareLanguage(primaryCulture, culture))
 				return false;
 		}
 	}
@@ -1161,7 +1181,7 @@ bool V3::Country::isCultureDiscriminated(const std::string& culture, const mappe
 	{
 		for (const auto& primaryCulture: processedData.cultures)
 		{
-			if (cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture))
+			if (cultureMapper.doCulturesShareHeritage(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritage(primaryCulture, culture))
 				return false;
 		}
 	}
@@ -1170,8 +1190,8 @@ bool V3::Country::isCultureDiscriminated(const std::string& culture, const mappe
 	{
 		for (const auto& primaryCulture: processedData.cultures)
 		{
-			if (cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritageTrait(primaryCulture, culture) ||
-				 cultureMapper.doCulturesShareNonHeritageTrait(primaryCulture, culture) && *cultureMapper.doCulturesShareNonHeritageTrait(primaryCulture, culture))
+			if (cultureMapper.doCulturesShareHeritage(primaryCulture, culture) && *cultureMapper.doCulturesShareHeritage(primaryCulture, culture) ||
+				 cultureMapper.doCulturesShareLanguage(primaryCulture, culture) && *cultureMapper.doCulturesShareLanguage(primaryCulture, culture))
 			{
 				return false;
 			}

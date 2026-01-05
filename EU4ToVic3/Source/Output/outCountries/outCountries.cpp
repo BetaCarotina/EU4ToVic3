@@ -8,7 +8,7 @@ namespace
 {
 void outMajorFormable(std::ostream& output, const std::string& tag, const V3::MajorFormablesEntry& formable)
 {
-	output << tag << " = {\n";
+	output << tag << " ?= {\n";
 	for (const auto& stanza: formable.getStanzas())
 		output << "\t" << stanza << "\n";
 	output << "\tpossible = {\n";
@@ -31,7 +31,7 @@ void outMajorFormable(std::ostream& output, const std::string& tag, const V3::Ma
 
 void outReleasableCountry(std::ostream& output, const V3::Country& country)
 {
-	output << country.getTag() << " = {\n";
+	output << country.getTag() << " ?= {\n";
 	output << "\tprovinces = { ";
 	for (const auto& province: country.getUnownedProvinces())
 		output << province << " ";
@@ -42,10 +42,16 @@ void outReleasableCountry(std::ostream& output, const V3::Country& country)
 
 void outCommonCountry(std::ostream& output, const V3::Country& country)
 {
-	output << country.getTag() << " = {\n";
+	output << country.getTag() << " ?= {\n";
 
 	if (country.getProcessedData().color)
 		output << "\tcolor " << *country.getProcessedData().color << "\n";
+	if (country.getProcessedData().primaryUnitColor)
+		output << "\tprimary_unit_color " << *country.getProcessedData().primaryUnitColor << "\n";
+	if (country.getProcessedData().secondaryUnitColor)
+		output << "\tsecondary_unit_color " << *country.getProcessedData().color << "\n";
+	if (country.getProcessedData().tertiaryUnitColor)
+		output << "\ttertiary_unit_color " << *country.getProcessedData().color << "\n";
 	if (!country.getProcessedData().type.empty())
 		output << "\tcountry_type = " << country.getProcessedData().type << "\n";
 	if (!country.getProcessedData().tier.empty())
@@ -69,7 +75,7 @@ void outCommonCountry(std::ostream& output, const V3::Country& country)
 
 void outHistoryCountry(std::ostream& output, const V3::Country& country)
 {
-	output << "\tc:" << country.getTag() << " = {\n";
+	output << "\tc:" << country.getTag() << " ?= {\n";
 	for (const auto& tech: country.getProcessedData().techs)
 		output << "\t\tadd_technology_researched = " << tech << "\n";
 	for (const auto& effect: country.getProcessedData().effects)
@@ -122,7 +128,7 @@ void outHistoryCountry(std::ostream& output, const V3::Country& country)
 
 void outHistoryPopulations(std::ostream& output, const V3::Country& country)
 {
-	output << "\tc:" << country.getTag() << " = {\n";
+	output << "\tc:" << country.getTag() << " ?= {\n";
 	for (const auto& effect: country.getProcessedData().populationEffects)
 		output << "\t\t" << effect << " = yes\n";
 	for (const auto& element: country.getProcessedData().vanillaPopulationElements)
@@ -132,11 +138,11 @@ void outHistoryPopulations(std::ostream& output, const V3::Country& country)
 
 } // namespace
 
-void OUT::exportCommonCountries(const std::string& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
+void OUT::exportCommonCountries(const std::filesystem::path& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
 {
-	std::ofstream output("output/" + outputName + "/common/country_definitions/99_converted_countries.txt");
+	std::ofstream output("output" / outputName / "common/country_definitions/99_converted_countries.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/country_definitions/99_converted_countries.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/country_definitions/99_converted_countries.txt");
 
 	output << commonItems::utf8BOM;
 	for (const auto& country: countries | std::views::values)
@@ -144,11 +150,11 @@ void OUT::exportCommonCountries(const std::string& outputName, const std::map<st
 	output.close();
 }
 
-void OUT::exportHistoryCountries(const std::string& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
+void OUT::exportHistoryCountries(const std::filesystem::path& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
 {
-	std::ofstream output("output/" + outputName + "/common/history/countries/99_converted_countries.txt");
+	std::ofstream output("output" / outputName / "common/history/countries/99_converted_countries.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/history/countries/99_converted_countries.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/history/countries/99_converted_countries.txt");
 
 	output << commonItems::utf8BOM << "COUNTRIES = {\n";
 	for (const auto& country: countries | std::views::values)
@@ -158,11 +164,11 @@ void OUT::exportHistoryCountries(const std::string& outputName, const std::map<s
 	output.close();
 }
 
-void OUT::exportHistoryPopulations(const std::string& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
+void OUT::exportHistoryPopulations(const std::filesystem::path& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
 {
-	std::ofstream output("output/" + outputName + "/common/history/population/99_converted_countries.txt");
+	std::ofstream output("output" / outputName / "common/history/population/99_converted_countries.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/history/population/99_converted_countries.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/history/population/99_converted_countries.txt");
 
 	output << commonItems::utf8BOM << "POPULATION = {\n";
 	for (const auto& country: countries | std::views::values)
@@ -173,11 +179,11 @@ void OUT::exportHistoryPopulations(const std::string& outputName, const std::map
 	output.close();
 }
 
-void OUT::exportReleasables(const std::string& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
+void OUT::exportReleasables(const std::filesystem::path& outputName, const std::map<std::string, std::shared_ptr<V3::Country>>& countries)
 {
-	std::ofstream output("output/" + outputName + "/common/country_creation/99_converted_releasables.txt");
+	std::ofstream output("output" / outputName / "common/country_creation/99_converted_releasables.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/country_creation/99_converted_releasables.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/country_creation/99_converted_releasables.txt");
 
 	output << commonItems::utf8BOM;
 	for (const auto& country: countries | std::views::values)
@@ -186,11 +192,11 @@ void OUT::exportReleasables(const std::string& outputName, const std::map<std::s
 	output.close();
 }
 
-void OUT::exportMajorFormables(const std::string& outputName, const std::map<std::string, V3::MajorFormablesEntry>& formables)
+void OUT::exportMajorFormables(const std::filesystem::path& outputName, const std::map<std::string, V3::MajorFormablesEntry>& formables)
 {
-	std::ofstream output("output/" + outputName + "/common/country_formation/00_major_formables.txt");
+	std::ofstream output("output" / outputName / "common/country_formation/00_major_formables.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/country_formation/00_major_formables.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/country_formation/00_major_formables.txt");
 
 	output << commonItems::utf8BOM;
 	for (const auto& [tag, formable]: formables)

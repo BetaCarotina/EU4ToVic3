@@ -511,7 +511,7 @@ int V3::PopManager::generatePopCountForShovedSubState(const std::shared_ptr<SubS
 	return static_cast<int>(round(subStateRatio * static_cast<double>(unassignedPopCount)));
 }
 
-void V3::PopManager::loadMinorityPopRules(const std::string& filePath)
+void V3::PopManager::loadMinorityPopRules(const std::filesystem::path& filePath)
 {
 	minorityPopMapper.loadMappingRules(filePath);
 }
@@ -557,7 +557,7 @@ std::map<std::string, V3::StatePops> V3::PopManager::injectReligionsIntoPops(con
 	return newVanillaPops;
 }
 
-void V3::PopManager::loadSlaveCultureRules(const std::string& filePath)
+void V3::PopManager::loadSlaveCultureRules(const std::filesystem::path& filePath)
 {
 	slaveCultureMapper.loadMappingRules(filePath);
 }
@@ -607,21 +607,38 @@ void V3::PopManager::alterSlaveCultures(const PoliticalManager& politicalManager
 
 	for (const auto& country: politicalManager.getCountries() | std::views::values)
 	{
-		std::set<std::string> cultureTraits;
+		std::set<std::string> cultureLanguages;
+		std::set<std::string> cultureHeritages;
 		for (const auto& culture: country->getProcessedData().cultures)
 		{
 			if (!cultureDefs.contains(culture))
 				continue;
-			const auto& traits = cultureDefs.at(culture).traits;
-			cultureTraits.insert(traits.begin(), traits.end());
+			const auto& heritage = cultureDefs.at(culture).heritage;
+			cultureHeritages.insert(heritage);
+			const auto& language = cultureDefs.at(culture).language;
+			cultureLanguages.insert(language);
 		}
 		std::optional<std::string> newSlaveCulture;
-		for (const auto& trait: cultureTraits)
-			if (slaveCultureMapper.getSlaveCulture(trait))
+		for (const auto& language: cultureLanguages) // try to use language to match a slave culture name.
+		{
+			if (slaveCultureMapper.getSlaveCulture(language))
 			{
-				newSlaveCulture = *slaveCultureMapper.getSlaveCulture(trait);
+				newSlaveCulture = *slaveCultureMapper.getSlaveCulture(language);
 				break;
 			}
+		}
+		if (!newSlaveCulture)
+		{
+			for (const auto& heritage: cultureHeritages) // let's try heritages.
+			{
+				if (slaveCultureMapper.getSlaveCulture(heritage))
+				{
+					newSlaveCulture = *slaveCultureMapper.getSlaveCulture(heritage);
+					break;
+				}
+			}
+		}
+
 		if (!newSlaveCulture)
 			continue;
 

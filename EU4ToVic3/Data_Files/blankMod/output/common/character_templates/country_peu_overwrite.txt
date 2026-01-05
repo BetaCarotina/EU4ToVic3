@@ -1,12 +1,11 @@
 ﻿### Peru character template file ###
 
-PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
+REPLACE:PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 	first_name = Bartolome
 	last_name = Herrera
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -16,7 +15,7 @@ PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 		inspirational_orator
 		imperious
 	}
-    interest_group_leader_usage = {
+	interest_group_leader_usage = {
 		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
@@ -29,20 +28,21 @@ PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1842.1.1
-        latest_usage_date = 1865.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1842.1.1
+		latest_usage_date = 1865.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_bartoleme_herrera
 		}
+		fix_variable_error = { variable = converter_bartoleme_herrera }
 	}
 }
 
@@ -52,7 +52,6 @@ fem_PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -62,7 +61,7 @@ fem_PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 		inspirational_orator
 		imperious
 	}
-    interest_group_leader_usage = {
+	interest_group_leader_usage = {
 		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
@@ -75,30 +74,30 @@ fem_PEU_bartoleme_herrera = { # Bartolomé Herrera Vélez
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1842.1.1
-        latest_usage_date = 1865.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1842.1.1
+		latest_usage_date = 1865.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_bartoleme_herrera
 		}
+		fix_variable_error = { variable = converter_bartoleme_herrera }
 	}
 }
 
-PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro Pacheco
+REPLACE:PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro Pacheco
 	first_name = Francisco_Xavier
 	last_name = de_Luna_Pizarro
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -108,8 +107,8 @@ PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro Pach
 		erudite
 		expert_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -121,20 +120,21 @@ PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro Pach
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1855.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1855.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francisco_xavier_de_luna_pizarro
 		}
+		fix_variable_error = { variable = converter_francisco_xavier_de_luna_pizarro }
 	}
 }
 
@@ -144,7 +144,6 @@ fem_PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro 
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -154,8 +153,8 @@ fem_PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro 
 		erudite
 		expert_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -167,30 +166,30 @@ fem_PEU_francisco_xavier_de_luna_pizarro = { # Francisco Xavier de Luna Pizarro 
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1855.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1855.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francisco_xavier_de_luna_pizarro
 		}
+		fix_variable_error = { variable = converter_francisco_xavier_de_luna_pizarro }
 	}
 }
 
-PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
+REPLACE:PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 	first_name = Manuel
 	last_name = Menendez
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -200,7 +199,7 @@ PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 		basic_political_operator
 		tactful
 	}
-    interest_group_leader_usage = {
+	interest_group_leader_usage = {
 		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
@@ -213,20 +212,21 @@ PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1847.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1847.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_menendez
 		}
+		fix_variable_error = { variable = converter_manuel_menendez }
 	}
 }
 
@@ -236,7 +236,6 @@ fem_PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -246,7 +245,7 @@ fem_PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 		basic_political_operator
 		tactful
 	}
-    interest_group_leader_usage = {
+	interest_group_leader_usage = {
 		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
@@ -259,30 +258,30 @@ fem_PEU_manuel_menendez = { # Manuel Menéndez Gorozabel
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1847.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1847.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_menendez
 		}
+		fix_variable_error = { variable = converter_manuel_menendez }
 	}
 }
 
-PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Ampudia
+REPLACE:PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Ampudia
 	first_name = Francisco
 	last_name = Quiros_y_Ampudia
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_industrialists
@@ -292,8 +291,8 @@ PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Ampudi
 		cautious
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -305,20 +304,21 @@ PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Ampudi
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1865.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1865.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francisco_quiros_y_ampudia
 		}
+		fix_variable_error = { variable = converter_francisco_quiros_y_ampudia }
 	}
 }
 
@@ -328,7 +328,6 @@ fem_PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Am
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_industrialists
@@ -338,8 +337,8 @@ fem_PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Am
 		cautious
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -351,30 +350,30 @@ fem_PEU_francisco_quiros_y_ampudia = { # Francisco de Paula Isidoro Quirós y Am
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
-        }   
-        earliest_usage_date = 1840.1.1
-        latest_usage_date = 1865.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1840.1.1
+		latest_usage_date = 1865.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_francisco_quiros_y_ampudia
 		}
+		fix_variable_error = { variable = converter_francisco_quiros_y_ampudia }
 	}
 }
 
-PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
+REPLACE:PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 	first_name = Manuel
 	last_name = Pardo_y_Lavalle
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -384,8 +383,8 @@ PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 		persistent
 		innovative
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -397,20 +396,21 @@ PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1870.1.1
-        latest_usage_date = 1890.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1870.1.1
+		latest_usage_date = 1890.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_pardo_y_lavalle
 		}
+		fix_variable_error = { variable = converter_manuel_pardo_y_lavalle }
 	}
 }
 
@@ -420,7 +420,6 @@ fem_PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -430,8 +429,8 @@ fem_PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 		persistent
 		innovative
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -443,30 +442,30 @@ fem_PEU_manuel_pardo_y_lavalle = { # Manuel Justo Pardo y Lavalle
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1870.1.1
-        latest_usage_date = 1890.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1870.1.1
+		latest_usage_date = 1890.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_pardo_y_lavalle
 		}
+		fix_variable_error = { variable = converter_manuel_pardo_y_lavalle }
 	}
 }
 
-PEU_domingo_elias = { # Domingo Elías Carbajo
+REPLACE:PEU_domingo_elias = { # Domingo Elías Carbajo
 	first_name = Domingo
 	last_name = Elias
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -477,8 +476,8 @@ PEU_domingo_elias = { # Domingo Elías Carbajo
 		persistent
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -490,20 +489,21 @@ PEU_domingo_elias = { # Domingo Elías Carbajo
 			needs_state_ica = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1844.1.1
-        latest_usage_date = 1858.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1844.1.1
+		latest_usage_date = 1858.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_domingo_elias
 		}
+		fix_variable_error = { variable = converter_domingo_elias }
 	}
 }
 
@@ -513,7 +513,6 @@ fem_PEU_domingo_elias = { # Domingo Elías Carbajo
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_landowners
@@ -524,8 +523,8 @@ fem_PEU_domingo_elias = { # Domingo Elías Carbajo
 		persistent
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -537,30 +536,30 @@ fem_PEU_domingo_elias = { # Domingo Elías Carbajo
 			needs_state_ica = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_landowners
-        }   
-        earliest_usage_date = 1844.1.1
-        latest_usage_date = 1858.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1844.1.1
+		latest_usage_date = 1858.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_domingo_elias
 		}
+		fix_variable_error = { variable = converter_domingo_elias }
 	}
 }
 
-PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
+REPLACE:PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 	first_name = Sebastian
 	last_name = Lorente
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -570,8 +569,8 @@ PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 		erudite
 		sickly
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -586,20 +585,21 @@ PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 				has_law = law_type:law_closed_borders
 			}
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1855.1.1
-        latest_usage_date = 1880.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1855.1.1
+		latest_usage_date = 1880.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_sebastian_lorente
 		}
+		fix_variable_error = { variable = converter_sebastian_lorente }
 	}
 }
 
@@ -609,7 +609,6 @@ fem_PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -619,8 +618,8 @@ fem_PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 		erudite
 		sickly
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -635,30 +634,30 @@ fem_PEU_sebastian_lorente = { # Sebastián Ignacio Lorente Ibáñez
 				has_law = law_type:law_closed_borders
 			}
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1855.1.1
-        latest_usage_date = 1880.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1855.1.1
+		latest_usage_date = 1880.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_sebastian_lorente
 		}
+		fix_variable_error = { variable = converter_sebastian_lorente }
 	}
 }
 
-PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
+REPLACE:PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 	first_name = Pedro_Galvez
 	last_name = Egusquiza
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -667,8 +666,8 @@ PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 	traits = {
 		experienced_diplomat
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -680,20 +679,21 @@ PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1852.1.1
-        latest_usage_date = 1868.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1852.1.1
+		latest_usage_date = 1868.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_galvez_egusquiza
 		}
+		fix_variable_error = { variable = converter_pedro_galvez_egusquiza }
 	}
 }
 
@@ -703,7 +703,6 @@ fem_PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -712,8 +711,8 @@ fem_PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 	traits = {
 		experienced_diplomat
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -725,30 +724,30 @@ fem_PEU_pedro_galvez_egusquiza = { # Pedro Gálvez Egúsquiza
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1852.1.1
-        latest_usage_date = 1868.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1852.1.1
+		latest_usage_date = 1868.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_galvez_egusquiza
 		}
+		fix_variable_error = { variable = converter_pedro_galvez_egusquiza }
 	}
 }
 
-PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola y Villena
+REPLACE:PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola y Villena
 	first_name = Nicolas
 	last_name = de_Pierola
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -758,8 +757,8 @@ PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola y Vi
 		reckless
 		persistent
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -771,20 +770,21 @@ PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola y Vi
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1900.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1875.1.1
+		latest_usage_date = 1900.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_nicolas_de_pierola
 		}
+		fix_variable_error = { variable = converter_nicolas_de_pierola }
 	}
 }
 
@@ -794,7 +794,6 @@ fem_PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola 
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -804,8 +803,8 @@ fem_PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola 
 		reckless
 		persistent
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -817,30 +816,30 @@ fem_PEU_nicolas_de_pierola = { # José Nicolás Baltazar Fernández de Piérola 
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1875.1.1
-        latest_usage_date = 1900.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1875.1.1
+		latest_usage_date = 1900.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_nicolas_de_pierola
 		}
+		fix_variable_error = { variable = converter_nicolas_de_pierola }
 	}
 }
 
-PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
-	first_name = Julio_Cesar
+REPLACE:PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
+	first_name = Julio_CE_sar
 	last_name = Arana_del_Aguila
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_industrialists
@@ -850,8 +849,8 @@ PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
 		cruel
 		ambitious
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -863,20 +862,21 @@ PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1930.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1930.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_julio_cesar_arana_del_aguila
 		}
+		fix_variable_error = { variable = converter_julio_cesar_arana_del_aguila }
 	}
 }
 
@@ -886,7 +886,6 @@ fem_PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_industrialists
@@ -896,8 +895,8 @@ fem_PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
 		cruel
 		ambitious
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -909,30 +908,30 @@ fem_PEU_julio_cesar_arana_del_aguila = { # Julio César Arana del Águila
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_industrialists
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1930.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1930.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_julio_cesar_arana_del_aguila
 		}
+		fix_variable_error = { variable = converter_julio_cesar_arana_del_aguila }
 	}
 }
 
-PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
+REPLACE:PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 	first_name = JosE_
 	last_name = Pardo_y_Barreda
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -943,8 +942,8 @@ PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 		experienced_diplomat
 		meticulous
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -956,20 +955,21 @@ PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1920.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1920.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jose_pardo_y_barreda
 		}
+		fix_variable_error = { variable = converter_jose_pardo_y_barreda }
 	}
 }
 
@@ -979,7 +979,6 @@ fem_PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -990,8 +989,8 @@ fem_PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 		experienced_diplomat
 		meticulous
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1003,30 +1002,30 @@ fem_PEU_jose_pardo_y_barreda = { # José Simón Pardo y Barreda
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1920.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1920.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jose_pardo_y_barreda
 		}
+		fix_variable_error = { variable = converter_jose_pardo_y_barreda }
 	}
 }
 
-PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
+REPLACE:PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 	first_name = Augusto
 	last_name = Leguia
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -1036,8 +1035,8 @@ PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 		imperious
 		charismatic
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1049,20 +1048,21 @@ PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1903.1.1
-        latest_usage_date = 1930.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1903.1.1
+		latest_usage_date = 1930.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_augusto_leguia
 		}
+		fix_variable_error = { variable = converter_augusto_leguia }
 	}
 }
 
@@ -1072,7 +1072,6 @@ fem_PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_petty_bourgeoisie
@@ -1082,8 +1081,8 @@ fem_PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 		imperious
 		charismatic
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1095,30 +1094,30 @@ fem_PEU_augusto_leguia = { # Augusto Bernardino Leguía y Salcedo
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
-        }   
-        earliest_usage_date = 1903.1.1
-        latest_usage_date = 1930.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1903.1.1
+		latest_usage_date = 1930.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_augusto_leguia
 		}
+		fix_variable_error = { variable = converter_augusto_leguia }
 	}
 }
 
-PEU_enrique_lopez_albujar = { # Enrique López Albújar
+REPLACE:PEU_enrique_lopez_albujar = { # Enrique López Albújar
 	first_name = Enrique
 	last_name = Lopez_Albujar
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_rural_folk
@@ -1128,8 +1127,8 @@ PEU_enrique_lopez_albujar = { # Enrique López Albújar
 		literary
 		brave
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1141,20 +1140,21 @@ PEU_enrique_lopez_albujar = { # Enrique López Albújar
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
-        }   
-        earliest_usage_date = 1910.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1910.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_enrique_lopez_albujar
 		}
+		fix_variable_error = { variable = converter_enrique_lopez_albujar }
 	}
 }
 
@@ -1164,7 +1164,6 @@ fem_PEU_enrique_lopez_albujar = { # Enrique López Albújar
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_rural_folk
@@ -1174,8 +1173,8 @@ fem_PEU_enrique_lopez_albujar = { # Enrique López Albújar
 		literary
 		brave
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1187,30 +1186,30 @@ fem_PEU_enrique_lopez_albujar = { # Enrique López Albújar
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
-        }   
-        earliest_usage_date = 1910.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1910.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_enrique_lopez_albujar
 		}
+		fix_variable_error = { variable = converter_enrique_lopez_albujar }
 	}
 }
 
-PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
+REPLACE:PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 	first_name = Guillermo
 	last_name = Billinghurst
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -1221,8 +1220,8 @@ PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 		basic_diplomat
 		imperious
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1234,20 +1233,21 @@ PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 			needs_state_tarapaca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1915.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1915.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_guillermo_billinghurst
 		}
+		fix_variable_error = { variable = converter_guillermo_billinghurst }
 	}
 }
 
@@ -1257,7 +1257,6 @@ fem_PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -1268,8 +1267,8 @@ fem_PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 		basic_diplomat
 		imperious
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1281,30 +1280,30 @@ fem_PEU_guillermo_billinghurst = { # Guillermo Enrique Billinghurst Angulo
 			needs_state_tarapaca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1900.1.1
-        latest_usage_date = 1915.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1900.1.1
+		latest_usage_date = 1915.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_guillermo_billinghurst
 		}
+		fix_variable_error = { variable = converter_guillermo_billinghurst }
 	}
 }
 
-PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
+REPLACE:PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 	first_name = Victor_Raul
 	last_name = Haya_de_la_Torre
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -1314,8 +1313,8 @@ PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 		persistent
 		firebrand
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1327,20 +1326,21 @@ PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1924.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1924.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_victor_raul_haya_de_la_torre
 		}
+		fix_variable_error = { variable = converter_victor_raul_haya_de_la_torre }
 	}
 }
 
@@ -1350,7 +1350,6 @@ fem_PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_intelligentsia
@@ -1360,8 +1359,8 @@ fem_PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 		persistent
 		firebrand
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1373,30 +1372,30 @@ fem_PEU_victor_raul_haya_de_la_torre = { # Víctor Raúl Haya de la Torre
 			needs_state_cajamarca = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_intelligentsia
-        }   
-        earliest_usage_date = 1924.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1924.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_victor_raul_haya_de_la_torre
 		}
+		fix_variable_error = { variable = converter_victor_raul_haya_de_la_torre }
 	}
 }
 
-PEU_emilio_lisson = { # Emilio Lisson
+REPLACE:PEU_emilio_lisson = { # Emilio Lisson
 	first_name = Emilio
 	last_name = Lisson
 	historical = yes
 	female = no
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -1407,8 +1406,8 @@ PEU_emilio_lisson = { # Emilio Lisson
 		imperious
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1420,20 +1419,21 @@ PEU_emilio_lisson = { # Emilio Lisson
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1915.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1915.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_emilio_lisson
 		}
+		fix_variable_error = { variable = converter_emilio_lisson }
 	}
 }
 
@@ -1443,7 +1443,6 @@ fem_PEU_emilio_lisson = { # Emilio Lisson
 	historical = yes
 	female = yes
 	ig_leader = yes
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	interest_group = ig_devout
@@ -1454,8 +1453,8 @@ fem_PEU_emilio_lisson = { # Emilio Lisson
 		imperious
 		basic_political_operator
 	}
-    interest_group_leader_usage = {
-        country_trigger = {
+	interest_group_leader_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -1467,24 +1466,25 @@ fem_PEU_emilio_lisson = { # Emilio Lisson
 			needs_state_arequipa = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_devout
-        }   
-        earliest_usage_date = 1915.1.1
-        latest_usage_date = 1936.1.1
-        chance = 75
-    }   
+		}
+		earliest_usage_date = 1915.1.1
+		latest_usage_date = 1936.1.1
+		chance = 75
+	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_emilio_lisson
 		}
+		fix_variable_error = { variable = converter_emilio_lisson }
 	}
 }
 
-PEU_ramon_castilla = { # Ramón Castilla y Marquesado
+REPLACE:PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 	first_name = Ramon
 	last_name = Castilla
 	historical = yes
@@ -1493,7 +1493,6 @@ PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_abolitionist
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1514,7 +1513,7 @@ PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 			needs_state_tarapaca = yes
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 			has_dlc_feature = rp1_content
 		}
@@ -1525,11 +1524,12 @@ PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_ramon_castilla
 		}
+		fix_variable_error = { variable = converter_ramon_castilla }
 	}
 }
 
@@ -1543,7 +1543,6 @@ fem_PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_abolitionist
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1564,7 +1563,7 @@ fem_PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 			needs_state_tarapaca = yes
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 			has_dlc_feature = rp1_content
 		}
@@ -1575,15 +1574,16 @@ fem_PEU_ramon_castilla = { # Ramón Castilla y Marquesado
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_ramon_castilla
 		}
+		fix_variable_error = { variable = converter_ramon_castilla }
 	}
 }
 
-PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
+REPLACE:PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 	first_name = Manuel_Ignacio
 	last_name = de_Vivanco
 	historical = yes
@@ -1592,7 +1592,6 @@ PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_royalist
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1612,7 +1611,7 @@ PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 			needs_state_lima = yes
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 			has_dlc_feature = rp1_content
 		}
@@ -1623,11 +1622,12 @@ PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_ignacio_de_vivanco
 		}
+		fix_variable_error = { variable = converter_manuel_ignacio_de_vivanco }
 	}
 }
 
@@ -1641,7 +1641,6 @@ fem_PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_royalist
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1661,7 +1660,7 @@ fem_PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 			needs_state_lima = yes
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 			has_dlc_feature = rp1_content
 		}
@@ -1672,15 +1671,16 @@ fem_PEU_manuel_ignacio_de_vivanco = { # Manuel Ignacio de Vivanco Iturralde
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_manuel_ignacio_de_vivanco
 		}
+		fix_variable_error = { variable = converter_manuel_ignacio_de_vivanco }
 	}
 }
 
-PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
+REPLACE:PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
 	first_name = Juan_Francisco
 	last_name = de_Vidal_La_Hoz
 	historical = yes
@@ -1689,7 +1689,6 @@ PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1717,11 +1716,12 @@ PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_juan_francisco_de_vidal_la_hoz
 		}
+		fix_variable_error = { variable = converter_juan_francisco_de_vidal_la_hoz }
 	}
 }
 
@@ -1735,7 +1735,6 @@ fem_PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1763,15 +1762,16 @@ fem_PEU_juan_francisco_de_vidal_la_hoz = { # Juan Francisco de Vidal La Hoz
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_juan_francisco_de_vidal_la_hoz
 		}
+		fix_variable_error = { variable = converter_juan_francisco_de_vidal_la_hoz }
 	}
 }
 
-PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
+REPLACE:PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 	first_name = Juan_Cristostomo
 	last_name = Torrico
 	historical = yes
@@ -1780,7 +1780,6 @@ PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1801,7 +1800,7 @@ PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 			has_dlc_feature = rp1_content
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 		}
 		role = general
@@ -1811,11 +1810,12 @@ PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_juan_cristostomo_torrico
 		}
+		fix_variable_error = { variable = converter_juan_cristostomo_torrico }
 	}
 }
 
@@ -1829,7 +1829,6 @@ fem_PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1850,7 +1849,7 @@ fem_PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 			has_dlc_feature = rp1_content
 			NOR = { # Anti-Confederation
 				c:PBC ?= THIS
-				is_subject = yes 
+				is_subject = yes
 			}
 		}
 		role = general
@@ -1860,15 +1859,16 @@ fem_PEU_juan_cristostomo_torrico = { # Juan Crisóstomo Torrico y Bargas
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_juan_cristostomo_torrico
 		}
+		fix_variable_error = { variable = converter_juan_cristostomo_torrico }
 	}
 }
 
-PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
+REPLACE:PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 	first_name = Antonio_Guiterrez
 	last_name = de_la_Fuente
 	historical = yes
@@ -1877,7 +1877,6 @@ PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1896,7 +1895,7 @@ PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 			uses_peu_characters = yes
 			needs_state_tarapaca = yes
 			has_dlc_feature = rp1_content
-			is_subject = yes 
+			is_subject = yes
 		}
 		role = general
 		earliest_usage_date = 1836.1.1
@@ -1905,11 +1904,12 @@ PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_antonio_gutierrez_de_la_fuente
 		}
+		fix_variable_error = { variable = converter_antonio_gutierrez_de_la_fuente }
 	}
 }
 
@@ -1923,7 +1923,6 @@ fem_PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1942,7 +1941,7 @@ fem_PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 			uses_peu_characters = yes
 			needs_state_tarapaca = yes
 			has_dlc_feature = rp1_content
-			is_subject = yes 
+			is_subject = yes
 		}
 		role = general
 		earliest_usage_date = 1836.1.1
@@ -1951,15 +1950,16 @@ fem_PEU_antonio_gutierrez_de_la_fuente = { # Antonio Gutiérrez de la Fuente
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_antonio_gutierrez_de_la_fuente
 		}
+		fix_variable_error = { variable = converter_antonio_gutierrez_de_la_fuente }
 	}
 }
 
-PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
+REPLACE:PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
 	first_name = Jose_Rufino
 	last_name = Echenique
 	historical = yes
@@ -1968,7 +1968,6 @@ PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -1995,11 +1994,12 @@ PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jose_rufino_echenique
 		}
+		fix_variable_error = { variable = converter_jose_rufino_echenique }
 	}
 }
 
@@ -2013,7 +2013,6 @@ fem_PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2040,15 +2039,16 @@ fem_PEU_jose_rufino_echenique = { # José Rufino Pompeyo Echenique Benavente
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_jose_rufino_echenique
 		}
+		fix_variable_error = { variable = converter_jose_rufino_echenique }
 	}
 }
 
-PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
+REPLACE:PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
 	first_name = Miguel
 	last_name = de_San_Roman
 	historical = yes
@@ -2057,7 +2057,6 @@ PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_liberal_leader
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2085,11 +2084,12 @@ PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_miguel_de_san_roman
 		}
+		fix_variable_error = { variable = converter_miguel_de_san_roman }
 	}
 }
 
@@ -2103,7 +2103,6 @@ fem_PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
 	commander_rank = default
 	interest_group = ig_armed_forces
 	ideology = ideology_liberal_leader
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2131,15 +2130,16 @@ fem_PEU_miguel_de_san_roman = { # Miguel de San Román y Meza
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_miguel_de_san_roman
 		}
+		fix_variable_error = { variable = converter_miguel_de_san_roman }
 	}
 }
 
-PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
+REPLACE:PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
 	first_name = Pedro_Pablo
 	last_name = Bermudez_Ascarza
 	historical = yes
@@ -2148,7 +2148,6 @@ PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
 	commander_rank = default
 	interest_group = ig_industrialists
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2175,11 +2174,12 @@ PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_pablo_bermudez_ascarza
 		}
+		fix_variable_error = { variable = converter_pedro_pablo_bermudez_ascarza }
 	}
 }
 
@@ -2193,7 +2193,6 @@ fem_PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
 	commander_rank = default
 	interest_group = ig_industrialists
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2220,15 +2219,16 @@ fem_PEU_pedro_pablo_bermudez_ascarza = { # Pedro Pablo Bermúdez Ascarza
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_pablo_bermudez_ascarza
 		}
+		fix_variable_error = { variable = converter_pedro_pablo_bermudez_ascarza }
 	}
 }
 
-PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
+REPLACE:PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
 	first_name = Andres_Avelino
 	last_name = Caceres
 	historical = yes
@@ -2237,7 +2237,6 @@ PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2265,11 +2264,12 @@ PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_andres_avelino_caceres
 		}
+		fix_variable_error = { variable = converter_andres_avelino_caceres }
 	}
 }
 
@@ -2283,7 +2283,6 @@ fem_PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_moderate
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2311,15 +2310,16 @@ fem_PEU_andres_avelino_caceres = { # Andrés Avelino Cáceres Dorregaray
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_andres_avelino_caceres
 		}
+		fix_variable_error = { variable = converter_andres_avelino_caceres }
 	}
 }
 
-PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
+REPLACE:PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
 	first_name = Miguel
 	last_name = Iglesias
 	historical = yes
@@ -2328,7 +2328,6 @@ PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2355,11 +2354,12 @@ PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_miguel_iglesias
 		}
+		fix_variable_error = { variable = converter_miguel_iglesias }
 	}
 }
 
@@ -2373,7 +2373,6 @@ fem_PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
 	commander_rank = default
 	interest_group = ig_landowners
 	ideology = ideology_authoritarian
-	#culture = global_var:sou_andes_culture
 	culture = primary_culture
 	religion = rel:catholic
 	traits = {
@@ -2400,20 +2399,21 @@ fem_PEU_miguel_iglesias = { # Miguel Iglesias Pino de Arce
 	}
 	trait_generation = { }
 	on_created = {
-		converter_andean_template_effect = yes
+		converter_colonial_template_effect = { TARGET = global_andean_cultures }
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_miguel_iglesias
 		}
+		fix_variable_error = { variable = converter_miguel_iglesias }
 	}
 }
 
-PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
+REPLACE:PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 	first_name = Pedro_Pablo
 	last_name = Atusparia
 	historical = yes
 	female = no
-	is_agitator = yes 
+	is_agitator = yes
 	culture = cu:quechua
 	religion = rel:catholic
 	interest_group = ig_rural_folk
@@ -2424,8 +2424,8 @@ PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 		firebrand
 		basic_offensive_planner
 	}
-    agitator_usage = {
-        country_trigger = {
+	agitator_usage = {
+		country_trigger = {
 			should_have_male_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -2440,18 +2440,19 @@ PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
-        }   
-        earliest_usage_date = 1885.1.1
-        latest_usage_date = 1895.1.1
-        chance = 50
-    }
+		}
+		earliest_usage_date = 1885.1.1
+		latest_usage_date = 1895.1.1
+		chance = 50
+	}
 	on_created = {
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_pablo_atusparia
 		}
+		fix_variable_error = { variable = converter_pedro_pablo_atusparia }
 	}
 }
 
@@ -2460,7 +2461,7 @@ fem_PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 	last_name = Atusparia
 	historical = yes
 	female = yes
-	is_agitator = yes 
+	is_agitator = yes
 	culture = cu:quechua
 	religion = rel:catholic
 	interest_group = ig_rural_folk
@@ -2471,8 +2472,8 @@ fem_PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 		firebrand
 		basic_offensive_planner
 	}
-    agitator_usage = {
-        country_trigger = {
+	agitator_usage = {
+		country_trigger = {
 			should_have_female_characters = yes
 			NOT = {
 				is_target_in_global_variable_list = {
@@ -2487,17 +2488,18 @@ fem_PEU_pedro_pablo_atusparia = { #Pedro Pablo Atusparia Ángeles
 			needs_state_lima = yes
 			has_dlc_feature = rp1_content
 		}
-        interest_group_trigger = {
+		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
-        }   
-        earliest_usage_date = 1885.1.1
-        latest_usage_date = 1895.1.1
-        chance = 50
-    }
+		}
+		earliest_usage_date = 1885.1.1
+		latest_usage_date = 1895.1.1
+		chance = 50
+	}
 	on_created = {
 		add_to_global_variable_list = {
 			name = converter_unavailable_unique_characters
 			target = flag:converter_pedro_pablo_atusparia
 		}
+		fix_variable_error = { variable = converter_pedro_pablo_atusparia }
 	}
 }

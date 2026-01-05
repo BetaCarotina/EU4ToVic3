@@ -1,0 +1,12 @@
+﻿tradition_oviparity ={
+	type = tradition
+}
+tradition_vivaparity = {
+	type = tradition
+}
+tradition_matriarchal = {
+	type = tradition
+}
+tradition_matriarchal = {
+	type = feminist
+}

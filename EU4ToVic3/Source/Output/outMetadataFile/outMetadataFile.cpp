@@ -35,7 +35,8 @@ void outMetadataFile(std::ostream& output, const std::string& outName)
 	output << "\t\t\t\"common/history/power_blocs\",\n";
 	output << "\t\t\t\"common/history/production_methods\",\n";
 	output << "\t\t\t\"common/history/states\",\n";
-	output << "\t\t\t\"common/history/trade_routes\",\n";
+	output << "\t\t\t\"common/history/trade\",\n";
+	output << "\t\t\t\"common/history/treaties\",\n";
 	output << "\t\t\t\"common/religions\"\n";
 	output << "\t\t]\n";
 	output << "\t}\n";
@@ -43,12 +44,12 @@ void outMetadataFile(std::ostream& output, const std::string& outName)
 }
 } // namespace
 
-void OUT::exportMetadataFile(const std::string& outputName)
+void OUT::exportMetadataFile(const std::filesystem::path& outputName)
 {
-	std::ofstream output("output/" + outputName + "/.metadata/metadata.json");
+	std::ofstream output("output" / outputName / ".metadata/metadata.json");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/.metadata/metadata.json");
-	Log(LogLevel::Info) << "<< Writing to: output/" + outputName + "/.metadata/metadata.json";
-	outMetadataFile(output, outputName);
+		throw std::runtime_error("Could not create " + outputName.string() + "/.metadata/metadata.json");
+	Log(LogLevel::Info) << "<< Writing to: output/" + outputName.string() + "/.metadata/metadata.json";
+	outMetadataFile(output, outputName.string());
 	output.close();
 }

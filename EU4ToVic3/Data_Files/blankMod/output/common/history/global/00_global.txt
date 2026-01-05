@@ -1,0 +1,73 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	every_country = {
+		limit = { NOT = { has_law_or_variant = law_type:law_slavery_banned } }
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_colonial_slavery
+			}
+			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery_colonial }
+		}
+		else = {
+			ig:ig_landowners ?= { add_ideology = ideology_pro_slavery }
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_law_or_variant = law_type:law_monarchy
+			has_law_or_variant = law_type:law_autocracy
+		}
+		set_variable = king_in_parliament_possible
+	}
+
+	c:BRZ ?= {
+		set_variable = {
+			name = pedropoints
+			value = 5
+		}
+	}
+
+	### Debt
+	# Maybe a future feature to convert loans from EU4 to starting debt?
+
+###ACHIEVEMENT VARIABLES###
+
+# No achievements to be triggered
+	#Event Variables
+
+	set_global_variable = {
+		name = number_of_mega_earthquakes
+		value = 0
+	}
+
+	set_global_variable = {
+		name = number_of_mega_floods
+		value = 0
+	}
+
+	set_global_variable = {
+		name = number_of_mega_eruptions
+		value = 0
+	}
+
+	s:STATE_DISTRICT_OF_COLUMBIA = {
+		set_variable = {
+            name = usa_state_flag_block
+            value = yes
+        }
+
+        set_variable = {
+            name = district_of_columbia
+            value = yes
+        }
+	}
+
+	s:STATE_WEST_VIRGINIA = {
+        set_variable = {
+            name = usa_state_flag_block
+            value = yes
+        }
+	}
+# maybe a future event to generate starting radicals from unrest?
+}

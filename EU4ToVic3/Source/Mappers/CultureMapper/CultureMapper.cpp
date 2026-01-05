@@ -149,7 +149,7 @@ void mappers::CultureMapper::loadMappingRules(std::istream& theStream)
 	markNeoCultureOverrides();
 }
 
-void mappers::CultureMapper::loadMappingRules(const std::string& fileName)
+void mappers::CultureMapper::loadMappingRules(const std::filesystem::path& fileName)
 {
 	Log(LogLevel::Info) << "-> Parsing culture mapping rules.";
 	registerKeys();
@@ -164,7 +164,7 @@ void mappers::CultureMapper::loadColonialRules(std::istream& theStream)
 	colonialRegionMapper.loadMappingRules(theStream);
 }
 
-void mappers::CultureMapper::loadColonialRules(const std::string& fileName)
+void mappers::CultureMapper::loadColonialRules(const std::filesystem::path& fileName)
 {
 	colonialRegionMapper.loadMappingRules(fileName);
 }
@@ -174,7 +174,7 @@ void mappers::CultureMapper::loadWesternizationRules(std::istream& theStream)
 	westernizationMapper.loadMappingRules(theStream);
 }
 
-void mappers::CultureMapper::loadWesternizationRules(const std::string& fileName)
+void mappers::CultureMapper::loadWesternizationRules(const std::filesystem::path& fileName)
 {
 	westernizationMapper.loadMappingRules(fileName);
 }
@@ -184,7 +184,7 @@ void mappers::CultureMapper::loadNewEU4CultureRules(std::istream& theStream)
 	newEU4CultureMapper.loadMappingRules(theStream);
 }
 
-void mappers::CultureMapper::loadNewEU4CultureRules(const std::string& fileName)
+void mappers::CultureMapper::loadNewEU4CultureRules(const std::filesystem::path& fileName)
 {
 	newEU4CultureMapper.loadMappingRules(fileName);
 }
@@ -313,13 +313,21 @@ void mappers::CultureMapper::alterNewEU4CultureDefinitions(const std::map<int, s
 				continue;
 			}
 			// do post-processing on definition.
-			for (const auto& removeTrait: newEU4CultureMapper.getRemoveTraitsForCulture(eu4Culture))
+			for (const auto& removeTradition: newEU4CultureMapper.getRemoveTraditionsForCulture(eu4Culture))
 			{
-				v3CultureDefinitions.at(target).traits.erase(removeTrait);
+				v3CultureDefinitions.at(target).traditions.erase(removeTradition);
 			}
-			for (const auto& addTrait: newEU4CultureMapper.getAddTraitsForCulture(eu4Culture))
+			for (const auto& addTradition: newEU4CultureMapper.getAddTraditionsForCulture(eu4Culture))
 			{
-				v3CultureDefinitions.at(target).traits.emplace(addTrait);
+				v3CultureDefinitions.at(target).traditions.emplace(addTradition);
+			}
+			if (newEU4CultureMapper.getReplaceHeritageForCulture(eu4Culture))
+			{
+				v3CultureDefinitions.at(target).heritage = *newEU4CultureMapper.getReplaceHeritageForCulture(eu4Culture);
+			}
+			if (newEU4CultureMapper.getReplaceLanguageForCulture(eu4Culture))
+			{
+				v3CultureDefinitions.at(target).language = *newEU4CultureMapper.getReplaceLanguageForCulture(eu4Culture);
 			}
 			v3CultureDefinitions.at(target).skipExport = false;
 		}
@@ -438,9 +446,11 @@ void mappers::CultureMapper::loadTraitDefinitions(const commonItems::ModFilesyst
 	v3TraitDefinitions = traitDefinitionLoader.getDefinitions();
 }
 
-void mappers::CultureMapper::generateCultureDefinitions(const std::string& nameListsPath,
-	 const std::string& nameListMapPath,
-	 const std::string& cultureTraitsPath,
+void mappers::CultureMapper::generateCultureDefinitions(const std::filesystem::path& nameListsPath,
+	 const std::filesystem::path& nameListMapPath,
+	 const std::filesystem::path& cultureHeritagesPath,
+	 const std::filesystem::path& cultureLanguagesPath,
+	 const std::filesystem::path& cultureTraditionsPath,
 	 const V3::ClayManager& clayManager,
 	 const EU4::CultureLoader& cultureLoader,
 	 const EU4::ReligionLoader& religionLoader,
@@ -453,7 +463,7 @@ void mappers::CultureMapper::generateCultureDefinitions(const std::string& nameL
 	NameListMapper nameListMapper;
 	nameListMapper.loadMappingRules(nameListMapPath);
 	CultureTraitMapper cultureTraitMapper;
-	cultureTraitMapper.loadMappingRules(cultureTraitsPath);
+	cultureTraitMapper.loadMappingRules(cultureHeritagesPath, cultureLanguagesPath, cultureTraditionsPath);
 
 	// shove existing vanilla defs into the bin.
 	const auto& defCount = v3CultureDefinitions.size();
@@ -551,7 +561,7 @@ int mappers::CultureMapper::getWesternizationScoreForCulture(const std::string& 
 		return 0;
 	}
 
-	return westernizationMapper.getWesternizationForTraits(v3CultureDefinitions.at(cultureName).traits);
+	return westernizationMapper.getWesternizationForCulture(v3CultureDefinitions.at(cultureName));
 }
 
 int mappers::CultureMapper::getLiteracyScoreForCulture(const std::string& cultureName) const
@@ -562,7 +572,7 @@ int mappers::CultureMapper::getLiteracyScoreForCulture(const std::string& cultur
 		return 0;
 	}
 
-	return westernizationMapper.getLiteracyForTraits(v3CultureDefinitions.at(cultureName).traits);
+	return westernizationMapper.getLiteracyForCulture(v3CultureDefinitions.at(cultureName));
 }
 
 int mappers::CultureMapper::getIndustryScoreForCulture(const std::string& cultureName) const
@@ -573,7 +583,7 @@ int mappers::CultureMapper::getIndustryScoreForCulture(const std::string& cultur
 		return 0;
 	}
 
-	return westernizationMapper.getIndustryForTraits(v3CultureDefinitions.at(cultureName).traits);
+	return westernizationMapper.getIndustryForCulture(v3CultureDefinitions.at(cultureName));
 }
 
 mappers::CultureDef mappers::CultureMapper::generateCultureDefinition(const V3::ClayManager& clayManager,
@@ -628,11 +638,13 @@ mappers::CultureDef mappers::CultureMapper::generateCultureDefinition(const V3::
 		const auto& groupName = sourceCultureGroup->getName();
 		if (const auto& traitsblock = cultureTraitMapper.getTraitsForCulture(sourceCultureName, groupName); !traitsblock)
 		{
-			Log(LogLevel::Warning) << "EU4 culture " << sourceCultureName << " has no mapped traits! Rectify!";
+			Log(LogLevel::Warning) << "EU4 culture " << sourceCultureName << " (group: " << groupName << ") has no mapped traits! Rectify!";
 		}
 		else
 		{
-			newDef.traits.insert(traitsblock->getTraits().begin(), traitsblock->getTraits().end());
+			newDef.traditions.insert(traitsblock->getTraditions().begin(), traitsblock->getTraditions().end());
+			newDef.heritage = traitsblock->getHeritage();
+			newDef.language = traitsblock->getLanguage();
 			newDef.ethnicities.emplace(traitsblock->getEthnicity());
 			newDef.graphics = traitsblock->getGraphics(); // Any will do but there must be only one.
 		}
@@ -679,7 +691,7 @@ mappers::CultureDef mappers::CultureMapper::generateCultureDefinition(const V3::
 	return newDef;
 }
 
-std::optional<bool> mappers::CultureMapper::doCulturesShareHeritageTrait(const std::string& cultureA, const std::string& cultureB) const
+std::optional<bool> mappers::CultureMapper::doCulturesShareHeritage(const std::string& cultureA, const std::string& cultureB) const
 {
 	if (!v3CultureDefinitions.contains(cultureA))
 		return std::nullopt;
@@ -687,19 +699,13 @@ std::optional<bool> mappers::CultureMapper::doCulturesShareHeritageTrait(const s
 	if (!v3CultureDefinitions.contains(cultureB))
 		return std::nullopt;
 
-	for (const auto& traitA: v3CultureDefinitions.at(cultureA).traits)
-	{
-		if (!v3TraitDefinitions.contains(traitA) || !v3TraitDefinitions.at(traitA).isHeritageTrait)
-			continue;
-
-		if (v3CultureDefinitions.at(cultureB).traits.contains(traitA))
-			return true;
-	}
+	if (v3CultureDefinitions.at(cultureA).heritage == v3CultureDefinitions.at(cultureB).heritage)
+		return true;
 
 	return false;
 }
 
-std::optional<bool> mappers::CultureMapper::doCulturesShareNonHeritageTrait(const std::string& cultureA, const std::string& cultureB) const
+std::optional<bool> mappers::CultureMapper::doCulturesShareLanguage(const std::string& cultureA, const std::string& cultureB) const
 {
 	if (!v3CultureDefinitions.contains(cultureA))
 		return std::nullopt;
@@ -707,12 +713,26 @@ std::optional<bool> mappers::CultureMapper::doCulturesShareNonHeritageTrait(cons
 	if (!v3CultureDefinitions.contains(cultureB))
 		return std::nullopt;
 
-	for (const auto& traitA: v3CultureDefinitions.at(cultureA).traits)
+	if (v3CultureDefinitions.at(cultureA).language == v3CultureDefinitions.at(cultureB).language)
+		return true;
+
+	return false;
+}
+
+std::optional<bool> mappers::CultureMapper::doCulturesShareTradition(const std::string& cultureA, const std::string& cultureB) const
+{
+	if (!v3CultureDefinitions.contains(cultureA))
+		return std::nullopt;
+
+	if (!v3CultureDefinitions.contains(cultureB))
+		return std::nullopt;
+
+	for (const auto& traitA: v3CultureDefinitions.at(cultureA).traditions)
 	{
-		if (!v3TraitDefinitions.contains(traitA) || v3TraitDefinitions.at(traitA).isHeritageTrait)
+		if (!v3TraitDefinitions.contains(traitA) || v3TraitDefinitions.at(traitA).isTradition)
 			continue;
 
-		if (v3CultureDefinitions.at(cultureB).traits.contains(traitA))
+		if (v3CultureDefinitions.at(cultureB).traditions.contains(traitA))
 			return true;
 	}
 

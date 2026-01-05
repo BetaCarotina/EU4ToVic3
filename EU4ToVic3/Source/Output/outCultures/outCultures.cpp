@@ -12,11 +12,15 @@ void outCulture(std::ostream& output, const mappers::CultureDef& culture)
 		output << "\tcolor " << *culture.color << "\n";
 	if (!culture.religion.empty())
 		output << "\treligion = \"" << culture.religion << "\"\n";
-	if (!culture.traits.empty())
+	if (!culture.language.empty())
+		output << "\tlanguage = \"" << culture.language << "\"\n";
+	if (!culture.heritage.empty())
+		output << "\theritage = \"" << culture.heritage << "\"\n";
+	if (!culture.traditions.empty())
 	{
-		output << "\ttraits = { ";
-		for (const auto& trait: culture.traits)
-			output << trait << " ";
+		output << "\ttraditions = { ";
+		for (const auto& tradition: culture.traditions)
+			output << tradition << " ";
 		output << "}\n";
 	}
 	if (!culture.maleCommonFirstNames.empty())
@@ -91,6 +95,24 @@ void outCultureStaticModifiers(std::ostream& output, const mappers::CultureDef& 
 	output << "\ticon = \"gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds\"\n";
 	output << "\tstate_" << culture.name << "_standard_of_living_add = 1\n";
 	output << "}\n\n";
+
+	output << culture.name << "_cultural_acceptance_modifier_positive = {\n";
+	output << "\ticon = \"gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds\"\n";
+	output << "\tcountry_" << culture.name << "_cultural_acceptance_add = 1\n";
+	output << "}\n";
+	output << culture.name << "_cultural_acceptance_modifier_negative = {\n";
+	output << "\ticon = \"gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds\"\n";
+	output << "\tcountry_" << culture.name << "_cultural_acceptance_add = 1\n";
+	output << "}\n\n";
+
+	output << culture.name << "_fervor_target_modifier_positive = {\n";
+	output << "\ticon = \"gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds\"\n";
+	output << "\tcountry_fervor_target_" << culture.name << "_add = 1\n";
+	output << "}\n";
+	output << culture.name << "_fervor_target_modifier_negative = {\n";
+	output << "\ticon = \"gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds\"\n";
+	output << "\tcountry_fervor_target_" << culture.name << "_add = 1\n";
+	output << "}\n\n";
 }
 
 void outCultureModifierTypeDefs(std::ostream& output, const mappers::CultureDef& culture)
@@ -102,21 +124,37 @@ void outCultureModifierTypeDefs(std::ostream& output, const mappers::CultureDef&
 	output << "\t\tai_value=0\n";
 	output << "\t}\n";
 	output << "}\n\n";
+
+	output << "country_" << culture.name << "_cultural_acceptance_add = {\n";
+	output << "\tdecimals=1\n";
+	output << "\tcolor=good\n";
+	output << "\tgame_data={\n";
+	output << "\t\tai_value=0\n";
+	output << "\t}\n";
+	output << "}\n\n";
+
+	output << "country_fervor_target_" << culture.name << "_add = {\n";
+	output << "\tdecimals=1\n";
+	output << "\tcolor=good\n";
+	output << "\tgame_data={\n";
+	output << "\t\tai_value=0\n";
+	output << "\t}\n";
+	output << "}\n\n";
 }
 
 } // namespace
 
-void OUT::exportCultures(const std::string& outputName, const std::map<std::string, mappers::CultureDef>& cultures)
+void OUT::exportCultures(const std::filesystem::path& outputName, const std::map<std::string, mappers::CultureDef>& cultures)
 {
-	std::ofstream output("output/" + outputName + "/common/cultures/99_converted_cultures.txt");
+	std::ofstream output("output" / outputName / "common/cultures/99_converted_cultures.txt");
 	if (!output.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/religions/99_converted_cultures.txt");
-	std::ofstream outputCultureStatics("output/" + outputName + "/common/static_modifiers/99_converted_cultures_static_modifiers.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/religions/99_converted_cultures.txt");
+	std::ofstream outputCultureStatics("output" / outputName / "common/static_modifiers/99_converted_cultures_static_modifiers.txt");
 	if (!outputCultureStatics.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/static_modifiers/99_converted_cultures_static_modifiers.txt");
-	std::ofstream outputCultureModifierTypes("output/" + outputName + "/common/modifier_type_definitions/99_converted_cultures_modifier_type_defs.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/static_modifiers/99_converted_cultures_static_modifiers.txt");
+	std::ofstream outputCultureModifierTypes("output" / outputName / "common/modifier_type_definitions/99_converted_cultures_modifier_type_defs.txt");
 	if (!outputCultureModifierTypes.is_open())
-		throw std::runtime_error("Could not create " + outputName + "/common/modifier_type_definitions/99_converted_cultures_modifier_type_defs.txt");
+		throw std::runtime_error("Could not create " + outputName.string() + "/common/modifier_type_definitions/99_converted_cultures_modifier_type_defs.txt");
 
 	output << commonItems::utf8BOM << "\n";
 	outputCultureStatics << commonItems::utf8BOM << "\n";
@@ -140,8 +178,15 @@ void OUT::exportCultures(const std::string& outputName, const std::map<std::stri
 	outputCultureModifierTypes.close();
 
 	// Copy over Decentralized World discrimination traits
-	auto files = commonItems::GetAllFilesInFolder("configurables/decentralized_world/common/discrimination_traits/");
+	auto files = commonItems::GetAllFilesInFolder("configurables/decentralized_world/common/discrimination_traits");
 	for (const auto& file: files)
-		commonItems::TryCopyFile("configurables/decentralized_world/common/discrimination_traits/" + file,
-			 "output/" + outputName + "/common/discrimination_traits/" + file);
+		std::filesystem::copy_file("configurables/decentralized_world/common/discrimination_traits" / file,
+			 "output" / outputName / "common/discrimination_traits" / file,
+			 std::filesystem::copy_options::overwrite_existing);
+
+	auto groupFiles = commonItems::GetAllFilesInFolder("configurables/decentralized_world/common/discrimination_trait_groups");
+	for (const auto& file: groupFiles)
+		std::filesystem::copy_file("configurables/decentralized_world/common/discrimination_trait_groups" / file,
+			 "output" / outputName / "common/discrimination_trait_groups" / file,
+			 std::filesystem::copy_options::overwrite_existing);
 }
