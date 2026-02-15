@@ -17,8 +17,14 @@ mappers::IGIdeologiesMapping::IGIdeologiesMapping(std::istream& theStream)
 
 void mappers::IGIdeologiesMapping::registerKeys()
 {
-	registerKeyword("culturetrait", [this](std::istream& theStream) {
-		cultureTraits.emplace(commonItems::getString(theStream));
+	registerKeyword("heritage", [this](std::istream& theStream) {
+		heritageTraits.emplace(commonItems::getString(theStream));
+	});
+	registerKeyword("language", [this](std::istream& theStream) {
+		languageTraits.emplace(commonItems::getString(theStream));
+	});
+	registerKeyword("tradition", [this](std::istream& theStream) {
+		traditionTraits.emplace(commonItems::getString(theStream));
 	});
 	registerKeyword("religiontrait", [this](std::istream& theStream) {
 		religionTraits.emplace(commonItems::getString(theStream));
@@ -104,13 +110,37 @@ bool mappers::IGIdeologiesMapping::matchCountry(const V3::Country& country,
 		return false;
 	const auto& srcCountry = country.getSourceCountry();
 
-	if (!cultureTraits.empty())
+	if (!heritageTraits.empty())
 	{
 		bool match = false;
-		for (const auto& trait: cultureTraits)
+		for (const auto& trait: heritageTraits)
 		{
 			for (const auto& culture: country.getProcessedData().cultures)
-				if (cultureMapper.getV3CultureDefinitions().contains(culture) && cultureMapper.getV3CultureDefinitions().at(culture).traits.contains(trait))
+				if (cultureMapper.getV3CultureDefinitions().contains(culture) && cultureMapper.getV3CultureDefinitions().at(culture).heritage == trait)
+					match = true;
+		}
+		if (!match)
+			return false;
+	}
+	if (!languageTraits.empty())
+	{
+		bool match = false;
+		for (const auto& trait: languageTraits)
+		{
+			for (const auto& culture: country.getProcessedData().cultures)
+				if (cultureMapper.getV3CultureDefinitions().contains(culture) && cultureMapper.getV3CultureDefinitions().at(culture).language == trait)
+					match = true;
+		}
+		if (!match)
+			return false;
+	}
+	if (!traditionTraits.empty())
+	{
+		bool match = false;
+		for (const auto& trait: traditionTraits)
+		{
+			for (const auto& culture: country.getProcessedData().cultures)
+				if (cultureMapper.getV3CultureDefinitions().contains(culture) && cultureMapper.getV3CultureDefinitions().at(culture).traditions.contains(trait))
 					match = true;
 		}
 		if (!match)
@@ -122,7 +152,7 @@ bool mappers::IGIdeologiesMapping::matchCountry(const V3::Country& country,
 		bool match = false;
 		const auto& religion = country.getProcessedData().religion;
 		for (const auto& trait: religionTraits)
-			if (religionMapper.getV3ReligionDefinitions().contains(religion) && religionMapper.getV3ReligionDefinitions().at(religion).traits.contains(trait))
+			if (religionMapper.getV3ReligionDefinitions().contains(religion) && religionMapper.getV3ReligionDefinitions().at(religion).heritage == trait)
 				match = true;
 		if (!match)
 			return false;
