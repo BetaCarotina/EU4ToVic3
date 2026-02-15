@@ -326,7 +326,6 @@ lawgroup_church_and_state = {
 			revolutionary_principle_reform equality_principle_reform clerical_commission_reform
 			theocratic_democracy_reform constitional_theocracy_reform organising_our_religion_reform
 			separate_clergy_from_state_affairs_reform cult_of_reason_reform secularization_of_the_state_reform
-			est_harmony ger_religious_tolerance_reform
 		}
 	}
 	# !THEOCRACY
@@ -340,7 +339,7 @@ lawgroup_church_and_state = {
 			strengthen_the_dhimmi_reform curtail_clergy_power_reform maintain_clergy_balance_of_power_reform
 			english_conciliarism_reform turkoman_ottoman_institutions integrated_ottoman_officials
 			georuisi japanshinbutsu ottoman_millet rhl_atheist_ideas
-			adutolerance hsntolerate ibeintegrate mch_buddhist kha_freedom_reform nazcoptic otr_tolerance polreligion
+			adutolerance est_harmony ger_religious_tolerance_reform hsntolerate ibeintegrate mch_buddhist kha_freedom_reform nazcoptic otr_tolerance polreligion
 		}
 	}
 	law_state_religion = {
@@ -805,7 +804,7 @@ lawgroup_trade_policy = {
 			mission_to_civilize_reform pious_merchants_reform monastic_breweries_reform 
 			divinity_through_craftsmanship_reform empower_the_burghers_reform reestablish_the_burgeoisie_reform 
 			new_world_exploitation_reform vodka_of_the_crown_reform german_saxon_reform german_swabian_reform
-			blt_amber_trade_charter danvikingtrade ab_customs_union siccurrency brifishing japanzaibatsu poljews
+			danvikingtrade ab_customs_union siccurrency brifishing japanzaibatsu poljews
 			japanredseal feoosmans
 		}
 	}
@@ -818,7 +817,7 @@ lawgroup_trade_policy = {
 			mercantilistic_approach_reform trade_company_government namestnik_reform thalassocracy_reform
 			royal_charters_reform consulate_of_the_sea karimi_stations_reform german_lower_saxon_reform
 			merchant_representation_reform
-			armfleet hansahansetag lat_podestas nazarab ottoman_corporation zunroutes
+			armfleet blt_amber_trade_charter hansahansetag lat_podestas nazarab ottoman_corporation zunroutes
 		}
 	}
 	law_isolationism = {
