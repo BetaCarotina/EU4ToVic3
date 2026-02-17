@@ -103,7 +103,7 @@ lawgroup_distribution_of_power = {
 			pirate_representation_reform government_for_people_reform theocratic_democracy_reform
 			constitional_theocracy_reform monastic_elections_reform united_cantons_reform strengthened_parliament_reform
 			civic_republicanism_government parliamentary_reform presidential_monarchy_reform the_social_contract_reform
-			bohsnem noralthing briparliament ab_florentine_peasants_reform ab_tuscan_peasants_reform
+			bohsnem danrigsdagen noralthing briparliament ab_florentine_peasants_reform ab_tuscan_peasants_reform
 		}
 	}
 	law_wealth_voting = {
@@ -133,7 +133,8 @@ lawgroup_distribution_of_power = {
 			landholders_reform clerical_commission_reform regionally_elected_commanders british_monarchy
 			tanistry_reform bohemian_elective_kingdom_reform house_of_lords_reform nakharar_title parliamentary_reform
 			bav_council_of_eight wenceslas british_monarchy bulboyar saxon_england est_council_of_chiefs frcrepresentatives
-			danelective geodarbazi georegulations htm_council kha_kurultai_reform polestablishsejm sweriksdag tataria_kurultai wls_rheol
+			danelective geodarbazi georegulations htm_council kha_kurultai_reform polestablishsejm sweriksdag tataria_kurultai
+			wls_rheol
 		}
 	}
 	law_elder_council = {
@@ -247,7 +248,7 @@ lawgroup_citizenship = {
 			peasants_republic american_republic federal_republic egalite_reform moral_principle_reform
 			enlightened_principle_reform revolutionary_principle_reform papacy_reform balanced_mission_reform
 			belief_and_unity_reform cultural_safe_haven_reform many_fingers_of_god_reform german_cultural_disunity_reform
-			cmnslavic mch_buddhist sicitalo ibeintegrate adutolerance chinamongols iranzamin_tajik
+			cmnslavic mch_buddhist sicitalo ibeintegrate adutolerance chinamongols iranzamin_tajik poljews feoslavic
 			tibetscript1 tibetscript2
 		}
 	}
@@ -258,7 +259,7 @@ lawgroup_citizenship = {
 			political_principle_reform internal_mission_reform mission_to_protect_reform
 			harmonization_of_cultures_reform taxation_of_the_foreigners_reform penal_colonies_reform
 			strengthened_parliament_reform millennialistic_theocracy_reform	german_franconian_reform german_swabian_reform
-			arsitalian arsresurgence crn_foreign cmnmongol est_council_of_chiefs lotculture poljews feoslavic wee_pagan_coalition
+			arsitalian arsresurgence crn_foreign cmnmongol est_council_of_chiefs lotculture wee_pagan_coalition
 		}
 	}
 	law_national_supremacy = {
@@ -341,7 +342,7 @@ lawgroup_church_and_state = {
 			english_conciliarism_reform turkoman_ottoman_institutions integrated_ottoman_officials
 			georuisi japanshinbutsu ottoman_millet rhl_atheist_ideas
 			adutolerance est_harmony ger_religious_tolerance_reform hsntolerate ibeintegrate mch_buddhist
-			kha_freedom_reform lotstates nazcoptic otr_tolerance polreligion
+			kha_freedom_reform lotstates nazcoptic otr_tolerance polreligion poljews
 		}
 	}
 	law_state_religion = {
@@ -841,7 +842,7 @@ lawgroup_welfare = {
 	law_poor_laws = {
 		forms = {}
 		ideas = { innovativeness_ideas }
-		reforms = {}
+		reforms = { mgs_footsteps }
 	}
 	law_no_social_security = {
 		forms = { monarchy tribal native republic theocracy }
