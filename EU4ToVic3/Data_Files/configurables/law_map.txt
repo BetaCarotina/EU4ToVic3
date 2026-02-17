@@ -684,6 +684,7 @@ lawgroup_rights_of_women = {
 		forms = {}
 		ideas = { plutocracy_ideas innovativeness_ideas }
 		reforms = { legion_of_honor_reform equality_principle_reform universal_suffrage_reform 
+			equal_electorate_reform democratic_values_reform matrilineal_system
 			sisterhood_of_jeanne_darc_reform 
 		}
 	}
