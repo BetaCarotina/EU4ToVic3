@@ -548,8 +548,8 @@ lawgroup_education_system = {
 		forms = { theocracy }
 		ideas = { religious_ideas theocracy_gov_ideas administrative_ideas }
 		reforms = { native_oral_tradition_reform state_and_shrines_intertwined_reform 
-			education_of_the_bishop_reform education_of_the_advisors_reform 
-			education_of_the_missionaries_reform guru_advisors_reform 
+			education_of_the_bishop_reform education_of_the_advisors_reform power_to_the_synagogoues_reform
+			education_of_the_missionaries_reform guru_advisors_reform focus_of_the_patriarchy_reform
 			state_of_theologians_reform pursuit_of_knowledge_reform state_madrasas_reform
 			german_westphalian_reform continue_the_renaissance_reform
 		}
@@ -663,8 +663,7 @@ lawgroup_policing = {
 		ideas = { religious_ideas defensive_ideas quality_ideas }
 		reforms = { poligar_reform imperial_diplomacy_reform imperial_principle_reform 
 			militarized_crusader_order_reform mission_to_kill_pirates_reform warrior_monks_reform
-			focus_of_the_patriarchy_reform gendarmes_reform russian_mercenary_guard_reform
-			german_prussian_reform german_swiss_reform
+			gendarmes_reform russian_mercenary_guard_reform german_prussian_reform german_swiss_reform
 		}
 	}
 	law_no_police = {
